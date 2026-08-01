@@ -4,18 +4,29 @@ public class CatMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
 
-    private Vector2 movement;
+    private Vector2 input;
+    private Animator animator;
 
-    void Update()
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update()
     {
         // Pobranie inputu
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
 
         // Zapobiega szybszemu chodzeniu po skosie
-        movement = movement.normalized;
+        input = input.normalized;
 
         // Ruch
-        transform.position += (Vector3)(movement * moveSpeed * Time.deltaTime);
+        transform.position += (Vector3)input * moveSpeed * Time.deltaTime;
+
+        // Animator
+        animator.SetFloat("MoveX", input.x);
+        animator.SetFloat("MoveY", input.y);
+        animator.SetFloat("speed", input.sqrMagnitude);
     }
 }
