@@ -1,0 +1,1716 @@
+fileFormatVersion: 2
+guid: 6a5d2e02dfe37f0429c95efe25dd0130
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5818351480526568212
+    second: fire food_0
+  - first:
+      213: 613938528431951308
+    second: fire food_1
+  - first:
+      213: -8255320913396908407
+    second: fire food_2
+  - first:
+      213: -2600562363398529789
+    second: fire food_3
+  - first:
+      213: 5870226341978824213
+    second: fire food_4
+  - first:
+      213: -5608830627721780193
+    second: fire food_5
+  - first:
+      213: -1671763799857211041
+    second: fire food_6
+  - first:
+      213: -2401916384308591402
+    second: fire food_7
+  - first:
+      213: -3751534697030461367
+    second: fire food_8
+  - first:
+      213: 204565482513717441
+    second: fire food_9
+  - first:
+      213: -5163842591516795434
+    second: fire food_10
+  - first:
+      213: 734611516504442339
+    second: fire food_11
+  - first:
+      213: 8829743001420302413
+    second: fire food_12
+  - first:
+      213: 7221514820470340007
+    second: fire food_13
+  - first:
+      213: -7480826394304293106
+    second: fire food_14
+  - first:
+      213: 2275560906863616810
+    second: fire food_15
+  - first:
+      213: -8472464907377524463
+    second: fire food_16
+  - first:
+      213: 3221212077425195279
+    second: fire food_17
+  - first:
+      213: -4069411372545097807
+    second: fire food_18
+  - first:
+      213: 4313141029899215291
+    second: fire food_19
+  - first:
+      213: 5697430476330061692
+    second: fire food_20
+  - first:
+      213: -6966024456830374349
+    second: fire food_21
+  - first:
+      213: -250603450879952001
+    second: fire food_22
+  - first:
+      213: -2424982940935989213
+    second: fire food_23
+  - first:
+      213: -2551186372465145249
+    second: fire food_24
+  - first:
+      213: 3220599367834732719
+    second: fire food_25
+  - first:
+      213: -8170471820202993268
+    second: fire food_26
+  - first:
+      213: -3677593425855040506
+    second: fire food_27
+  - first:
+      213: 3102906681221806542
+    second: fire food_28
+  - first:
+      213: -2080470733830126606
+    second: fire food_29
+  - first:
+      213: 1629974340075838942
+    second: fire food_30
+  - first:
+      213: -384660967142552185
+    second: fire food_31
+  - first:
+      213: 8479777288253482362
+    second: fire food_32
+  - first:
+      213: -6892295949495888290
+    second: fire food_33
+  - first:
+      213: 5252346110636444887
+    second: fire food_34
+  - first:
+      213: 6695552341157558423
+    second: fire food_35
+  - first:
+      213: -7652536857969893074
+    second: fire food_36
+  - first:
+      213: 8981681316381250697
+    second: fire food_37
+  - first:
+      213: -7975550194278896956
+    second: fire food_38
+  - first:
+      213: 7750159314679956125
+    second: fire food_39
+  - first:
+      213: -1140512314210669663
+    second: fire food_40
+  - first:
+      213: -8383942225139958584
+    second: fire food_41
+  - first:
+      213: 5549623101627235270
+    second: fire food_42
+  - first:
+      213: -8439972881399505035
+    second: fire food_43
+  - first:
+      213: 1594136303255189706
+    second: fire food_44
+  - first:
+      213: -2144754435230696230
+    second: fire food_45
+  - first:
+      213: 9173288063387234655
+    second: fire food_46
+  - first:
+      213: 328657202931613872
+    second: fire food_47
+  - first:
+      213: -397417245667295417
+    second: fire food_48
+  - first:
+      213: 4145446201468263182
+    second: fire food_49
+  - first:
+      213: -8585430466833754880
+    second: fire food_50
+  - first:
+      213: -5042878040851173201
+    second: fire food_51
+  - first:
+      213: -7299356640383423764
+    second: fire food_52
+  - first:
+      213: -3160630779923104400
+    second: fire food_53
+  - first:
+      213: -5677952766860506263
+    second: fire food_54
+  - first:
+      213: 6649289298524284799
+    second: fire food_55
+  - first:
+      213: 2508644086665944813
+    second: fire food_56
+  - first:
+      213: 7447602691901690112
+    second: fire food_57
+  - first:
+      213: 7285588793452301579
+    second: fire food_58
+  - first:
+      213: 5428410793290582331
+    second: fire food_59
+  - first:
+      213: 6035969380288719408
+    second: fire food_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire food_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 248
+        width: 70
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce488d8c720114fa0800000000000000
+      internalID: -5818351480526568212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 176
+        width: 70
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccdcc1db6d5258800800000000000000
+      internalID: 613938528431951308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 200
+        width: 171
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ebf1a2e553f6d80800000000000000
+      internalID: -8255320913396908407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_3
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 251
+        width: 41
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d51611f42f8ebd0800000000000000
+      internalID: -2600562363398529789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 168
+        width: 171
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ed9c891cb377150800000000000000
+      internalID: 5870226341978824213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_5
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 165
+        width: 38
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14ef4dc24e6922b0800000000000000
+      internalID: -5608830627721780193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 190
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5957217ea3bcc8e0800000000000000
+      internalID: -1671763799857211041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_7
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 214
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4881d36cdaaaed0800000000000000
+      internalID: -2401916384308591402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_8
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 171
+        width: 74
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94852fcc11fdfebc0800000000000000
+      internalID: -3751534697030461367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 100
+        width: 32
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c85986f833c6d200800000000000000
+      internalID: 204565482513717441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_10
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 130
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dddb90b5885658b0800000000000000
+      internalID: -5163842591516795434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_11
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 6
+        width: 38
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e58829384dd13a00800000000000000
+      internalID: 734611516504442339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_12
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 2
+        width: 38
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4806a15a7c898a70800000000000000
+      internalID: 8829743001420302413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 74
+        width: 28
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a97a5ec779f73460800000000000000
+      internalID: 7221514820470340007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_14
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1
+        width: 135
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07502d8704ce2890800000000000000
+      internalID: -7480826394304293106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_15
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 92
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a232f5e969a649f10800000000000000
+      internalID: 2275560906863616810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_16
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 72
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111ccc74e02cb6a80800000000000000
+      internalID: -8472464907377524463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_17
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 90
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f097025515b04bc20800000000000000
+      internalID: 3221212077425195279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 84
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bfb386daeb8687c0800000000000000
+      internalID: -4069411372545097807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_19
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 89
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb12e492aea5bdb30800000000000000
+      internalID: 4313141029899215291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_20
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 83
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f432af4d6511f40800000000000000
+      internalID: 5697430476330061692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_21
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 85
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e21f10aa5b35f90800000000000000
+      internalID: -6966024456830374349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_22
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 30
+        width: 135
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b30da3d7da58cf0800000000000000
+      internalID: -250603450879952001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_23
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 73
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328d0230ddab85ed0800000000000000
+      internalID: -2424982940935989213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_24
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 72
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ac561d28d589cd0800000000000000
+      internalID: -2551186372465145249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_25
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 78
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa803a3cf0ed1bc20800000000000000
+      internalID: 3220599367834732719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_26
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 74
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8916752b27ac9e80800000000000000
+      internalID: -8170471820202993268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_27
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 68
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604399f834096fcc0800000000000000
+      internalID: -3677593425855040506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_28
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 72
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec97969cf2dbf0b20800000000000000
+      internalID: 3102906681221806542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_29
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 52
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f38570f3eea023e0800000000000000
+      internalID: -2080470733830126606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_30
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 52
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eddd83db605de9610800000000000000
+      internalID: 1629974340075838942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_31
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 52
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d828e63e869aaf0800000000000000
+      internalID: -384660967142552185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_32
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 61
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7526c014883ea570800000000000000
+      internalID: 8479777288253482362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_33
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 56
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e561f63d955a950a0800000000000000
+      internalID: -6892295949495888290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dcc3e1a5f414e840800000000000000
+      internalID: 5252346110636444887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_35
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 51
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7983bb531616bec50800000000000000
+      internalID: 6695552341157558423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_36
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 63
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21ee16c54abcc590800000000000000
+      internalID: -7652536857969893074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_37
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 58
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 984daacf19755ac70800000000000000
+      internalID: 8981681316381250697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_38
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 45
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca65b5ca57215190800000000000000
+      internalID: -7975550194278896956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_39
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 44
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d920f28a5d81e8b60800000000000000
+      internalID: 7750159314679956125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_40
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 49
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aba389c7161c20f0800000000000000
+      internalID: -1140512314210669663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_41
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 40
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc722d57f046ab80800000000000000
+      internalID: -8383942225139958584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_42
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 51
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbfac9cec8340d40800000000000000
+      internalID: 5549623101627235270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_43
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 32
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f904a91613fda80800000000000000
+      internalID: -8439972881399505035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_44
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 32
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8741f85828f1610800000000000000
+      internalID: 1594136303255189706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_45
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 31
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc71ad543d4c32e0800000000000000
+      internalID: -2144754435230696230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_46
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 36
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51f68834e01e4f70800000000000000
+      internalID: 9173288063387234655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_47
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 21
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0cc991cff9f8400800000000000000
+      internalID: 328657202931613872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_48
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 29
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ff264ee171c7af0800000000000000
+      internalID: -397417245667295417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_49
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 29
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b12025b55978930800000000000000
+      internalID: 4145446201468263182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_50
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 7
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005de8c5a7c6ad880800000000000000
+      internalID: -8585430466833754880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_51
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 10
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0b271e329140ab0800000000000000
+      internalID: -5042878040851173201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_52
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 20
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceaae092fc973ba90800000000000000
+      internalID: -7299356640383423764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_53
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 17
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d74882d0f2324d0800000000000000
+      internalID: -3160630779923104400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_54
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 22
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b45d7aa0cd331b0800000000000000
+      internalID: -5677952766860506263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_55
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 22
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f77a8573365074c50800000000000000
+      internalID: 6649289298524284799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_56
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 15
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee9b95618e70d220800000000000000
+      internalID: 2508644086665944813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_57
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 15
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0011b0f60333b5760800000000000000
+      internalID: 7447602691901690112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_58
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 8
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d8a4d286c9b1560800000000000000
+      internalID: 7285588793452301579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_59
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 8
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b394bf40bd6955b40800000000000000
+      internalID: 5428410793290582331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire food_60
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 8
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03a6e33eb2214c350800000000000000
+      internalID: 6035969380288719408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fire food_0: -5818351480526568212
+      fire food_1: 613938528431951308
+      fire food_10: -5163842591516795434
+      fire food_11: 734611516504442339
+      fire food_12: 8829743001420302413
+      fire food_13: 7221514820470340007
+      fire food_14: -7480826394304293106
+      fire food_15: 2275560906863616810
+      fire food_16: -8472464907377524463
+      fire food_17: 3221212077425195279
+      fire food_18: -4069411372545097807
+      fire food_19: 4313141029899215291
+      fire food_2: -8255320913396908407
+      fire food_20: 5697430476330061692
+      fire food_21: -6966024456830374349
+      fire food_22: -250603450879952001
+      fire food_23: -2424982940935989213
+      fire food_24: -2551186372465145249
+      fire food_25: 3220599367834732719
+      fire food_26: -8170471820202993268
+      fire food_27: -3677593425855040506
+      fire food_28: 3102906681221806542
+      fire food_29: -2080470733830126606
+      fire food_3: -2600562363398529789
+      fire food_30: 1629974340075838942
+      fire food_31: -384660967142552185
+      fire food_32: 8479777288253482362
+      fire food_33: -6892295949495888290
+      fire food_34: 5252346110636444887
+      fire food_35: 6695552341157558423
+      fire food_36: -7652536857969893074
+      fire food_37: 8981681316381250697
+      fire food_38: -7975550194278896956
+      fire food_39: 7750159314679956125
+      fire food_4: 5870226341978824213
+      fire food_40: -1140512314210669663
+      fire food_41: -8383942225139958584
+      fire food_42: 5549623101627235270
+      fire food_43: -8439972881399505035
+      fire food_44: 1594136303255189706
+      fire food_45: -2144754435230696230
+      fire food_46: 9173288063387234655
+      fire food_47: 328657202931613872
+      fire food_48: -397417245667295417
+      fire food_49: 4145446201468263182
+      fire food_5: -5608830627721780193
+      fire food_50: -8585430466833754880
+      fire food_51: -5042878040851173201
+      fire food_52: -7299356640383423764
+      fire food_53: -3160630779923104400
+      fire food_54: -5677952766860506263
+      fire food_55: 6649289298524284799
+      fire food_56: 2508644086665944813
+      fire food_57: 7447602691901690112
+      fire food_58: 7285588793452301579
+      fire food_59: 5428410793290582331
+      fire food_6: -1671763799857211041
+      fire food_60: 6035969380288719408
+      fire food_7: -2401916384308591402
+      fire food_8: -3751534697030461367
+      fire food_9: 204565482513717441
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

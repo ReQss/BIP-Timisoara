@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 577e0ff27aa7f2dc98ad67d6a6d3f35b
+guid: 77cac85761957314b896914d908d47f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4483607655262404820
-    second: wallsnfloor_0
+      213: 4268214376947299466
+    second: cabin_0
+  - first:
+      213: 8362259854150337007
+    second: cabin_1
+  - first:
+      213: -7313128961699635226
+    second: cabin_2
+  - first:
+      213: 5575218459758606404
+    second: cabin_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0}
-  spritePixelsToUnits: 32
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wallsnfloor_0
+      name: cabin_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1
-        width: 167
-        height: 154
+        x: 41
+        y: 253
+        width: 185
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d043244869f83e30800000000000000
-      internalID: 4483607655262404820
+      spriteID: a84b823ac5ebb3b30800000000000000
+      internalID: 4268214376947299466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabin_1
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 264
+        width: 241
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1042e3807bc0470800000000000000
+      internalID: 8362259854150337007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabin_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 9
+        width: 277
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef9549b4fb828a90800000000000000
+      internalID: -7313128961699635226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabin_3
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 49
+        width: 185
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448bc1f76a72f5d40800000000000000
+      internalID: 5575218459758606404
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wallsnfloor_0: 4483607655262404820
+      cabin_0: 4268214376947299466
+      cabin_1: 8362259854150337007
+      cabin_2: -7313128961699635226
+      cabin_3: 5575218459758606404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
