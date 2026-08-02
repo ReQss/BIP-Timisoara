@@ -31,7 +31,7 @@ public static class BarmanSetup
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        Debug.Log("Barman setup complete. The placeholder is stationary and uses people_0 through people_39.");
+        Debug.Log("Barman setup complete. The barman uses people_0 through people_39 and is controlled by a gamepad or IJKL.");
     }
 
     private static void ConfigureSpriteSheet()
@@ -79,10 +79,10 @@ public static class BarmanSetup
 
         return new Dictionary<string, AnimationClip>
         {
-            ["IdleSouthWest"] = CreateClip("IdleSouthWest", new[] { sprites[9] }, 1f, false),
-            ["IdleSouthEast"] = CreateClip("IdleSouthEast", new[] { sprites[19] }, 1f, false),
-            ["IdleNorthWest"] = CreateClip("IdleNorthWest", new[] { sprites[29] }, 1f, false),
-            ["IdleNorthEast"] = CreateClip("IdleNorthEast", new[] { sprites[39] }, 1f, false),
+            ["IdleSouthWest"] = CreateClip("IdleSouthWest", new[] { sprites[0] }, 1f, false),
+            ["IdleSouthEast"] = CreateClip("IdleSouthEast", new[] { sprites[10] }, 1f, false),
+            ["IdleNorthWest"] = CreateClip("IdleNorthWest", new[] { sprites[20] }, 1f, false),
+            ["IdleNorthEast"] = CreateClip("IdleNorthEast", new[] { sprites[30] }, 1f, false),
             ["WalkSouthWest"] = CreateClip("WalkSouthWest", southWest, 10f, true),
             ["WalkSouthEast"] = CreateClip("WalkSouthEast", southEast, 10f, true),
             ["WalkNorthWest"] = CreateClip("WalkNorthWest", northWest, 10f, true),
@@ -196,7 +196,7 @@ public static class BarmanSetup
             renderer.sortingOrder = 10;
             renderer.sprite = AssetDatabase.LoadAllAssetRepresentationsAtPath(SpriteSheetPath)
                 .OfType<Sprite>()
-                .First(sprite => sprite.name == "people_19");
+                .First(sprite => sprite.name == "people_10");
 
             BoxCollider2D collider = root.AddComponent<BoxCollider2D>();
             collider.size = new Vector2(0.55f, 0.35f);

@@ -29,11 +29,13 @@ public sealed class BarmanController : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         moveAction = new InputAction("Barman Move", InputActionType.Value);
+        moveAction.AddBinding("<Gamepad>/leftStick");
+        moveAction.AddBinding("<Gamepad>/dpad");
         moveAction.AddCompositeBinding("2DVector")
-            .With("Up", "<Keyboard>/w")
-            .With("Down", "<Keyboard>/s")
-            .With("Left", "<Keyboard>/a")
-            .With("Right", "<Keyboard>/d");
+            .With("Up", "<Keyboard>/i")
+            .With("Down", "<Keyboard>/k")
+            .With("Left", "<Keyboard>/j")
+            .With("Right", "<Keyboard>/l");
 
         SetFacing(startingDirection);
         SetWalking(false);
