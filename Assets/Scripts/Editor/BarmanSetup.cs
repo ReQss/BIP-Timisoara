@@ -15,31 +15,6 @@ public static class BarmanSetup
     private const string PrefabPath = "Assets/Prefabs/Barman.prefab";
     private const string ScenePath = "Assets/Scenes/SampleScene.unity";
 
-    [InitializeOnLoadMethod]
-    private static void UpgradeAnimationLayoutOnce()
-    {
-        EditorApplication.playModeStateChanged -= OnUpgradePlayModeChanged;
-        EditorApplication.playModeStateChanged += OnUpgradePlayModeChanged;
-        EditorApplication.delayCall += TryUpgradeAnimationLayout;
-    }
-
-    private static void OnUpgradePlayModeChanged(PlayModeStateChange state)
-    {
-        if (state == PlayModeStateChange.EnteredEditMode)
-        {
-            TryUpgradeAnimationLayout();
-        }
-    }
-
-    private static void TryUpgradeAnimationLayout()
-    {
-        if (!EditorApplication.isPlayingOrWillChangePlaymode
-            && AssetDatabase.LoadAssetAtPath<AnimationClip>(AnimationFolder + "/WalkSouthWest.anim") == null)
-        {
-            Setup();
-        }
-    }
-
     [MenuItem("Tools/Cat Cafe/Setup Barman")]
     public static void Setup()
     {
@@ -52,8 +27,7 @@ public static class BarmanSetup
         Dictionary<string, AnimationClip> clips = CreateAnimationClips();
         AnimatorController controller = CreateAnimatorController(clips);
         GameObject prefab = CreatePrefab(controller);
-        ReplaceCatsWithBarman(prefab);
-        DeleteCatAssets();
+        AddBarmanAlongsideCats(prefab);
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
@@ -245,7 +219,7 @@ public static class BarmanSetup
         }
     }
 
-    private static void ReplaceCatsWithBarman(GameObject prefab)
+    private static void AddBarmanAlongsideCats(GameObject prefab)
     {
         Scene scene = SceneManager.GetSceneByPath(ScenePath);
         if (!scene.IsValid() || !scene.isLoaded)
@@ -257,28 +231,17 @@ public static class BarmanSetup
         GameObject existingBarman = roots.FirstOrDefault(root => root.name == "Barman");
         GameObject[] cats = roots.Where(root => root.name.StartsWith("Cat", StringComparison.Ordinal)).ToArray();
 
-        Vector3 spawnPosition = cats.Length > 0 ? cats[0].transform.position : Vector3.zero;
-        foreach (GameObject cat in cats)
-        {
-            UnityEngine.Object.DestroyImmediate(cat);
-        }
-
         if (existingBarman == null)
         {
             existingBarman = (GameObject)PrefabUtility.InstantiatePrefab(prefab, scene);
+            existingBarman.name = "Barman";
+            existingBarman.transform.position = cats.Length > 0
+                ? cats[0].transform.position + new Vector3(1.25f, 0f, 0f)
+                : Vector3.zero;
+
+            EditorSceneManager.MarkSceneDirty(scene);
+            EditorSceneManager.SaveScene(scene);
         }
-
-        existingBarman.name = "Barman";
-        existingBarman.transform.position = spawnPosition;
-        EditorSceneManager.MarkSceneDirty(scene);
-        EditorSceneManager.SaveScene(scene);
-    }
-
-    private static void DeleteCatAssets()
-    {
-        AssetDatabase.DeleteAsset("Assets/Animations/Cat");
-        AssetDatabase.DeleteAsset("Assets/Prefabs/Cat.prefab");
-        AssetDatabase.DeleteAsset("Assets/Assets/Sprites/Cat");
     }
 
     private static void EnsureFolder(string parent, string name)
