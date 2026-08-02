@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 2b11feb67d6a323c1906430c518af00f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3825153361731209428
+    second: stairs and extra_0
+  - first:
+      213: -2350124802802165533
+    second: stairs and extra_1
+  - first:
+      213: -124913417151840287
+    second: stairs and extra_2
+  - first:
+      213: -7381553527952255498
+    second: stairs and extra_3
+  - first:
+      213: -4481496450663936753
+    second: stairs and extra_4
+  - first:
+      213: -4134450492668312045
+    second: stairs and extra_5
+  - first:
+      213: -4680836763298016030
+    second: stairs and extra_6
+  - first:
+      213: -2542820853585246237
+    second: stairs and extra_7
+  - first:
+      213: 6377865050955506023
+    second: stairs and extra_8
+  - first:
+      213: 5287818585606331107
+    second: stairs and extra_9
+  - first:
+      213: 6721164173335562384
+    second: stairs and extra_10
+  - first:
+      213: 7276967892933007408
+    second: stairs and extra_11
+  - first:
+      213: -4174289182276581735
+    second: stairs and extra_12
+  - first:
+      213: 8271311816706362838
+    second: stairs and extra_13
+  - first:
+      213: 7499434248692211307
+    second: stairs and extra_14
+  - first:
+      213: -6771066290445619330
+    second: stairs and extra_15
+  - first:
+      213: 9077183382997961258
+    second: stairs and extra_16
+  - first:
+      213: 5139744785923916246
+    second: stairs and extra_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stairs and extra_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 720
+        width: 171
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27be96b8435aeac0800000000000000
+      internalID: -3825153361731209428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_1
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 735
+        width: 135
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8542f71fda26fd0800000000000000
+      internalID: -2350124802802165533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_2
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 604
+        width: 139
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1effbfea8e7344ef0800000000000000
+      internalID: -124913417151840287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_3
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 611
+        width: 171
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5dfdbec247f8990800000000000000
+      internalID: -7381553527952255498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_4
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 724
+        width: 147
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d800cd8b68ec1c0800000000000000
+      internalID: -4481496450663936753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_5
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 431
+        width: 156
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3160113ae2b7f96c0800000000000000
+      internalID: -4134450492668312045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 569
+        width: 175
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4580093c35a0fb0800000000000000
+      internalID: -4680836763298016030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 466
+        width: 141
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e78896f7e516bcd0800000000000000
+      internalID: -2542820853585246237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_8
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 475
+        width: 171
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761e493f87ab28850800000000000000
+      internalID: 6377865050955506023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_9
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 249
+        width: 211
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea16cfccfa126940800000000000000
+      internalID: 5287818585606331107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_10
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 255
+        width: 211
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0988fb4943f564d50800000000000000
+      internalID: 6721164173335562384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_11
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 334
+        width: 151
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038d13c5ebbfcf460800000000000000
+      internalID: 7276967892933007408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_12
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 186
+        width: 151
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99606a4ea12f116c0800000000000000
+      internalID: -4174289182276581735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_13
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 208
+        width: 171
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd0645264a99c270800000000000000
+      internalID: 8271311816706362838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_14
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 339
+        width: 171
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e92b927b7531860800000000000000
+      internalID: 7499434248692211307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 48
+        width: 211
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fed5f55175802a0800000000000000
+      internalID: -6771066290445619330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_16
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 49
+        width: 211
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a0ca0a132a8fd70800000000000000
+      internalID: 9077183382997961258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stairs and extra_17
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 34
+        width: 151
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d14929b6aa045740800000000000000
+      internalID: 5139744785923916246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      stairs and extra_0: -3825153361731209428
+      stairs and extra_1: -2350124802802165533
+      stairs and extra_10: 6721164173335562384
+      stairs and extra_11: 7276967892933007408
+      stairs and extra_12: -4174289182276581735
+      stairs and extra_13: 8271311816706362838
+      stairs and extra_14: 7499434248692211307
+      stairs and extra_15: -6771066290445619330
+      stairs and extra_16: 9077183382997961258
+      stairs and extra_17: 5139744785923916246
+      stairs and extra_2: -124913417151840287
+      stairs and extra_3: -7381553527952255498
+      stairs and extra_4: -4481496450663936753
+      stairs and extra_5: -4134450492668312045
+      stairs and extra_6: -4680836763298016030
+      stairs and extra_7: -2542820853585246237
+      stairs and extra_8: 6377865050955506023
+      stairs and extra_9: 5287818585606331107
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
