@@ -5896,8 +5896,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCameraFollow
   player: {fileID: 1059972354}
   otherPlayer: {fileID: 1697492769}
-  followSpeed: 8
-  mergeDistance: 8
+  followSpeed: 4
+  minOrthographicSize: 3
+  maxOrthographicSize: 5
+  zoomSpeed: 2
 --- !u!1 &1000043622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5931,9 +5933,11 @@ MonoBehaviour:
   player2: {fileID: 1059972354}
   camera1: {fileID: 1008420709}
   camera2: {fileID: 867782896}
-  splitDistance: 10
-  mergeDistance: 8
-  animationSpeed: 5
+  follow1: {fileID: 1008420710}
+  follow2: {fileID: 867782897}
+  splitDistance: 6
+  mergeDistance: 4
+  smoothTime: 0.2
 --- !u!4 &1000043624
 Transform:
   m_ObjectHideFlags: 0
@@ -6101,8 +6105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCameraFollow
   player: {fileID: 1697492769}
   otherPlayer: {fileID: 1059972354}
-  followSpeed: 8
-  mergeDistance: 8
+  followSpeed: 4
+  minOrthographicSize: 3
+  maxOrthographicSize: 5
+  zoomSpeed: 2
 --- !u!4 &1059972354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6318089435512960628, guid: 8ad7e0e6fbe0a2dd78838ad47859c912, type: 3}

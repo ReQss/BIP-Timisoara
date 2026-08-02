@@ -2,71 +2,84 @@ using UnityEngine;
 
 public class SplitScreenManager : MonoBehaviour
 {
+    [Header("Players")]
     [SerializeField] private Transform player1;
     [SerializeField] private Transform player2;
 
+    [Header("Cameras")]
     [SerializeField] private Camera camera1;
     [SerializeField] private Camera camera2;
 
+    [Header("Camera Follow Scripts")]
+    [SerializeField] private PlayerCameraFollow follow1;
+    [SerializeField] private PlayerCameraFollow follow2;
+
+    [Header("Distances")]
     [SerializeField] private float splitDistance = 10f;
-    [SerializeField] private float mergeDistance = 8f;
+    [SerializeField] private float mergeDistance = 7f;
 
-    [SerializeField] private float animationSpeed = 5f;
+    [Header("Animation Smoothness")]
+    [SerializeField] private float smoothTime = 0.3f; // Czas trwania płynnego przejścia
 
-    private bool split;
+    private float splitAmount;
+    private float splitVelocity; // Używane wewnętrznie przez Mathf.SmoothDamp
 
     private void Start()
     {
-        camera1.rect = new Rect(0,0,1,1);
+        // Na starcie ustawiamy pełen ekran dla kamery 1
+        camera1.rect = new Rect(0f, 0f, 1f, 1f);
+        camera2.rect = new Rect(1f, 0f, 0f, 1f);
 
-        camera2.rect = new Rect(1,0,1,1);
+        splitAmount = 0f;
     }
 
     private void Update()
     {
-        float distance = Vector2.Distance(
-            player1.position,
-            player2.position);
+        if (player1 == null || player2 == null) return;
 
-        if(!split && distance > splitDistance)
-            split = true;
+        float distance = Vector2.Distance(player1.position, player2.position);
 
-        if(split && distance < mergeDistance)
-            split = false;
-
-        AnimateRects();
-    }
-
-    void AnimateRects()
-    {
-        Rect target1;
-        Rect target2;
-
-        if(split)
+        // Histereza - określenie docelowego stanu podziału
+        float targetSplit = splitAmount;
+        if (distance > splitDistance)
         {
-            target1 = new Rect(0,0,0.5f,1);
-
-            target2 = new Rect(0.5f,0,0.5f,1);
+            targetSplit = 1f;
         }
-        else
+        else if (distance < mergeDistance)
         {
-            target1 = new Rect(0,0,1,1);
-
-            target2 = new Rect(1,0,1,1);
+            targetSplit = 0f;
         }
 
-        camera1.rect = LerpRect(camera1.rect,target1);
+        // Płynna interpolacja z użyciem SmoothDamp (efekt wyhamowania przy końcu)
+        splitAmount = Mathf.SmoothDamp(
+            splitAmount, 
+            targetSplit, 
+            ref splitVelocity, 
+            smoothTime);
 
-        camera2.rect = LerpRect(camera2.rect,target2);
+        // Przekazanie wartości do skryptów podążania
+        if (follow1 != null) follow1.SetSplitAmount(splitAmount);
+        if (follow2 != null) follow2.SetSplitAmount(splitAmount);
+
+        UpdateRects();
     }
 
-    Rect LerpRect(Rect a, Rect b)
+    private void UpdateRects()
     {
-        return new Rect(
-            Mathf.Lerp(a.x,b.x,Time.deltaTime*animationSpeed),
-            Mathf.Lerp(a.y,b.y,Time.deltaTime*animationSpeed),
-            Mathf.Lerp(a.width,b.width,Time.deltaTime*animationSpeed),
-            Mathf.Lerp(a.height,b.height,Time.deltaTime*animationSpeed)
-        );
+        // Wyłączenie 2. kamery gdy podział nie jest używany (optymalizacja)
+        if (splitAmount < 0.01f)
+        {
+            camera1.rect = new Rect(0f, 0f, 1f, 1f);
+            camera2.enabled = false;
+            return;
+        }
+
+        if (!camera2.enabled) camera2.enabled = true;
+
+        // Obliczanie proporcji ekranu
+        float leftWidth = Mathf.Lerp(1f, 0.5f, splitAmount);
+
+        camera1.rect = new Rect(0f, 0f, leftWidth, 1f);
+        camera2.rect = new Rect(leftWidth, 0f, 1f - leftWidth, 1f);
     }
 }
