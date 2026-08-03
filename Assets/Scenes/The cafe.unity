@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 376607286}
   - component: {fileID: 376607285}
   m_Layer: 0
-  m_Name: BarmanCamera
+  m_Name: DogCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3499,7 +3499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7812831775941677724, guid: 8ad7e0e6fbe0a2dd78838ad47859c912, type: 3}
       propertyPath: m_Name
-      value: Barman
+      value: Dog
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

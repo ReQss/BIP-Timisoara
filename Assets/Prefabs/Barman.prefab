@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 341226941281339261}
   - component: {fileID: 5665645197959944514}
   - component: {fileID: 4708136466622819219}
+  - component: {fileID: 6126956049025738971}
   m_Layer: 0
-  m_Name: Barman
+  m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8705802314535483547, guid: 1e92fad1ce90ba124b6af69fe12357a9, type: 3}
+  m_Sprite: {fileID: -4435420479391560189, guid: b6dfcb9756cd42c66acd2118d43d7953, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.625, y: 1.21875}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -129,17 +130,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.45}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.625, y: 1.21875}
-    newSize: {x: 0.625, y: 1.21875}
+    oldSize: {x: 0.53125, y: 0.65625}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.55, y: 0.35}
+  m_Size: {x: 0.6, y: 0.5}
   m_EdgeRadius: 0
 --- !u!50 &341226941281339261
 Rigidbody2D:
@@ -176,7 +177,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7812831775941677724}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7ad5d78cdb3ae57f4afe4ee26513229b, type: 2}
   m_CullingMode: 0
@@ -200,7 +201,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c1dd995ccb9ceb49051b5e19c235fb, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::BarmanController
   startingDirection: 1
   moveSpeed: 2.5
+--- !u!114 &6126956049025738971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812831775941677724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d34003d85ad4cc6819681a99f88c948, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::DogSpriteAnimator
+  targetRenderer: {fileID: 7245050086080663317}
+  spriteSheet: {fileID: 2800000, guid: b6dfcb9756cd42c66acd2118d43d7953, type: 3}
+  idleFramesPerSecond: 4
+  walkFramesPerSecond: 10
+  pixelsPerUnit: 32

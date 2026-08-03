@@ -20,6 +20,7 @@ public sealed class BarmanController : MonoBehaviour
     private static readonly int Speed = Animator.StringToHash("Speed");
 
     private Animator animator;
+    private DogSpriteAnimator dogSpriteAnimator;
     private Rigidbody2D body;
     private InputAction moveAction;
     private Vector2 movement;
@@ -27,6 +28,7 @@ public sealed class BarmanController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        dogSpriteAnimator = GetComponent<DogSpriteAnimator>();
         body = GetComponent<Rigidbody2D>();
         moveAction = new InputAction("Barman Move", InputActionType.Value);
         moveAction.AddBinding("<Gamepad>/leftStick");
@@ -55,6 +57,8 @@ public sealed class BarmanController : MonoBehaviour
         {
             body.linearVelocity = Vector2.zero;
         }
+
+        dogSpriteAnimator?.SetMovement(Vector2.zero);
     }
 
     private void OnDestroy()
@@ -66,6 +70,7 @@ public sealed class BarmanController : MonoBehaviour
     {
         movement = moveAction?.ReadValue<Vector2>() ?? Vector2.zero;
         movement = Vector2.ClampMagnitude(movement, 1f);
+        dogSpriteAnimator?.SetMovement(movement);
 
         if (movement.sqrMagnitude > 0.001f)
         {
@@ -97,6 +102,12 @@ public sealed class BarmanController : MonoBehaviour
     public void SetFacing(FaceDirection direction)
     {
         startingDirection = direction;
+
+        if (dogSpriteAnimator != null)
+        {
+            return;
+        }
+
         Vector2 facing = DirectionToVector(direction);
 
         if (animator == null)
@@ -110,6 +121,11 @@ public sealed class BarmanController : MonoBehaviour
 
     public void SetWalking(bool walking)
     {
+        if (dogSpriteAnimator != null)
+        {
+            return;
+        }
+
         if (animator == null)
         {
             animator = GetComponent<Animator>();
