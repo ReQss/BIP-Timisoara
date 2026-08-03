@@ -87,7 +87,7 @@ public class DogSpriteAnimator : MonoBehaviour
                     frames[index] = Sprite.Create(
                         spriteSheet,
                         new Rect(column * CellSize, y, CellSize, CellSize),
-                        new Vector2(0.5f, 0.5f),
+                        new Vector2(0.5f, 0f),
                         pixelsPerUnit,
                         0,
                         SpriteMeshType.FullRect);
