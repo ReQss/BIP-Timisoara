@@ -7,7 +7,7 @@ using TMPro;
 [System.Serializable]
 public class JobItemInList
 {
-    public Job job;
+    public Job job = null;
     public TextMeshProUGUI jobDescription;
     public TextMeshProUGUI timeLeft;
 }
@@ -28,18 +28,38 @@ public class UIHandler : MonoBehaviour
     }
     public JobItemInList GetFirstFreeJobItemInList()
     {
-        return jobItemsInList.Find(job => job.job == null);
+        for(int i = 0; i < jobItemsInList.Count; i++)
+        {
+            if(jobItemsInList[i].job == null || jobItemsInList[i].jobDescription.text == "")
+            {
+                return jobItemsInList[i];
+            }
+        }
+        return null;
     }
     public void AddJobTextToList(Job job)
     {
         JobItemInList newJobItem = GetFirstFreeJobItemInList();
+        if(newJobItem == null)
+        {
+            Debug.LogWarning("No free job item in list to add job text");
+            return;
+        }
         newJobItem.job = job;
         newJobItem.jobDescription.text = job.assignedTask.taskDescription;
         newJobItem.timeLeft.text = job.waitingTime.ToString();
     }
     
        
-    
+    public void CleanJobList()
+    {
+        foreach (var jobItem in jobItemsInList)
+        {
+            jobItem.job = null;
+            jobItem.jobDescription.text = "";
+            jobItem.timeLeft.text = "";
+        }
+    }
     public void RemoveJobTextFromList(int jobId)
     {
         JobItemInList jobToRemove = jobItemsInList.Find(job => job.job != null && job.job.jobId == jobId);

@@ -41,12 +41,21 @@ public class TaskManager : MonoBehaviour
     public float timeBetweenJobs = 25f;
     public float timeLeftForJob = 0f;
     int jobIdCounter = 0;
+    public UIHandler uiHandler;
     public Job GetRandomJob()
     {
         //waiting time random from 30 to 60s
-        int randomWaitingTime = Random.Range(30, 61);
         TaskItem randomTask = GetRandomTask();
-        Job newJob = new Job(randomWaitingTime, randomTask, jobIdCounter++);
+        int waitingTime;
+        if(randomTask.taskType == TaskType.CleaningToilet)
+        {
+            waitingTime = 400;
+        }
+        else
+        {
+            waitingTime = Random.Range(30, 60);
+        }
+        Job newJob = new Job(waitingTime, randomTask, jobIdCounter++);
         return newJob;
     }
     public TaskItem GetRandomTask()
@@ -63,6 +72,8 @@ public class TaskManager : MonoBehaviour
             {
                 currentJobs.Add(newJob);
                 lastJob = newJob;
+                uiHandler.AddJobTextToList(newJob);
+                StartCoroutine(RemoveJob(newJob));
             }
             else
             {
@@ -74,9 +85,18 @@ public class TaskManager : MonoBehaviour
 
         }
     }
+    public IEnumerator RemoveJob(Job jobToRemove)
+    {
+        //wait for the job to be completed
+        yield return new WaitUntil(() => jobToRemove.waitingTime <= 0);
+        currentJobs.Remove(jobToRemove);
+        uiHandler.RemoveJobTextFromList(jobToRemove.jobId);
+        yield return null;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        uiHandler.CleanJobList();
         StartCoroutine(StartRandomTasks());
     }
 
