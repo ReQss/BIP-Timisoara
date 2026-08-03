@@ -1,0 +1,1781 @@
+fileFormatVersion: 2
+guid: b6dfcb9756cd42c66acd2118d43d7953
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4435420479391560189
+    second: GoldenRetriever_spritesheet_free_0
+  - first:
+      213: -3137388743644335519
+    second: GoldenRetriever_spritesheet_free_1
+  - first:
+      213: -2000420933070462863
+    second: GoldenRetriever_spritesheet_free_2
+  - first:
+      213: 5130688593464475670
+    second: GoldenRetriever_spritesheet_free_3
+  - first:
+      213: 5439913404028829496
+    second: GoldenRetriever_spritesheet_free_4
+  - first:
+      213: 8488037720071847161
+    second: GoldenRetriever_spritesheet_free_5
+  - first:
+      213: 5394000469997879973
+    second: GoldenRetriever_spritesheet_free_6
+  - first:
+      213: -8236533118544809740
+    second: GoldenRetriever_spritesheet_free_7
+  - first:
+      213: -6567592236713737881
+    second: GoldenRetriever_spritesheet_free_8
+  - first:
+      213: -5409137862383739122
+    second: GoldenRetriever_spritesheet_free_9
+  - first:
+      213: 8721682990734613999
+    second: GoldenRetriever_spritesheet_free_10
+  - first:
+      213: -2664791067607520114
+    second: GoldenRetriever_spritesheet_free_11
+  - first:
+      213: 1197074350750120889
+    second: GoldenRetriever_spritesheet_free_12
+  - first:
+      213: -158243158339606123
+    second: GoldenRetriever_spritesheet_free_13
+  - first:
+      213: 2054582273090275945
+    second: GoldenRetriever_spritesheet_free_14
+  - first:
+      213: -4977539361641201155
+    second: GoldenRetriever_spritesheet_free_15
+  - first:
+      213: 5736337529246664074
+    second: GoldenRetriever_spritesheet_free_16
+  - first:
+      213: -7023243013185358718
+    second: GoldenRetriever_spritesheet_free_17
+  - first:
+      213: -6012130280716829583
+    second: GoldenRetriever_spritesheet_free_18
+  - first:
+      213: -6447668874745000274
+    second: GoldenRetriever_spritesheet_free_19
+  - first:
+      213: 8046885004337170857
+    second: GoldenRetriever_spritesheet_free_20
+  - first:
+      213: -18322162803557309
+    second: GoldenRetriever_spritesheet_free_21
+  - first:
+      213: 1322288609431913762
+    second: GoldenRetriever_spritesheet_free_22
+  - first:
+      213: 5881298255726178022
+    second: GoldenRetriever_spritesheet_free_23
+  - first:
+      213: -3862958239913579903
+    second: GoldenRetriever_spritesheet_free_24
+  - first:
+      213: 1501128345194331897
+    second: GoldenRetriever_spritesheet_free_25
+  - first:
+      213: 824255624611074810
+    second: GoldenRetriever_spritesheet_free_26
+  - first:
+      213: -1468455901494185437
+    second: GoldenRetriever_spritesheet_free_27
+  - first:
+      213: -7150692681225310977
+    second: GoldenRetriever_spritesheet_free_28
+  - first:
+      213: -5833629385535587875
+    second: GoldenRetriever_spritesheet_free_29
+  - first:
+      213: -4458087596960633789
+    second: GoldenRetriever_spritesheet_free_30
+  - first:
+      213: 3668388213039413120
+    second: GoldenRetriever_spritesheet_free_31
+  - first:
+      213: 1456768740733652133
+    second: GoldenRetriever_spritesheet_free_32
+  - first:
+      213: 8929535020881509639
+    second: GoldenRetriever_spritesheet_free_33
+  - first:
+      213: 4519949968465769439
+    second: GoldenRetriever_spritesheet_free_34
+  - first:
+      213: 5361435975715842568
+    second: GoldenRetriever_spritesheet_free_35
+  - first:
+      213: 4567608127326320977
+    second: GoldenRetriever_spritesheet_free_36
+  - first:
+      213: -6363331918560816573
+    second: GoldenRetriever_spritesheet_free_37
+  - first:
+      213: 6103048316598224987
+    second: GoldenRetriever_spritesheet_free_38
+  - first:
+      213: 4348519873269365741
+    second: GoldenRetriever_spritesheet_free_39
+  - first:
+      213: 7358873174430122630
+    second: GoldenRetriever_spritesheet_free_40
+  - first:
+      213: -5352532411712600678
+    second: GoldenRetriever_spritesheet_free_41
+  - first:
+      213: -7034184162831217979
+    second: GoldenRetriever_spritesheet_free_42
+  - first:
+      213: -5811225088157109879
+    second: GoldenRetriever_spritesheet_free_43
+  - first:
+      213: -2033130193239784116
+    second: GoldenRetriever_spritesheet_free_44
+  - first:
+      213: -2960092005896783940
+    second: GoldenRetriever_spritesheet_free_45
+  - first:
+      213: -2301025527379173177
+    second: GoldenRetriever_spritesheet_free_46
+  - first:
+      213: 1557101407568776756
+    second: GoldenRetriever_spritesheet_free_47
+  - first:
+      213: 3668372340182695303
+    second: GoldenRetriever_spritesheet_free_48
+  - first:
+      213: 7310503922280706811
+    second: GoldenRetriever_spritesheet_free_49
+  - first:
+      213: -7151039213230908902
+    second: GoldenRetriever_spritesheet_free_50
+  - first:
+      213: -6263808110864932266
+    second: GoldenRetriever_spritesheet_free_51
+  - first:
+      213: 5542011031670280579
+    second: GoldenRetriever_spritesheet_free_52
+  - first:
+      213: -2271653100990781992
+    second: GoldenRetriever_spritesheet_free_53
+  - first:
+      213: 5964508913059135617
+    second: GoldenRetriever_spritesheet_free_54
+  - first:
+      213: -3812410654994103611
+    second: GoldenRetriever_spritesheet_free_55
+  - first:
+      213: -2921325423833031151
+    second: GoldenRetriever_spritesheet_free_56
+  - first:
+      213: 5695049772470090803
+    second: GoldenRetriever_spritesheet_free_57
+  - first:
+      213: 7327261800276184093
+    second: GoldenRetriever_spritesheet_free_58
+  - first:
+      213: -1394649112909094575
+    second: GoldenRetriever_spritesheet_free_59
+  - first:
+      213: -1315040828387572478
+    second: GoldenRetriever_spritesheet_free_60
+  - first:
+      213: -2162191047950470442
+    second: GoldenRetriever_spritesheet_free_61
+  - first:
+      213: 6067038141885455933
+    second: GoldenRetriever_spritesheet_free_62
+  - first:
+      213: -1819665862296486759
+    second: GoldenRetriever_spritesheet_free_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 37
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e8f58e2983272c0800000000000000
+      internalID: -4435420479391560189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 37
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16235cc6f81c574d0800000000000000
+      internalID: -3137388743644335519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 37
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170641392c31d34e0800000000000000
+      internalID: -2000420933070462863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 37
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610499a971ed33740800000000000000
+      internalID: 5130688593464475670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 37
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f36084b647e7b40800000000000000
+      internalID: 5439913404028829496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 37
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcbff8b5519bc570800000000000000
+      internalID: 8488037720071847161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 37
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2838c49d65bda40800000000000000
+      internalID: 5394000469997879973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 37
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f0756884c4f1bd80800000000000000
+      internalID: -8236533118544809740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 37
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761801548a93bd4a0800000000000000
+      internalID: -6567592236713737881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_9
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 37
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0f5083e5c1eee4b0800000000000000
+      internalID: -5409137862383739122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 37
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed9d4a7874a90970800000000000000
+      internalID: 8721682990734613999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_11
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 37
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8cae9684a2c40bd0800000000000000
+      internalID: -2664791067607520114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_12
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 37
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb313697ccdc9010800000000000000
+      internalID: 1197074350750120889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_13
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 37
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59928079faecdcdf0800000000000000
+      internalID: -158243158339606123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_14
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 37
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a4c5511b7538c10800000000000000
+      internalID: 2054582273090275945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_15
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 37
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df10add925a3ceab0800000000000000
+      internalID: -4977539361641201155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_16
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 37
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a854d7627909b9f40800000000000000
+      internalID: 5736337529246664074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 37
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284b7d3b0bd688e90800000000000000
+      internalID: -7023243013185358718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 37
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cf0820d5f909ca0800000000000000
+      internalID: -6012130280716829583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_19
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 37
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae4b73d1574586a0800000000000000
+      internalID: -6447668874745000274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_20
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 37
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a94fe7f6474caf60800000000000000
+      internalID: 8046885004337170857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_21
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 37
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34cb39a0718eebff0800000000000000
+      internalID: -18322162803557309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_22
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 37
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2250cb70c76b95210800000000000000
+      internalID: 1322288609431913762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_23
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 37
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eeeea66a919e9150800000000000000
+      internalID: 5881298255726178022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_24
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 37
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a68c792f3046ac0800000000000000
+      internalID: -3862958239913579903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_25
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 37
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fef391d64415d410800000000000000
+      internalID: 1501128345194331897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_26
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 37
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af29f0d9f18507b00800000000000000
+      internalID: 824255624611074810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_27
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 37
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322fc17432ffe9be0800000000000000
+      internalID: -1468455901494185437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_28
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 37
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc649574e2a3cc90800000000000000
+      internalID: -7150692681225310977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_29
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 37
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9fed35bf8ca0fa0800000000000000
+      internalID: -5833629385535587875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_30
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 37
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c269553f0b122c0800000000000000
+      internalID: -4458087596960633789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_31
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 37
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087b170d4abb8e230800000000000000
+      internalID: 3668388213039413120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_32
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac825f837b773410800000000000000
+      internalID: 1456768740733652133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_33
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 6
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d7d017ac41ceb70800000000000000
+      internalID: 8929535020881509639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_34
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 5
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3b0f07c861abe30800000000000000
+      internalID: 4519949968465769439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_35
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 6
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80aea822d95a76a40800000000000000
+      internalID: 5361435975715842568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_36
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 5
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159f87e3467636f30800000000000000
+      internalID: 4567608127326320977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_37
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 6
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 342174e9557e0b7a0800000000000000
+      internalID: -6363331918560816573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_38
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5802edcb1262b450800000000000000
+      internalID: 6103048316598224987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_39
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 6
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb72f809cb095c30800000000000000
+      internalID: 4348519873269365741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_40
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6820f05c928ff1660800000000000000
+      internalID: 7358873174430122630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_41
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a950b17612cf7b5b0800000000000000
+      internalID: -5352532411712600678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_42
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca44c9c5ce816e90800000000000000
+      internalID: -7034184162831217979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_43
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981be8e42916a5fa0800000000000000
+      internalID: -5811225088157109879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_44
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4542d97cded8c3e0800000000000000
+      internalID: -2033130193239784116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_45
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 7
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb77c0ef004abe6d0800000000000000
+      internalID: -2960092005896783940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_46
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c06575697d1110e0800000000000000
+      internalID: -2301025527379173177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_47
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 6
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ec565fa7feb9510800000000000000
+      internalID: 1557101407568776756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_48
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 5
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d3570253da8e230800000000000000
+      internalID: 3668372340182695303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_49
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 6
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf234a8a590247560800000000000000
+      internalID: 7310503922280706811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_50
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 5
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a9b7039b762cc90800000000000000
+      internalID: -7151039213230908902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_51
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 6
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6526fa2d5bb7219a0800000000000000
+      internalID: -6263808110864932266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_52
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 381d004abad29ec40800000000000000
+      internalID: 5542011031670280579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_53
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 7
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5a7865a877970e0800000000000000
+      internalID: -2271653100990781992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_54
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1808a8e414136c250800000000000000
+      internalID: 5964508913059135617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_55
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 6
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2892355b8971bc0800000000000000
+      internalID: -3812410654994103611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_56
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11e5d1f310e5577d0800000000000000
+      internalID: -2921325423833031151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_57
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cbf3a2891e80f40800000000000000
+      internalID: 5695049772470090803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_58
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 5
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c40cd29c9afa560800000000000000
+      internalID: 7327261800276184093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_59
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1516dbe550635ace0800000000000000
+      internalID: -1394649112909094575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_60
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 5
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205c2de755900cde0800000000000000
+      internalID: -1315040828387572478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_61
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 6
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2f16a92ba5ef1e0800000000000000
+      internalID: -2162191047950470442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_62
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 5
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e14d5ab03723450800000000000000
+      internalID: 6067038141885455933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldenRetriever_spritesheet_free_63
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 6
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cb9eb0a8f3fb6e0800000000000000
+      internalID: -1819665862296486759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GoldenRetriever_spritesheet_free_0: -4435420479391560189
+      GoldenRetriever_spritesheet_free_1: -3137388743644335519
+      GoldenRetriever_spritesheet_free_10: 8721682990734613999
+      GoldenRetriever_spritesheet_free_11: -2664791067607520114
+      GoldenRetriever_spritesheet_free_12: 1197074350750120889
+      GoldenRetriever_spritesheet_free_13: -158243158339606123
+      GoldenRetriever_spritesheet_free_14: 2054582273090275945
+      GoldenRetriever_spritesheet_free_15: -4977539361641201155
+      GoldenRetriever_spritesheet_free_16: 5736337529246664074
+      GoldenRetriever_spritesheet_free_17: -7023243013185358718
+      GoldenRetriever_spritesheet_free_18: -6012130280716829583
+      GoldenRetriever_spritesheet_free_19: -6447668874745000274
+      GoldenRetriever_spritesheet_free_2: -2000420933070462863
+      GoldenRetriever_spritesheet_free_20: 8046885004337170857
+      GoldenRetriever_spritesheet_free_21: -18322162803557309
+      GoldenRetriever_spritesheet_free_22: 1322288609431913762
+      GoldenRetriever_spritesheet_free_23: 5881298255726178022
+      GoldenRetriever_spritesheet_free_24: -3862958239913579903
+      GoldenRetriever_spritesheet_free_25: 1501128345194331897
+      GoldenRetriever_spritesheet_free_26: 824255624611074810
+      GoldenRetriever_spritesheet_free_27: -1468455901494185437
+      GoldenRetriever_spritesheet_free_28: -7150692681225310977
+      GoldenRetriever_spritesheet_free_29: -5833629385535587875
+      GoldenRetriever_spritesheet_free_3: 5130688593464475670
+      GoldenRetriever_spritesheet_free_30: -4458087596960633789
+      GoldenRetriever_spritesheet_free_31: 3668388213039413120
+      GoldenRetriever_spritesheet_free_32: 1456768740733652133
+      GoldenRetriever_spritesheet_free_33: 8929535020881509639
+      GoldenRetriever_spritesheet_free_34: 4519949968465769439
+      GoldenRetriever_spritesheet_free_35: 5361435975715842568
+      GoldenRetriever_spritesheet_free_36: 4567608127326320977
+      GoldenRetriever_spritesheet_free_37: -6363331918560816573
+      GoldenRetriever_spritesheet_free_38: 6103048316598224987
+      GoldenRetriever_spritesheet_free_39: 4348519873269365741
+      GoldenRetriever_spritesheet_free_4: 5439913404028829496
+      GoldenRetriever_spritesheet_free_40: 7358873174430122630
+      GoldenRetriever_spritesheet_free_41: -5352532411712600678
+      GoldenRetriever_spritesheet_free_42: -7034184162831217979
+      GoldenRetriever_spritesheet_free_43: -5811225088157109879
+      GoldenRetriever_spritesheet_free_44: -2033130193239784116
+      GoldenRetriever_spritesheet_free_45: -2960092005896783940
+      GoldenRetriever_spritesheet_free_46: -2301025527379173177
+      GoldenRetriever_spritesheet_free_47: 1557101407568776756
+      GoldenRetriever_spritesheet_free_48: 3668372340182695303
+      GoldenRetriever_spritesheet_free_49: 7310503922280706811
+      GoldenRetriever_spritesheet_free_5: 8488037720071847161
+      GoldenRetriever_spritesheet_free_50: -7151039213230908902
+      GoldenRetriever_spritesheet_free_51: -6263808110864932266
+      GoldenRetriever_spritesheet_free_52: 5542011031670280579
+      GoldenRetriever_spritesheet_free_53: -2271653100990781992
+      GoldenRetriever_spritesheet_free_54: 5964508913059135617
+      GoldenRetriever_spritesheet_free_55: -3812410654994103611
+      GoldenRetriever_spritesheet_free_56: -2921325423833031151
+      GoldenRetriever_spritesheet_free_57: 5695049772470090803
+      GoldenRetriever_spritesheet_free_58: 7327261800276184093
+      GoldenRetriever_spritesheet_free_59: -1394649112909094575
+      GoldenRetriever_spritesheet_free_6: 5394000469997879973
+      GoldenRetriever_spritesheet_free_60: -1315040828387572478
+      GoldenRetriever_spritesheet_free_61: -2162191047950470442
+      GoldenRetriever_spritesheet_free_62: 6067038141885455933
+      GoldenRetriever_spritesheet_free_63: -1819665862296486759
+      GoldenRetriever_spritesheet_free_7: -8236533118544809740
+      GoldenRetriever_spritesheet_free_8: -6567592236713737881
+      GoldenRetriever_spritesheet_free_9: -5409137862383739122
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
