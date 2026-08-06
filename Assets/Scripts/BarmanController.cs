@@ -82,7 +82,7 @@ public sealed class BarmanController : MonoBehaviour, IBeverageCarrier
 
     private void Update()
     {
-        if (fridgeMenuOpen)
+        if (GameManager.IsGameplayInputBlocked || fridgeMenuOpen)
         {
             movement = Vector2.zero;
             dogSpriteAnimator?.SetMovement(Vector2.zero);
@@ -231,7 +231,9 @@ public sealed class BarmanController : MonoBehaviour, IBeverageCarrier
 
     private void FixedUpdate()
     {
-        body.linearVelocity = movement * moveSpeed;
+        body.linearVelocity = GameManager.IsGameplayInputBlocked
+            ? Vector2.zero
+            : movement * moveSpeed;
     }
 
     public void SetFacing(FaceDirection direction)

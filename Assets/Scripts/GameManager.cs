@@ -12,20 +12,39 @@ public class GameManager : MonoBehaviour
 
     private bool isGameActive;
     private float currentTime;
+    private int gameStartedFrame = -1;
+
+    private static GameManager instance;
+
+    public static bool IsGameplayInputBlocked =>
+        instance != null && instance.IsStartInputBlocked();
 
     private void Awake()
     {
+        instance = this;
         isGameActive = false;
     }
 
     private void Start()
     {
         currentTime = startTime;
+
+        if (startPanel != null)
+            startPanel.SetActive(true);
+
         UpdateTimerUI();
     }
 
     private void Update()
     {
+        if (startPanel != null && startPanel.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+                StartGame();
+
+            return;
+        }
+
         if (!isGameActive)
             return;
 
@@ -46,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         currentTime = startTime;
         isGameActive = true;
+        gameStartedFrame = Time.frameCount;
 
         if (startPanel != null)
             startPanel.SetActive(false);
@@ -56,6 +76,18 @@ public class GameManager : MonoBehaviour
     public bool IsGameActive()
     {
         return isGameActive;
+    }
+
+    private bool IsStartInputBlocked()
+    {
+        bool startMenuVisible = startPanel != null && startPanel.activeInHierarchy;
+        return startMenuVisible || Time.frameCount == gameStartedFrame;
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+            instance = null;
     }
 
     private void UpdateTimerUI()

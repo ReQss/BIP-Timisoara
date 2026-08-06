@@ -22,7 +22,7 @@ public class CatActions : MonoBehaviour, IBeverageCarrier
 
     void Update()
     {
-        if (fridgeMenuOpen)
+        if (GameManager.IsGameplayInputBlocked || fridgeMenuOpen)
         {
             return;
         }

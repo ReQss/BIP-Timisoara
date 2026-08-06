@@ -32,7 +32,8 @@ public sealed class BeverageFridge : MonoBehaviour
 
     public void ShowDrinkSelection(IBeverageCarrier carrier)
     {
-        if (carrier == null || beverages == null || beverages.Length == 0)
+        if (GameManager.IsGameplayInputBlocked ||
+            carrier == null || beverages == null || beverages.Length == 0)
         {
             return;
         }
@@ -117,6 +118,11 @@ public sealed class BeverageFridge : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.IsGameplayInputBlocked)
+        {
+            return;
+        }
+
         for (int i = sessions.Count - 1; i >= 0; i--)
         {
             UpdateSession(sessions[i]);

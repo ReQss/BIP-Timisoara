@@ -21,13 +21,10 @@ public class CatMovement : MonoBehaviour
 
     private void Update()
     {
-        if (catActions != null && catActions.IsFridgeMenuOpen)
+        if (GameManager.IsGameplayInputBlocked ||
+            (catActions != null && catActions.IsFridgeMenuOpen))
         {
-            input = Vector2.zero;
-            if (animator != null && animator.isActiveAndEnabled)
-            {
-                animator.SetFloat("speed", 0f);
-            }
+            StopMovement();
             return;
         }
 
@@ -73,6 +70,18 @@ public class CatMovement : MonoBehaviour
         {
             dogSpriteAnimator.SetMovement(input);
         }
+    }
+
+    private void StopMovement()
+    {
+        input = Vector2.zero;
+
+        if (animator != null && animator.isActiveAndEnabled)
+        {
+            animator.SetFloat("speed", 0f);
+        }
+
+        dogSpriteAnimator?.SetMovement(Vector2.zero);
     }
 
     private static float ReadAxis(Keyboard keyboard, Key negative, Key positive)

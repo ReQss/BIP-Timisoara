@@ -24,6 +24,11 @@ public class UIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.IsGameplayInputBlocked)
+        {
+            return;
+        }
+
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
