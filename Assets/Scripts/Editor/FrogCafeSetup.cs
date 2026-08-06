@@ -1,133 +1,130 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
-[InitializeOnLoad]
 public static class FrogCafeSetup
 {
-    private const string FrogFolder = "Assets/Assets/Sprites/Casual Frog Traveler";
+    private const string CharacterSheet = "Assets/Assets/Sprites/8Direction_TopDown_Character Sprites_ByBossNelNel/SpriteSheet.png";
+    private const string BeverageFolder = "Assets/Assets/Sprites/PixelBeveragesAndDrink16x16/Items";
     private const string PrefabPath = "Assets/Prefabs/Frog Customer.prefab";
-    private const string ScenePath = "Assets/Scenes/SampleScene.unity";
+    private const string ScenePath = "Assets/Scenes/The cafe.unity";
     private const string SystemName = "Cafe Customer System";
 
-    static FrogCafeSetup()
-    {
-        EditorApplication.delayCall += SetupIfNeeded;
-    }
-
-    [MenuItem("Tools/Cat Cafe/Setup Frog Customers")]
+    [MenuItem("Tools/Cat Cafe/Setup Traveller Customers")]
     public static void Setup()
     {
         if (EditorApplication.isPlayingOrWillChangePlaymode)
         {
-            Debug.LogWarning("Stop Play Mode before setting up frog customers.");
+            Debug.LogWarning("Stop Play Mode before setting up cafe customers.");
             return;
         }
 
-        Sprite[][] frames = LoadAndConfigureFrames();
-        FrogCustomer prefab = CreateCustomerPrefab(frames);
-        AddSystemToScene(prefab);
+        Sprite[][] directions = LoadCharacterDirections();
+        BeverageDefinition[] beverages = LoadBeverages();
+        FrogCustomer prefab = CreateCustomerPrefab(directions, beverages);
+        ConfigureCafeScene(prefab, beverages);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        Debug.Log("Frog cafe customers are ready. Move the entrance, seat, and toilet markers under 'Cafe Customer System' to match the furniture.");
+        Debug.Log("Traveller customers, eight table seats, beverage orders, order UI, and fridge are ready in The cafe scene.");
     }
 
-    private static void SetupIfNeeded()
+    private static Sprite[][] LoadCharacterDirections()
     {
-        if (EditorApplication.isPlayingOrWillChangePlaymode || AssetDatabase.IsAssetImportWorkerProcess())
-        {
-            return;
-        }
-
-        if (AssetDatabase.LoadAssetAtPath<GameObject>(PrefabPath) == null &&
-            AssetDatabase.IsValidFolder(FrogFolder))
-        {
-            Setup();
-        }
-    }
-
-    private static Sprite[][] LoadAndConfigureFrames()
-    {
-        string[] folders =
-        {
-            "Idle Sprites/Front Idle", "Idle Sprites/Back Idle", "Idle Sprites/Left Idle", "Idle Sprites/Right Idle",
-            "Run Sprites/Front Sprites", "Run Sprites/Back Sprites", "Run Sprites/Left Sprites", "Run Sprites/Right Sprites"
-        };
-
-        Sprite[][] result = new Sprite[folders.Length][];
-        for (int i = 0; i < folders.Length; i++)
-        {
-            string path = FrogFolder + "/" + folders[i];
-            string[] texturePaths = AssetDatabase.FindAssets("t:Texture2D", new[] { path })
-                .Select(AssetDatabase.GUIDToAssetPath)
-                .OrderBy(assetPath => assetPath, StringComparer.Ordinal)
-                .ToArray();
-
-            if (texturePaths.Length == 0)
-            {
-                throw new InvalidOperationException("No frog frames found in " + path);
-            }
-
-            result[i] = texturePaths.Select(LoadFrame).ToArray();
-        }
-
-        return result;
-    }
-
-    private static Sprite LoadFrame(string path)
-    {
-        TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+        TextureImporter importer = AssetImporter.GetAtPath(CharacterSheet) as TextureImporter;
         if (importer == null)
         {
-            throw new InvalidOperationException("Could not import frog frame " + path);
+            throw new InvalidOperationException("Missing traveller sprite sheet: " + CharacterSheet);
         }
 
-        TextureImporterSettings settings = new TextureImporterSettings();
-        importer.ReadTextureSettings(settings);
-        bool pivotChanged = settings.spriteAlignment != (int)SpriteAlignment.Custom ||
-                            settings.spritePivot != new Vector2(0.5f, 0f);
-        bool changed = importer.spritePixelsPerUnit != 64f || importer.filterMode != FilterMode.Point ||
-                       importer.textureCompression != TextureImporterCompression.Uncompressed || importer.mipmapEnabled ||
-                       importer.spriteImportMode != SpriteImportMode.Single || pivotChanged;
         importer.textureType = TextureImporterType.Sprite;
-        importer.spriteImportMode = SpriteImportMode.Single;
-        importer.spritePixelsPerUnit = 64f;
+        importer.spriteImportMode = SpriteImportMode.Multiple;
+        importer.spritePixelsPerUnit = 32f;
         importer.filterMode = FilterMode.Point;
         importer.textureCompression = TextureImporterCompression.Uncompressed;
         importer.mipmapEnabled = false;
-        settings.spriteAlignment = (int)SpriteAlignment.Custom;
-        settings.spritePivot = new Vector2(0.5f, 0f);
-        importer.SetTextureSettings(settings);
-        if (changed)
+        importer.SaveAndReimport();
+
+        Sprite[] sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath(CharacterSheet)
+            .OfType<Sprite>()
+            .OrderByDescending(sprite => sprite.rect.y)
+            .ThenBy(sprite => sprite.rect.x)
+            .ToArray();
+        if (sprites.Length < 72)
         {
-            importer.SaveAndReimport();
+            throw new InvalidOperationException("Expected at least 72 frames in the traveller sprite sheet, found " + sprites.Length + ".");
         }
 
-        Sprite sprite = AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().FirstOrDefault();
-        if (sprite == null)
+        // Rows are authored clockwise: south, south-east, east, north-east,
+        // north, north-west, west, south-west. Column zero is idle.
+        Sprite[][] rows = new Sprite[8][];
+        for (int row = 0; row < rows.Length; row++)
         {
-            throw new InvalidOperationException("Could not load frog sprite from " + path);
+            rows[row] = sprites.Skip(row * 9).Take(9).ToArray();
         }
 
-        return sprite;
+        return rows;
     }
 
-    private static FrogCustomer CreateCustomerPrefab(Sprite[][] frames)
+    private static BeverageDefinition[] LoadBeverages()
     {
-        GameObject root = new GameObject("Frog Customer");
+        string[] names =
+        {
+            "Coffee", "Tea", "Cocoa", "Latte", "Espresso",
+            "Iced Coffee", "Milk Tea", "Green Tea", "Berry Tea", "Lemon Tea",
+            "Cola", "Orange Soda", "Lemon Soda", "Grape Soda", "Sparkling Water",
+            "Orange Juice", "Apple Juice", "Berry Juice", "Lemonade", "Fruit Punch"
+        };
+
+        BeverageDefinition[] result = new BeverageDefinition[names.Length];
+        for (int i = 0; i < names.Length; i++)
+        {
+            result[i] = LoadBeverage((BeverageType)(i + 1), names[i], i + 1);
+        }
+        return result;
+    }
+
+    private static BeverageDefinition LoadBeverage(BeverageType type, string name, int itemNumber)
+    {
+        string path = BeverageFolder + "/Item" + itemNumber + ".png";
+        TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+        if (importer == null)
+        {
+            throw new InvalidOperationException("Missing beverage sprite: " + path);
+        }
+
+        importer.textureType = TextureImporterType.Sprite;
+        importer.spritePixelsPerUnit = 16f;
+        importer.filterMode = FilterMode.Point;
+        importer.textureCompression = TextureImporterCompression.Uncompressed;
+        importer.mipmapEnabled = false;
+        importer.SaveAndReimport();
+        Sprite icon = AssetDatabase.LoadAllAssetsAtPath(path).OfType<Sprite>().FirstOrDefault();
+        return new BeverageDefinition { type = type, displayName = name, icon = icon };
+    }
+
+    private static FrogCustomer CreateCustomerPrefab(Sprite[][] rows, BeverageDefinition[] beverages)
+    {
+        GameObject root = new GameObject("Traveller Customer");
         try
         {
             SpriteRenderer renderer = root.AddComponent<SpriteRenderer>();
-            renderer.sprite = frames[0][0];
+            renderer.sprite = rows[0][0];
             renderer.sortingOrder = 1000;
-
             FrogCustomer customer = root.AddComponent<FrogCustomer>();
+
+            Sprite[] Idle(int row) => new[] { rows[row][0] };
+            Sprite[] Walk(int row) => rows[row].Skip(1).Take(8).ToArray();
             customer.ConfigureAnimationFrames(
-                frames[0], frames[1], frames[2], frames[3],
-                frames[4], frames[5], frames[6], frames[7]);
+                Idle(0), Idle(4), Idle(6), Idle(2),
+                Walk(0), Walk(4), Walk(6), Walk(2),
+                Idle(1), Idle(3), Idle(7), Idle(5),
+                Walk(1), Walk(3), Walk(7), Walk(5));
+            customer.ConfigureBeverages(beverages);
 
             GameObject prefab = PrefabUtility.SaveAsPrefabAsset(root, PrefabPath);
             return prefab.GetComponent<FrogCustomer>();
@@ -138,44 +135,147 @@ public static class FrogCafeSetup
         }
     }
 
-    private static void AddSystemToScene(FrogCustomer prefab)
+    private static void ConfigureCafeScene(FrogCustomer prefab, BeverageDefinition[] beverages)
     {
         Scene scene = SceneManager.GetSceneByPath(ScenePath);
         if (!scene.IsValid() || !scene.isLoaded)
         {
-            scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Additive);
+            scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
         }
 
         GameObject existing = scene.GetRootGameObjects().FirstOrDefault(root => root.name == SystemName);
         if (existing != null)
         {
-            CafeCustomerDirector currentDirector = existing.GetComponent<CafeCustomerDirector>();
-            if (currentDirector != null)
-            {
-                EditorUtility.SetDirty(currentDirector);
-            }
-            return;
+            UnityEngine.Object.DestroyImmediate(existing);
         }
 
         GameObject system = new GameObject(SystemName);
         SceneManager.MoveGameObjectToScene(system, scene);
         CafeCustomerDirector director = system.AddComponent<CafeCustomerDirector>();
 
-        Transform entrance = CreateMarker(system.transform, "Entrance", new Vector3(-5.2f, -2.4f, 0f));
-        Transform exit = CreateMarker(system.transform, "Exit", new Vector3(-5.8f, -2.4f, 0f));
-        CafeDestination[] seats =
-        {
-            CreateDestination(system.transform, "Seat 1", new Vector3(-2.8f, -0.4f, 0f), CafeDestination.DestinationKind.Seat),
-            CreateDestination(system.transform, "Seat 2", new Vector3(0.2f, -0.4f, 0f), CafeDestination.DestinationKind.Seat),
-            CreateDestination(system.transform, "Seat 3", new Vector3(2.4f, 1.2f, 0f), CafeDestination.DestinationKind.Seat)
-        };
-        CafeDestination toilet = CreateDestination(
-            system.transform, "Toilet", new Vector3(3.8f, 2.8f, 0f), CafeDestination.DestinationKind.Toilet);
+        Tilemap insideTables = FindTilemap(scene, "Tables");
+        Tilemap outsideTables = FindTilemap(scene, "Outside tables");
+        List<Vector3> insideCenters = FindFurnitureCenters(insideTables, 5);
+        List<Vector3> outsideCenters = FindFurnitureCenters(outsideTables, 3);
+        List<Vector3> allCenters = insideCenters.Concat(outsideCenters).ToList();
 
+        Bounds cafeBounds = insideTables != null ? insideTables.localBounds : new Bounds(Vector3.zero, new Vector3(12f, 8f));
+        Vector3 entrancePosition = outsideCenters.Count > 0
+            ? outsideCenters.OrderBy(point => point.x).First() + new Vector3(-2f, -1.5f, 0f)
+            : new Vector3(-6f, -3f, 0f);
+        Transform entrance = CreateMarker(system.transform, "Entrance", entrancePosition);
+        Transform exit = CreateMarker(system.transform, "Exit", entrancePosition + new Vector3(-0.8f, 0f, 0f));
+
+        CafeDestination[] seats = new CafeDestination[8];
+        for (int i = 0; i < seats.Length; i++)
+        {
+            Vector3 table = i < allCenters.Count ? allCenters[i] : new Vector3(-3f + (i % 4) * 2f, -1f + (i / 4) * 3f, 0f);
+            Vector3 seatPosition = table + new Vector3(0f, -0.65f, 0f);
+            seats[i] = CreateDestination(system.transform, "Table Seat " + (i + 1), seatPosition, CafeDestination.DestinationKind.Seat, Vector2.up);
+        }
+
+        CafeDestination toilet = CreateDestination(
+            system.transform,
+            "Toilet",
+            new Vector3(cafeBounds.max.x - 0.5f, cafeBounds.max.y - 0.5f, 0f),
+            CafeDestination.DestinationKind.Toilet,
+            Vector2.down);
         director.Configure(prefab, entrance, exit, seats, toilet);
+
+        CreateFridge(scene, beverages);
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);
         Selection.activeGameObject = system;
+    }
+
+    private static void CreateFridge(Scene scene, BeverageDefinition[] beverages)
+    {
+        GameObject oldFridge = scene.GetRootGameObjects().FirstOrDefault(root => root.name == "Beverage Fridge");
+        if (oldFridge != null)
+        {
+            UnityEngine.Object.DestroyImmediate(oldFridge);
+        }
+
+        GameObject fridge = new GameObject("Beverage Fridge");
+        SceneManager.MoveGameObjectToScene(fridge, scene);
+        Tile tallCupboard = AssetDatabase.LoadAssetAtPath<Tile>("Assets/TallCupboard.asset");
+        SpriteRenderer renderer = fridge.AddComponent<SpriteRenderer>();
+        renderer.sprite = tallCupboard != null ? tallCupboard.sprite : beverages[0].icon;
+        renderer.color = new Color(0.65f, 0.88f, 1f);
+        renderer.sortingOrder = 20;
+        BeverageFridge component = fridge.AddComponent<BeverageFridge>();
+        component.Configure(beverages);
+
+        Tilemap kitchen = FindTilemap(scene, "Kitchen");
+        Bounds bounds = kitchen != null ? kitchen.localBounds : new Bounds(new Vector3(4f, 2f), new Vector3(4f, 4f));
+        Vector3 position = kitchen != null ? kitchen.transform.TransformPoint(bounds.center) : bounds.center;
+        fridge.transform.position = position + new Vector3(bounds.extents.x - 0.75f, 0f, 0f);
+    }
+
+    private static Tilemap FindTilemap(Scene scene, string objectName)
+    {
+        return scene.GetRootGameObjects()
+            .SelectMany(root => root.GetComponentsInChildren<Tilemap>(true))
+            .FirstOrDefault(tilemap => string.Equals(tilemap.name, objectName, StringComparison.OrdinalIgnoreCase));
+    }
+
+    private static List<Vector3> FindFurnitureCenters(Tilemap tilemap, int wantedCount)
+    {
+        if (tilemap == null)
+        {
+            return new List<Vector3>();
+        }
+
+        HashSet<Vector3Int> occupied = new HashSet<Vector3Int>();
+        foreach (Vector3Int position in tilemap.cellBounds.allPositionsWithin)
+        {
+            if (tilemap.HasTile(position))
+            {
+                occupied.Add(position);
+            }
+        }
+
+        List<List<Vector3Int>> clusters = new List<List<Vector3Int>>();
+        while (occupied.Count > 0)
+        {
+            Vector3Int start = occupied.First();
+            occupied.Remove(start);
+            Queue<Vector3Int> pending = new Queue<Vector3Int>();
+            pending.Enqueue(start);
+            List<Vector3Int> cluster = new List<Vector3Int>();
+            while (pending.Count > 0)
+            {
+                Vector3Int current = pending.Dequeue();
+                cluster.Add(current);
+                for (int y = -1; y <= 1; y++)
+                {
+                    for (int x = -1; x <= 1; x++)
+                    {
+                        Vector3Int neighbour = current + new Vector3Int(x, y, 0);
+                        if (occupied.Remove(neighbour))
+                        {
+                            pending.Enqueue(neighbour);
+                        }
+                    }
+                }
+            }
+            clusters.Add(cluster);
+        }
+
+        return clusters.OrderByDescending(cluster => cluster.Count)
+            .Take(wantedCount)
+            .Select(cluster =>
+            {
+                Vector3 total = Vector3.zero;
+                foreach (Vector3Int cell in cluster)
+                {
+                    total += tilemap.GetCellCenterWorld(cell);
+                }
+                return total / cluster.Count;
+            })
+            .OrderBy(point => point.y)
+            .ThenBy(point => point.x)
+            .ToList();
     }
 
     private static Transform CreateMarker(Transform parent, string name, Vector3 position)
@@ -187,11 +287,11 @@ public static class FrogCafeSetup
     }
 
     private static CafeDestination CreateDestination(
-        Transform parent, string name, Vector3 position, CafeDestination.DestinationKind kind)
+        Transform parent, string name, Vector3 position, CafeDestination.DestinationKind kind, Vector2 facing)
     {
         Transform marker = CreateMarker(parent, name, position);
         CafeDestination destination = marker.gameObject.AddComponent<CafeDestination>();
-        destination.Configure(kind);
+        destination.Configure(kind, facing);
         return destination;
     }
 }

@@ -1,0 +1,3341 @@
+fileFormatVersion: 2
+guid: 8878498d3b595b9edb76dd3830b51344
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 332810582350079539
+    second: PixelDrinkandBeveragesFullSheet_0
+  - first:
+      213: 4701241358818728119
+    second: PixelDrinkandBeveragesFullSheet_1
+  - first:
+      213: 887028422463841917
+    second: PixelDrinkandBeveragesFullSheet_2
+  - first:
+      213: -1779521900308406600
+    second: PixelDrinkandBeveragesFullSheet_3
+  - first:
+      213: -3974231688712572221
+    second: PixelDrinkandBeveragesFullSheet_4
+  - first:
+      213: -6049959146243953834
+    second: PixelDrinkandBeveragesFullSheet_5
+  - first:
+      213: -4092849692380274441
+    second: PixelDrinkandBeveragesFullSheet_6
+  - first:
+      213: 7126603249816062901
+    second: PixelDrinkandBeveragesFullSheet_7
+  - first:
+      213: -6304021199375924911
+    second: PixelDrinkandBeveragesFullSheet_8
+  - first:
+      213: -5173023576943881172
+    second: PixelDrinkandBeveragesFullSheet_9
+  - first:
+      213: 3489450231018239489
+    second: PixelDrinkandBeveragesFullSheet_10
+  - first:
+      213: -3694732497505261439
+    second: PixelDrinkandBeveragesFullSheet_11
+  - first:
+      213: 5413434586934246223
+    second: PixelDrinkandBeveragesFullSheet_12
+  - first:
+      213: -278120155933701819
+    second: PixelDrinkandBeveragesFullSheet_13
+  - first:
+      213: -3258466479306091435
+    second: PixelDrinkandBeveragesFullSheet_14
+  - first:
+      213: 2271008751625977642
+    second: PixelDrinkandBeveragesFullSheet_15
+  - first:
+      213: 4368495686932219522
+    second: PixelDrinkandBeveragesFullSheet_16
+  - first:
+      213: -8378507080822256720
+    second: PixelDrinkandBeveragesFullSheet_17
+  - first:
+      213: -6288049649874311901
+    second: PixelDrinkandBeveragesFullSheet_18
+  - first:
+      213: 5414244911634751964
+    second: PixelDrinkandBeveragesFullSheet_19
+  - first:
+      213: -1801734172669789967
+    second: PixelDrinkandBeveragesFullSheet_20
+  - first:
+      213: -6586680772196466632
+    second: PixelDrinkandBeveragesFullSheet_21
+  - first:
+      213: -3682052487237057693
+    second: PixelDrinkandBeveragesFullSheet_22
+  - first:
+      213: 1256033285926974357
+    second: PixelDrinkandBeveragesFullSheet_23
+  - first:
+      213: 3339027420193653301
+    second: PixelDrinkandBeveragesFullSheet_24
+  - first:
+      213: 6798664194967623624
+    second: PixelDrinkandBeveragesFullSheet_25
+  - first:
+      213: -2705286268073571217
+    second: PixelDrinkandBeveragesFullSheet_26
+  - first:
+      213: 4444325308123935296
+    second: PixelDrinkandBeveragesFullSheet_27
+  - first:
+      213: -8367061550577867828
+    second: PixelDrinkandBeveragesFullSheet_28
+  - first:
+      213: -3456351980243815766
+    second: PixelDrinkandBeveragesFullSheet_29
+  - first:
+      213: -1964129073979226614
+    second: PixelDrinkandBeveragesFullSheet_30
+  - first:
+      213: 1131289390557106405
+    second: PixelDrinkandBeveragesFullSheet_31
+  - first:
+      213: -9221549209284794954
+    second: PixelDrinkandBeveragesFullSheet_32
+  - first:
+      213: -3242064857939257784
+    second: PixelDrinkandBeveragesFullSheet_33
+  - first:
+      213: 2020191203186626905
+    second: PixelDrinkandBeveragesFullSheet_34
+  - first:
+      213: 8021980213052688325
+    second: PixelDrinkandBeveragesFullSheet_35
+  - first:
+      213: 6619913529037765743
+    second: PixelDrinkandBeveragesFullSheet_36
+  - first:
+      213: 574142330591594769
+    second: PixelDrinkandBeveragesFullSheet_37
+  - first:
+      213: -4394330674849007772
+    second: PixelDrinkandBeveragesFullSheet_38
+  - first:
+      213: 811718071888082227
+    second: PixelDrinkandBeveragesFullSheet_39
+  - first:
+      213: 8549032211216189689
+    second: PixelDrinkandBeveragesFullSheet_40
+  - first:
+      213: 1854314803675966685
+    second: PixelDrinkandBeveragesFullSheet_41
+  - first:
+      213: 2630103721222978526
+    second: PixelDrinkandBeveragesFullSheet_42
+  - first:
+      213: -5320261238148721838
+    second: PixelDrinkandBeveragesFullSheet_43
+  - first:
+      213: 4461476863791512975
+    second: PixelDrinkandBeveragesFullSheet_44
+  - first:
+      213: 458084680145171132
+    second: PixelDrinkandBeveragesFullSheet_45
+  - first:
+      213: 88696592789824779
+    second: PixelDrinkandBeveragesFullSheet_46
+  - first:
+      213: 2780302418431509075
+    second: PixelDrinkandBeveragesFullSheet_47
+  - first:
+      213: 6753909241096668357
+    second: PixelDrinkandBeveragesFullSheet_48
+  - first:
+      213: 4749586600104228648
+    second: PixelDrinkandBeveragesFullSheet_49
+  - first:
+      213: -7323118345400355934
+    second: PixelDrinkandBeveragesFullSheet_50
+  - first:
+      213: 7641363057694296404
+    second: PixelDrinkandBeveragesFullSheet_51
+  - first:
+      213: -5068977388747325400
+    second: PixelDrinkandBeveragesFullSheet_52
+  - first:
+      213: -791508144502232483
+    second: PixelDrinkandBeveragesFullSheet_53
+  - first:
+      213: 6503985742618735497
+    second: PixelDrinkandBeveragesFullSheet_54
+  - first:
+      213: 6536945450885225394
+    second: PixelDrinkandBeveragesFullSheet_55
+  - first:
+      213: 3840211224020951980
+    second: PixelDrinkandBeveragesFullSheet_56
+  - first:
+      213: 1192052926434076762
+    second: PixelDrinkandBeveragesFullSheet_57
+  - first:
+      213: -6857066781877520164
+    second: PixelDrinkandBeveragesFullSheet_58
+  - first:
+      213: -1723267922601518535
+    second: PixelDrinkandBeveragesFullSheet_59
+  - first:
+      213: 3638029576129753731
+    second: PixelDrinkandBeveragesFullSheet_60
+  - first:
+      213: -8916556097664672388
+    second: PixelDrinkandBeveragesFullSheet_61
+  - first:
+      213: -9110817653916259841
+    second: PixelDrinkandBeveragesFullSheet_62
+  - first:
+      213: -1633195323219238997
+    second: PixelDrinkandBeveragesFullSheet_63
+  - first:
+      213: -4820191060914689055
+    second: PixelDrinkandBeveragesFullSheet_64
+  - first:
+      213: 4754933471031457926
+    second: PixelDrinkandBeveragesFullSheet_65
+  - first:
+      213: -69245417497252162
+    second: PixelDrinkandBeveragesFullSheet_66
+  - first:
+      213: -7372991776414924468
+    second: PixelDrinkandBeveragesFullSheet_67
+  - first:
+      213: 2068155465860546108
+    second: PixelDrinkandBeveragesFullSheet_68
+  - first:
+      213: -861565613442873
+    second: PixelDrinkandBeveragesFullSheet_69
+  - first:
+      213: -1514600972238794812
+    second: PixelDrinkandBeveragesFullSheet_70
+  - first:
+      213: 8375180780691706976
+    second: PixelDrinkandBeveragesFullSheet_71
+  - first:
+      213: 905278794145486302
+    second: PixelDrinkandBeveragesFullSheet_72
+  - first:
+      213: -5215229299030177397
+    second: PixelDrinkandBeveragesFullSheet_73
+  - first:
+      213: 5163291871006347484
+    second: PixelDrinkandBeveragesFullSheet_74
+  - first:
+      213: -4966941268174400408
+    second: PixelDrinkandBeveragesFullSheet_75
+  - first:
+      213: -6599357777494975158
+    second: PixelDrinkandBeveragesFullSheet_76
+  - first:
+      213: 1208384098711666851
+    second: PixelDrinkandBeveragesFullSheet_77
+  - first:
+      213: 8399998320106694180
+    second: PixelDrinkandBeveragesFullSheet_78
+  - first:
+      213: 5161851720187139463
+    second: PixelDrinkandBeveragesFullSheet_79
+  - first:
+      213: 6452202417172020028
+    second: PixelDrinkandBeveragesFullSheet_80
+  - first:
+      213: -4522813934054413351
+    second: PixelDrinkandBeveragesFullSheet_81
+  - first:
+      213: -6615599430006743159
+    second: PixelDrinkandBeveragesFullSheet_82
+  - first:
+      213: 6887443766836933519
+    second: PixelDrinkandBeveragesFullSheet_83
+  - first:
+      213: 7695328499801379631
+    second: PixelDrinkandBeveragesFullSheet_84
+  - first:
+      213: 8869997586060919662
+    second: PixelDrinkandBeveragesFullSheet_85
+  - first:
+      213: -4782069666845637484
+    second: PixelDrinkandBeveragesFullSheet_86
+  - first:
+      213: 6541577016733562572
+    second: PixelDrinkandBeveragesFullSheet_87
+  - first:
+      213: -1672869690773280382
+    second: PixelDrinkandBeveragesFullSheet_88
+  - first:
+      213: 5821492144155228403
+    second: PixelDrinkandBeveragesFullSheet_89
+  - first:
+      213: 2949946065514651814
+    second: PixelDrinkandBeveragesFullSheet_90
+  - first:
+      213: -7445246382764820834
+    second: PixelDrinkandBeveragesFullSheet_91
+  - first:
+      213: -7292397033690023634
+    second: PixelDrinkandBeveragesFullSheet_92
+  - first:
+      213: 3361360391370192128
+    second: PixelDrinkandBeveragesFullSheet_93
+  - first:
+      213: 8644175229104427502
+    second: PixelDrinkandBeveragesFullSheet_94
+  - first:
+      213: -3586077285962520155
+    second: PixelDrinkandBeveragesFullSheet_95
+  - first:
+      213: -5590312515934271065
+    second: PixelDrinkandBeveragesFullSheet_96
+  - first:
+      213: 1712527379621960914
+    second: PixelDrinkandBeveragesFullSheet_97
+  - first:
+      213: 9001745613147984226
+    second: PixelDrinkandBeveragesFullSheet_98
+  - first:
+      213: -2924661772886107623
+    second: PixelDrinkandBeveragesFullSheet_99
+  - first:
+      213: -3212189568380710267
+    second: PixelDrinkandBeveragesFullSheet_100
+  - first:
+      213: 2119432417363478160
+    second: PixelDrinkandBeveragesFullSheet_101
+  - first:
+      213: 2695615543422419802
+    second: PixelDrinkandBeveragesFullSheet_102
+  - first:
+      213: 2354812667194015047
+    second: PixelDrinkandBeveragesFullSheet_103
+  - first:
+      213: 7960558477596283108
+    second: PixelDrinkandBeveragesFullSheet_104
+  - first:
+      213: 1468922609527296298
+    second: PixelDrinkandBeveragesFullSheet_105
+  - first:
+      213: 3557310609385878054
+    second: PixelDrinkandBeveragesFullSheet_106
+  - first:
+      213: -6437599569951590397
+    second: PixelDrinkandBeveragesFullSheet_107
+  - first:
+      213: -1704173171256912286
+    second: PixelDrinkandBeveragesFullSheet_108
+  - first:
+      213: -5685746692126848963
+    second: PixelDrinkandBeveragesFullSheet_109
+  - first:
+      213: -2910539928860275123
+    second: PixelDrinkandBeveragesFullSheet_110
+  - first:
+      213: 2743768417668975306
+    second: PixelDrinkandBeveragesFullSheet_111
+  - first:
+      213: 8277057560141468662
+    second: PixelDrinkandBeveragesFullSheet_112
+  - first:
+      213: -727065897059957024
+    second: PixelDrinkandBeveragesFullSheet_113
+  - first:
+      213: -7465451496107386749
+    second: PixelDrinkandBeveragesFullSheet_114
+  - first:
+      213: -6675117510315877031
+    second: PixelDrinkandBeveragesFullSheet_115
+  - first:
+      213: 1888996993218321706
+    second: PixelDrinkandBeveragesFullSheet_116
+  - first:
+      213: -9169381655137784173
+    second: PixelDrinkandBeveragesFullSheet_117
+  - first:
+      213: -4194224069681591670
+    second: PixelDrinkandBeveragesFullSheet_118
+  - first:
+      213: 7370434042370209772
+    second: PixelDrinkandBeveragesFullSheet_119
+  - first:
+      213: 2844361972608062121
+    second: PixelDrinkandBeveragesFullSheet_120
+  - first:
+      213: 1875974206282880024
+    second: PixelDrinkandBeveragesFullSheet_121
+  - first:
+      213: 5092383818973075943
+    second: PixelDrinkandBeveragesFullSheet_122
+  - first:
+      213: 4011041065478977896
+    second: PixelDrinkandBeveragesFullSheet_123
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336a77a16716e9400800000000000000
+      internalID: 332810582350079539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 160
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8d3cb8b1a2e3140800000000000000
+      internalID: 4701241358818728119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76e1aa86ab5f4c00800000000000000
+      internalID: 887028422463841917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 161
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bed61e824edd47e0800000000000000
+      internalID: -1779521900308406600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 162
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2bf23e551b8d8c0800000000000000
+      internalID: -3974231688712572221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 160
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65be086e53a3a0ca0800000000000000
+      internalID: -6049959146243953834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 160
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f06b9eb3e64337c0800000000000000
+      internalID: -4092849692380274441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 160
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb4e68b5e7c6e260800000000000000
+      internalID: 7126603249816062901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 160
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1518aaa8e1e9388a0800000000000000
+      internalID: -6304021199375924911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 160
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c241a81f67ab538b0800000000000000
+      internalID: -5173023576943881172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_10
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 161
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1063f394f740d6030800000000000000
+      internalID: 3489450231018239489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 161
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1886b1a7e5ca9bcc0800000000000000
+      internalID: -3694732497505261439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 161
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b77014312602b40800000000000000
+      internalID: 5413434586934246223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 145
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54902b4113be32cf0800000000000000
+      internalID: -278120155933701819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 144
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554517c400a97c2d0800000000000000
+      internalID: -3258466479306091435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f38726d6e348f10800000000000000
+      internalID: 2271008751625977642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 145
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286cb669ea300ac30800000000000000
+      internalID: 4368495686932219522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 145
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb8e73833099bb80800000000000000
+      internalID: -8378507080822256720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325e831b82c5cb8a0800000000000000
+      internalID: -6288049649874311901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 144
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1a4fcaf03432b40800000000000000
+      internalID: 5414244911634751964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_20
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 144
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8b552e054fef6e0800000000000000
+      internalID: -1801734172669789967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_21
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 144
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83085544cb86794a0800000000000000
+      internalID: -6586680772196466632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 144
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36344ed65c8b6ecc0800000000000000
+      internalID: -3682052487237057693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_23
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 145
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5937eb96e935e6110800000000000000
+      internalID: 1256033285926974357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_24
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 145
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5328eeb6fbb965e20800000000000000
+      internalID: 3339027420193653301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_25
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 145
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c756308015b95e50800000000000000
+      internalID: 6798664194967623624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c8bbfe874e47ad0800000000000000
+      internalID: -2705286268073571217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 111
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0427109125a6dad30800000000000000
+      internalID: 4444325308123935296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_28
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc32affa9d932eb80800000000000000
+      internalID: -8367061550577867828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_29
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 111
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa279debf229800d0800000000000000
+      internalID: -3456351980243815766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_30
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06837c73030eb4e0800000000000000
+      internalID: -1964129073979226614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_31
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 111
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e01356f4b523bf00800000000000000
+      internalID: 1131289390557106405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_32
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5abcd1ad9760080800000000000000
+      internalID: -9221549209284794954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_33
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 111
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846d0cb503fd103d0800000000000000
+      internalID: -3242064857939257784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_34
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951de442239290c10800000000000000
+      internalID: 2020191203186626905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_35
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 111
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7c732608cc35f60800000000000000
+      internalID: 8021980213052688325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_36
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6c3916e748aedb50800000000000000
+      internalID: 6619913529037765743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_37
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 111
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1194d616863c7f700800000000000000
+      internalID: 574142330591594769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_38
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467b50c88833403c0800000000000000
+      internalID: -4394330674849007772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_39
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 111
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33577a4294dc34b00800000000000000
+      internalID: 811718071888082227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_40
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8c9ea508344a670800000000000000
+      internalID: 8549032211216189689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_41
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 111
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcaad64d79dbb910800000000000000
+      internalID: 1854314803675966685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_42
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edbbde94661008420800000000000000
+      internalID: 2630103721222978526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_43
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 111
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2539dd38792aa26b0800000000000000
+      internalID: -5320261238148721838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_44
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8dbae7d1995aed30800000000000000
+      internalID: 4461476863791512975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_45
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 111
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2f91de6917b5600800000000000000
+      internalID: 458084680145171132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_46
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 128
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05660ac41d1b3100800000000000000
+      internalID: 88696592789824779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_47
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 111
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35205c2a15e959620800000000000000
+      internalID: 2780302418431509075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_48
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c48bc8cba4babd50800000000000000
+      internalID: 6753909241096668357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_49
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 111
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827fa2139dbe9e140800000000000000
+      internalID: 4749586600104228648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_50
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 128
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3f3461aae0f5a90800000000000000
+      internalID: -7323118345400355934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_51
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 111
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45949ad17339b0a60800000000000000
+      internalID: 7641363057694296404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8208a39ebef57a9b0800000000000000
+      internalID: -5068977388747325400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_53
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 80
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5aad12498ff305f0800000000000000
+      internalID: -791508144502232483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_54
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983bef4c29cc24a50800000000000000
+      internalID: 6503985742618735497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_55
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb9e1cd045e7ba50800000000000000
+      internalID: 6536945450885225394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3ac3e03cb2b4530800000000000000
+      internalID: 3840211224020951980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_57
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58619122d50b8010800000000000000
+      internalID: 1192052926434076762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_58
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 96
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd83f09971ec6d0a0800000000000000
+      internalID: -6857066781877520164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_59
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 80
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ad28464f8b518e0800000000000000
+      internalID: -1723267922601518535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_60
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3823497df90ec7230800000000000000
+      internalID: 3638029576129753731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d9ada9877024480800000000000000
+      internalID: -8916556097664672388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_62
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9a6fc6d9fdf8180800000000000000
+      internalID: -9110817653916259841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_63
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf10bea189b559e0800000000000000
+      internalID: -1633195323219238997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_64
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ebaaa0c4cd3b1db0800000000000000
+      internalID: -4820191060914689055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_65
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688f1779ccaecf140800000000000000
+      internalID: 4754933471031457926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_66
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebea0cfd8adf90ff0800000000000000
+      internalID: -69245417497252162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_67
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4189ea0b0fdda990800000000000000
+      internalID: -7372991776414924468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_68
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 96
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e76ea407093bc10800000000000000
+      internalID: 2068155465860546108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_69
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 80
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8f8af1960fcfff0800000000000000
+      internalID: -861565613442873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_70
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 96
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfce31c07e0bfae0800000000000000
+      internalID: -1514600972238794812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_71
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 80
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064dec2eb8e9a3470800000000000000
+      internalID: 8375180780691706976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_72
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 95
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed55cb35442309c00800000000000000
+      internalID: 905278794145486302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_73
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 79
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89c8118598cf97b0800000000000000
+      internalID: -5215229299030177397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_74
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 79
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd0def2b992b7a740800000000000000
+      internalID: 5163291871006347484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_75
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 79
+        width: 11
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8649c3a8b31e11bb0800000000000000
+      internalID: -4966941268174400408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4d53b6f01f5a64a0800000000000000
+      internalID: -6599357777494975158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a080fb7fea05c010800000000000000
+      internalID: 1208384098711666851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_78
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42666df87f9c29470800000000000000
+      internalID: 8399998320106694180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_79
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7855ef47ac492a740800000000000000
+      internalID: 5161851720187139463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_80
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 64
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b7476c9e3da8950800000000000000
+      internalID: 6452202417172020028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_81
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 48
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dbef7b90bcbb31c0800000000000000
+      internalID: -4522813934054413351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fdb2e8e5ba034a0800000000000000
+      internalID: -6615599430006743159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_83
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 64
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f833bcc5d9d159f50800000000000000
+      internalID: 6887443766836933519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_84
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 48
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23d99cbf7c4bca60800000000000000
+      internalID: 7695328499801379631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_85
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 63
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e63cbbb2fcf881b70800000000000000
+      internalID: 8869997586060919662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_86
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 48
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 494ce7879fca2adb0800000000000000
+      internalID: -4782069666845637484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_87
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 64
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6734153a958ca50800000000000000
+      internalID: 6541577016733562572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_88
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 63
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289e0f521e5c8c8e0800000000000000
+      internalID: -1672869690773280382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_89
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f87913f2481ac050800000000000000
+      internalID: 5821492144155228403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_90
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0ef8d215050f820800000000000000
+      internalID: 2949946065514651814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_91
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e967a0a8cdb2da890800000000000000
+      internalID: -7445246382764820834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_92
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 64
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e293bcdd8833cca90800000000000000
+      internalID: -7292397033690023634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_93
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00530b97773f5ae20800000000000000
+      internalID: 3361360391370192128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_94
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee11003729746f770800000000000000
+      internalID: 8644175229104427502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_95
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a96b1155b1bb3ec0800000000000000
+      internalID: -3586077285962520155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_96
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 64
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a94150b2683b62b0800000000000000
+      internalID: -5590312515934271065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_97
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc5f72149e14c710800000000000000
+      internalID: 1712527379621960914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_98
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 64
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261dd1e11ff9cec70800000000000000
+      internalID: 9001745613147984226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_99
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a95f2fc938967d0800000000000000
+      internalID: -2924661772886107623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_100
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 64
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582d3714b920c63d0800000000000000
+      internalID: -3212189568380710267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_101
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096c56aed8cb96d10800000000000000
+      internalID: 2119432417363478160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_102
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5307b40e00c86520800000000000000
+      internalID: 2695615543422419802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_103
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d70bcf4a9fda020800000000000000
+      internalID: 2354812667194015047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_104
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0d9de22c5997e60800000000000000
+      internalID: 7960558477596283108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_105
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a211a67a459a26410800000000000000
+      internalID: 1468922609527296298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_106
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6227c2cd62b1e5130800000000000000
+      internalID: 3557310609385878054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_107
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308f3da8c4d09a6a0800000000000000
+      internalID: -6437599569951590397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_108
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2661b73a78f8958e0800000000000000
+      internalID: -1704173171256912286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_109
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d384de4028b2811b0800000000000000
+      internalID: -5685746692126848963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_110
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e41bbfa5fab97d0800000000000000
+      internalID: -2910539928860275123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_111
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca4819b6d2d31620800000000000000
+      internalID: 2743768417668975306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_112
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f391b94ff30ed270800000000000000
+      internalID: 8277057560141468662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_113
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6c0753b61f8e5f0800000000000000
+      internalID: -727065897059957024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_114
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3885c9efa63656890800000000000000
+      internalID: -7465451496107386749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_115
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95dd1ab9df73d53a0800000000000000
+      internalID: -6675117510315877031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_116
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d1f8ac1c0173a10800000000000000
+      internalID: 1888996993218321706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_117
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e678357ffcfb080800000000000000
+      internalID: -9169381655137784173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_118
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a4c3a3e6f1bc5c0800000000000000
+      internalID: -4194224069681591670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_119
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce73ce716ba094660800000000000000
+      internalID: 7370434042370209772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_120
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2deedd424397720800000000000000
+      internalID: 2844361972608062121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_121
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814594de99cc80a10800000000000000
+      internalID: 1875974206282880024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_122
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 32
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e956dd4a18cba640800000000000000
+      internalID: 5092383818973075943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelDrinkandBeveragesFullSheet_123
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 10
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869f06ff8941aa730800000000000000
+      internalID: 4011041065478977896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PixelDrinkandBeveragesFullSheet_0: 332810582350079539
+      PixelDrinkandBeveragesFullSheet_1: 4701241358818728119
+      PixelDrinkandBeveragesFullSheet_10: 3489450231018239489
+      PixelDrinkandBeveragesFullSheet_100: -3212189568380710267
+      PixelDrinkandBeveragesFullSheet_101: 2119432417363478160
+      PixelDrinkandBeveragesFullSheet_102: 2695615543422419802
+      PixelDrinkandBeveragesFullSheet_103: 2354812667194015047
+      PixelDrinkandBeveragesFullSheet_104: 7960558477596283108
+      PixelDrinkandBeveragesFullSheet_105: 1468922609527296298
+      PixelDrinkandBeveragesFullSheet_106: 3557310609385878054
+      PixelDrinkandBeveragesFullSheet_107: -6437599569951590397
+      PixelDrinkandBeveragesFullSheet_108: -1704173171256912286
+      PixelDrinkandBeveragesFullSheet_109: -5685746692126848963
+      PixelDrinkandBeveragesFullSheet_11: -3694732497505261439
+      PixelDrinkandBeveragesFullSheet_110: -2910539928860275123
+      PixelDrinkandBeveragesFullSheet_111: 2743768417668975306
+      PixelDrinkandBeveragesFullSheet_112: 8277057560141468662
+      PixelDrinkandBeveragesFullSheet_113: -727065897059957024
+      PixelDrinkandBeveragesFullSheet_114: -7465451496107386749
+      PixelDrinkandBeveragesFullSheet_115: -6675117510315877031
+      PixelDrinkandBeveragesFullSheet_116: 1888996993218321706
+      PixelDrinkandBeveragesFullSheet_117: -9169381655137784173
+      PixelDrinkandBeveragesFullSheet_118: -4194224069681591670
+      PixelDrinkandBeveragesFullSheet_119: 7370434042370209772
+      PixelDrinkandBeveragesFullSheet_12: 5413434586934246223
+      PixelDrinkandBeveragesFullSheet_120: 2844361972608062121
+      PixelDrinkandBeveragesFullSheet_121: 1875974206282880024
+      PixelDrinkandBeveragesFullSheet_122: 5092383818973075943
+      PixelDrinkandBeveragesFullSheet_123: 4011041065478977896
+      PixelDrinkandBeveragesFullSheet_13: -278120155933701819
+      PixelDrinkandBeveragesFullSheet_14: -3258466479306091435
+      PixelDrinkandBeveragesFullSheet_15: 2271008751625977642
+      PixelDrinkandBeveragesFullSheet_16: 4368495686932219522
+      PixelDrinkandBeveragesFullSheet_17: -8378507080822256720
+      PixelDrinkandBeveragesFullSheet_18: -6288049649874311901
+      PixelDrinkandBeveragesFullSheet_19: 5414244911634751964
+      PixelDrinkandBeveragesFullSheet_2: 887028422463841917
+      PixelDrinkandBeveragesFullSheet_20: -1801734172669789967
+      PixelDrinkandBeveragesFullSheet_21: -6586680772196466632
+      PixelDrinkandBeveragesFullSheet_22: -3682052487237057693
+      PixelDrinkandBeveragesFullSheet_23: 1256033285926974357
+      PixelDrinkandBeveragesFullSheet_24: 3339027420193653301
+      PixelDrinkandBeveragesFullSheet_25: 6798664194967623624
+      PixelDrinkandBeveragesFullSheet_26: -2705286268073571217
+      PixelDrinkandBeveragesFullSheet_27: 4444325308123935296
+      PixelDrinkandBeveragesFullSheet_28: -8367061550577867828
+      PixelDrinkandBeveragesFullSheet_29: -3456351980243815766
+      PixelDrinkandBeveragesFullSheet_3: -1779521900308406600
+      PixelDrinkandBeveragesFullSheet_30: -1964129073979226614
+      PixelDrinkandBeveragesFullSheet_31: 1131289390557106405
+      PixelDrinkandBeveragesFullSheet_32: -9221549209284794954
+      PixelDrinkandBeveragesFullSheet_33: -3242064857939257784
+      PixelDrinkandBeveragesFullSheet_34: 2020191203186626905
+      PixelDrinkandBeveragesFullSheet_35: 8021980213052688325
+      PixelDrinkandBeveragesFullSheet_36: 6619913529037765743
+      PixelDrinkandBeveragesFullSheet_37: 574142330591594769
+      PixelDrinkandBeveragesFullSheet_38: -4394330674849007772
+      PixelDrinkandBeveragesFullSheet_39: 811718071888082227
+      PixelDrinkandBeveragesFullSheet_4: -3974231688712572221
+      PixelDrinkandBeveragesFullSheet_40: 8549032211216189689
+      PixelDrinkandBeveragesFullSheet_41: 1854314803675966685
+      PixelDrinkandBeveragesFullSheet_42: 2630103721222978526
+      PixelDrinkandBeveragesFullSheet_43: -5320261238148721838
+      PixelDrinkandBeveragesFullSheet_44: 4461476863791512975
+      PixelDrinkandBeveragesFullSheet_45: 458084680145171132
+      PixelDrinkandBeveragesFullSheet_46: 88696592789824779
+      PixelDrinkandBeveragesFullSheet_47: 2780302418431509075
+      PixelDrinkandBeveragesFullSheet_48: 6753909241096668357
+      PixelDrinkandBeveragesFullSheet_49: 4749586600104228648
+      PixelDrinkandBeveragesFullSheet_5: -6049959146243953834
+      PixelDrinkandBeveragesFullSheet_50: -7323118345400355934
+      PixelDrinkandBeveragesFullSheet_51: 7641363057694296404
+      PixelDrinkandBeveragesFullSheet_52: -5068977388747325400
+      PixelDrinkandBeveragesFullSheet_53: -791508144502232483
+      PixelDrinkandBeveragesFullSheet_54: 6503985742618735497
+      PixelDrinkandBeveragesFullSheet_55: 6536945450885225394
+      PixelDrinkandBeveragesFullSheet_56: 3840211224020951980
+      PixelDrinkandBeveragesFullSheet_57: 1192052926434076762
+      PixelDrinkandBeveragesFullSheet_58: -6857066781877520164
+      PixelDrinkandBeveragesFullSheet_59: -1723267922601518535
+      PixelDrinkandBeveragesFullSheet_6: -4092849692380274441
+      PixelDrinkandBeveragesFullSheet_60: 3638029576129753731
+      PixelDrinkandBeveragesFullSheet_61: -8916556097664672388
+      PixelDrinkandBeveragesFullSheet_62: -9110817653916259841
+      PixelDrinkandBeveragesFullSheet_63: -1633195323219238997
+      PixelDrinkandBeveragesFullSheet_64: -4820191060914689055
+      PixelDrinkandBeveragesFullSheet_65: 4754933471031457926
+      PixelDrinkandBeveragesFullSheet_66: -69245417497252162
+      PixelDrinkandBeveragesFullSheet_67: -7372991776414924468
+      PixelDrinkandBeveragesFullSheet_68: 2068155465860546108
+      PixelDrinkandBeveragesFullSheet_69: -861565613442873
+      PixelDrinkandBeveragesFullSheet_7: 7126603249816062901
+      PixelDrinkandBeveragesFullSheet_70: -1514600972238794812
+      PixelDrinkandBeveragesFullSheet_71: 8375180780691706976
+      PixelDrinkandBeveragesFullSheet_72: 905278794145486302
+      PixelDrinkandBeveragesFullSheet_73: -5215229299030177397
+      PixelDrinkandBeveragesFullSheet_74: 5163291871006347484
+      PixelDrinkandBeveragesFullSheet_75: -4966941268174400408
+      PixelDrinkandBeveragesFullSheet_76: -6599357777494975158
+      PixelDrinkandBeveragesFullSheet_77: 1208384098711666851
+      PixelDrinkandBeveragesFullSheet_78: 8399998320106694180
+      PixelDrinkandBeveragesFullSheet_79: 5161851720187139463
+      PixelDrinkandBeveragesFullSheet_8: -6304021199375924911
+      PixelDrinkandBeveragesFullSheet_80: 6452202417172020028
+      PixelDrinkandBeveragesFullSheet_81: -4522813934054413351
+      PixelDrinkandBeveragesFullSheet_82: -6615599430006743159
+      PixelDrinkandBeveragesFullSheet_83: 6887443766836933519
+      PixelDrinkandBeveragesFullSheet_84: 7695328499801379631
+      PixelDrinkandBeveragesFullSheet_85: 8869997586060919662
+      PixelDrinkandBeveragesFullSheet_86: -4782069666845637484
+      PixelDrinkandBeveragesFullSheet_87: 6541577016733562572
+      PixelDrinkandBeveragesFullSheet_88: -1672869690773280382
+      PixelDrinkandBeveragesFullSheet_89: 5821492144155228403
+      PixelDrinkandBeveragesFullSheet_9: -5173023576943881172
+      PixelDrinkandBeveragesFullSheet_90: 2949946065514651814
+      PixelDrinkandBeveragesFullSheet_91: -7445246382764820834
+      PixelDrinkandBeveragesFullSheet_92: -7292397033690023634
+      PixelDrinkandBeveragesFullSheet_93: 3361360391370192128
+      PixelDrinkandBeveragesFullSheet_94: 8644175229104427502
+      PixelDrinkandBeveragesFullSheet_95: -3586077285962520155
+      PixelDrinkandBeveragesFullSheet_96: -5590312515934271065
+      PixelDrinkandBeveragesFullSheet_97: 1712527379621960914
+      PixelDrinkandBeveragesFullSheet_98: 9001745613147984226
+      PixelDrinkandBeveragesFullSheet_99: -2924661772886107623
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

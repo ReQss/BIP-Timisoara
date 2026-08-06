@@ -14,6 +14,7 @@ public sealed class BarmanController : MonoBehaviour
 
     [SerializeField] private FaceDirection startingDirection = FaceDirection.SouthEast;
     [SerializeField, Min(0f)] private float moveSpeed = 2.5f;
+    [SerializeField, Min(0.25f)] private float customerInteractionDistance = 1.25f;
 
     private static readonly int MoveX = Animator.StringToHash("MoveX");
     private static readonly int MoveY = Animator.StringToHash("MoveY");
@@ -24,6 +25,10 @@ public sealed class BarmanController : MonoBehaviour
     private Rigidbody2D body;
     private InputAction moveAction;
     private Vector2 movement;
+    private BeverageDefinition heldBeverage;
+    private SpriteRenderer heldBeverageRenderer;
+
+    public BeverageType HeldBeverage => heldBeverage.type;
 
     private void Awake()
     {
@@ -41,11 +46,17 @@ public sealed class BarmanController : MonoBehaviour
 
         SetFacing(startingDirection);
         SetWalking(false);
+        CreateHeldBeverageDisplay();
     }
 
     private void OnEnable()
     {
         moveAction?.Enable();
+    }
+
+    private void Start()
+    {
+        IgnoreCatCollisions();
     }
 
     private void OnDisable()
@@ -92,6 +103,107 @@ public sealed class BarmanController : MonoBehaviour
         }
 
         SetWalking(movement.sqrMagnitude > 0.001f);
+
+        bool keyboardInteract = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+        bool gamepadInteract = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
+        if (keyboardInteract || gamepadInteract)
+        {
+            Interact();
+        }
+    }
+
+    private void Interact()
+    {
+        BeverageFridge fridge = FindAnyObjectByType<BeverageFridge>();
+        if (fridge != null && fridge.IsInRange(transform.position))
+        {
+            fridge.ShowDrinkSelection(this);
+            return;
+        }
+
+        if (heldBeverage.type == BeverageType.None)
+        {
+            return;
+        }
+
+        FrogCustomer[] customers = FindObjectsByType<FrogCustomer>();
+        FrogCustomer closest = null;
+        float closestDistance = customerInteractionDistance;
+        foreach (FrogCustomer customer in customers)
+        {
+            if (!customer.IsWaitingForOrder || customer.RequestedBeverage != heldBeverage.type)
+            {
+                continue;
+            }
+
+            float distance = Vector2.Distance(transform.position, customer.transform.position);
+            if (distance <= closestDistance)
+            {
+                closest = customer;
+                closestDistance = distance;
+            }
+        }
+
+        if (closest != null && closest.TryServe(heldBeverage.type, transform.position))
+        {
+            heldBeverage = default;
+            UpdateHeldBeverageDisplay();
+        }
+    }
+
+    private void CreateHeldBeverageDisplay()
+    {
+        GameObject display = new GameObject("Held Beverage");
+        display.transform.SetParent(transform, false);
+        display.transform.localPosition = new Vector3(0.48f, 0.3f, 0f);
+        display.transform.localScale = Vector3.one * 1.35f;
+        heldBeverageRenderer = display.AddComponent<SpriteRenderer>();
+        heldBeverageRenderer.sortingOrder = 2100;
+        heldBeverageRenderer.enabled = false;
+    }
+
+    public void SetHeldBeverage(BeverageDefinition beverage)
+    {
+        heldBeverage = beverage;
+        UpdateHeldBeverageDisplay();
+    }
+
+    private void IgnoreCatCollisions()
+    {
+        Collider2D[] dogColliders = GetComponentsInChildren<Collider2D>();
+        CatMovement[] characters = FindObjectsByType<CatMovement>();
+        foreach (CatMovement character in characters)
+        {
+            if (character.gameObject == gameObject || character.GetComponent<BarmanController>() != null)
+            {
+                continue;
+            }
+
+            Rigidbody2D catBody = character.GetComponent<Rigidbody2D>();
+            if (catBody != null)
+            {
+                catBody.linearVelocity = Vector2.zero;
+                catBody.angularVelocity = 0f;
+            }
+
+            Collider2D[] catColliders = character.GetComponentsInChildren<Collider2D>();
+            foreach (Collider2D dogCollider in dogColliders)
+            foreach (Collider2D catCollider in catColliders)
+            {
+                Physics2D.IgnoreCollision(dogCollider, catCollider, true);
+            }
+        }
+    }
+
+    private void UpdateHeldBeverageDisplay()
+    {
+        if (heldBeverageRenderer == null)
+        {
+            return;
+        }
+
+        heldBeverageRenderer.sprite = heldBeverage.icon;
+        heldBeverageRenderer.enabled = heldBeverage.type != BeverageType.None && heldBeverage.icon != null;
     }
 
     private void FixedUpdate()

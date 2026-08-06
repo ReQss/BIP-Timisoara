@@ -1,0 +1,33 @@
+PIXEL DRINKS AND BEVERAGES 16X16 LICENSE AGREEMENT
+Version 1.1 — Issued by ZabbyShelter
+
+GRANT OF LICENSE
+This asset pack and all contents therein (collectively referred to as the "Assets") are created by and remain the intellectual property of ZabbyShelter. By downloading or using these Assets, you agree to the terms outlined in this license.
+
+PERMITTED USES
+You are free to:
+
+Use the Assets in personal and commercial projects, including but not limited to video games, applications, and digital media
+Use the Assets in projects that are sold or monetized
+
+RESTRICTIONS
+You are prohibited from engaging in any of the following:
+
+1. Redistribute, resell, or repackage the Assets as a standalone asset pack, whether modified or unmodified
+2. Modify, alter, or adapt the Assets in any way, including recoloring, reshaping, or otherwise editing the original sprites
+3. Claim the original Assets as your own creation
+4. Use the Assets in any project that promotes unlawful, harmful, or offensive content
+5. Use the Assets, in whole or in part, for the purpose of training, fine-tuning, or otherwise developing artificial intelligence or machine learning models of any kind, including but not limited to image generation models, reinforcement learning systems, and neural networks
+6. Include the Assets in any dataset, corpus, or collection intended for AI or machine learning purposes, whether commercial or non-commercial
+
+ATTRIBUTION
+Credit is not required but is greatly appreciated. If you choose to credit, please do so as:
+"Art assets by ZabbyShelter"
+
+DISCLAIMER OF WARRANTIES
+These Assets are provided "as is" without warranty of any kind. ZabbyShelter is not liable for any damages or issues arising from the use of these Assets.
+
+TERMINATION
+This license is effective until terminated. Any breach of the terms outlined above will result in automatic termination of your right to use the Assets.
+
+© 2025 ZabbyShelter. All rights reserved.

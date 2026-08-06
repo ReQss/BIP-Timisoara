@@ -12539,6 +12539,22 @@ MonoBehaviour:
   timeBetweenJobs: 25
   timeLeftForJob: 0
   uiHandler: {fileID: 1222930115}
+  travellerSpriteSheet: {fileID: 2800000, guid: fb0b4c693588d7959be51dc4fda5af40, type: 3}
+  beverageSpriteSheet: {fileID: 2800000, guid: 8878498d3b595b9edb76dd3830b51344, type: 3}
+  cafeBeverages:
+  - type: 1
+    displayName: Coffee
+    icon: {fileID: 448563759746355636, guid: fc2950ac98e22767c8142a1ed04c1e58, type: 3}
+  - type: 2
+    displayName: Tea
+    icon: {fileID: 4241727045068834795, guid: fc7f790cb6f41d97095d7bc11e0b77fe, type: 3}
+  - type: 3
+    displayName: Juice
+    icon: {fileID: -402823733049590459, guid: cf1fe049ea1ad6c5e91c8cc1cf618f77, type: 3}
+  - type: 4
+    displayName: Soda
+    icon: {fileID: -4506535428803468806, guid: e7da17eb30d1dde08bfcd6e3135bc6e9, type: 3}
+  fridgePlaceholder: {fileID: 705487952, guid: 6c871a61e6794e8d6b8953881413983c, type: 3}
 --- !u!4 &1570482017
 Transform:
   m_ObjectHideFlags: 0
