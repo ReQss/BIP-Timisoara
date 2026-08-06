@@ -10,15 +10,27 @@ public class CatMovement : MonoBehaviour
     private Vector2 input;
     private Animator animator;
     private DogSpriteAnimator dogSpriteAnimator;
+    private CatActions catActions;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         dogSpriteAnimator = GetComponent<DogSpriteAnimator>();
+        catActions = GetComponent<CatActions>();
     }
 
     private void Update()
     {
+        if (catActions != null && catActions.IsFridgeMenuOpen)
+        {
+            input = Vector2.zero;
+            if (animator != null && animator.isActiveAndEnabled)
+            {
+                animator.SetFloat("speed", 0f);
+            }
+            return;
+        }
+
         // Each character has its own keyboard scheme; the second player also accepts a gamepad.
         Keyboard keyboard = Keyboard.current;
         if (useGamepadAndIJKL)

@@ -18,6 +18,7 @@ public class UIHandler : MonoBehaviour
     public List<JobItemInList> jobItemsInList = new List<JobItemInList>();
     private readonly List<CustomerOrderRow> customerOrderRows = new List<CustomerOrderRow>();
     private RectTransform customerOrderPanel;
+    private TextMeshProUGUI moneyText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
@@ -54,6 +55,11 @@ public class UIHandler : MonoBehaviour
 
     public void RefreshCustomerOrders(IReadOnlyList<CustomerOrderTask> orders)
     {
+        if (this == null || !isActiveAndEnabled)
+        {
+            return;
+        }
+
         EnsureCustomerOrderPanel();
         if (customerOrderPanel == null)
         {
@@ -69,6 +75,12 @@ public class UIHandler : MonoBehaviour
         {
             bool visible = i < orders.Count;
             CustomerOrderRow row = customerOrderRows[i];
+            if (row.root == null)
+            {
+                customerOrderRows.Clear();
+                RefreshCustomerOrders(orders);
+                return;
+            }
             row.root.SetActive(visible);
             if (!visible)
             {
@@ -82,12 +94,38 @@ public class UIHandler : MonoBehaviour
         }
     }
 
+    public void SetMoney(int amount)
+    {
+        if (moneyText == null)
+        {
+            TextMeshProUGUI[] labels = FindObjectsByType<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI label in labels)
+            {
+                string value = label.text.Trim().TrimStart('$');
+                bool namedMoneyValue = label.name == "Money Value";
+                bool legacyMoneyValue = int.TryParse(value, out int parsed) && parsed == 300;
+                if (namedMoneyValue || legacyMoneyValue)
+                {
+                    moneyText = label;
+                    break;
+                }
+            }
+        }
+
+        if (moneyText != null)
+        {
+            moneyText.text = amount.ToString();
+        }
+    }
+
     private void EnsureCustomerOrderPanel()
     {
         if (customerOrderPanel != null)
         {
             return;
         }
+
+        customerOrderRows.Clear();
 
         Canvas canvas = GetComponentInParent<Canvas>();
         if (canvas == null && jobItemsInList.Count > 0 && jobItemsInList[0].jobDescription != null)
@@ -205,6 +243,13 @@ public class UIHandler : MonoBehaviour
     public void ActiveOrDisablePanel(GameObject panel)
     {
         panel.SetActive(!panel.activeSelf);
+    }
+
+    private void OnDestroy()
+    {
+        customerOrderRows.Clear();
+        customerOrderPanel = null;
+        moneyText = null;
     }
 }
 

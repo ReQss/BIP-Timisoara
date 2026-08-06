@@ -23,6 +23,20 @@ public class SplitScreenManager : MonoBehaviour
 
     private float splitAmount;
     private float splitVelocity; // Używane wewnętrznie przez Mathf.SmoothDamp
+    private int menuSplitLocks;
+
+    public void PushMenuSplit()
+    {
+        menuSplitLocks++;
+        splitAmount = 1f;
+        splitVelocity = 0f;
+        UpdateRects();
+    }
+
+    public void PopMenuSplit()
+    {
+        menuSplitLocks = Mathf.Max(0, menuSplitLocks - 1);
+    }
 
     private void Start()
     {
@@ -41,7 +55,11 @@ public class SplitScreenManager : MonoBehaviour
 
         // Histereza - określenie docelowego stanu podziału
         float targetSplit = splitAmount;
-        if (distance > splitDistance)
+        if (menuSplitLocks > 0)
+        {
+            targetSplit = 1f;
+        }
+        else if (distance > splitDistance)
         {
             targetSplit = 1f;
         }

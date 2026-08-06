@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public sealed class FrogCustomer : MonoBehaviour
@@ -59,8 +58,7 @@ public sealed class FrogCustomer : MonoBehaviour
     private float animationTime;
     private bool served;
 
-    private Canvas orderCanvas;
-    private Image orderIcon;
+    private SpriteRenderer orderSpriteRenderer;
     [SerializeField] private BeverageDefinition[] beverages;
     private BeverageDefinition order;
     private int orderTaskId = -1;
@@ -71,7 +69,7 @@ public sealed class FrogCustomer : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        CreateOrderUi();
+        CreateOrderDisplay();
     }
 
     public void Initialize(CafeCustomerDirector owner, CafeDestination reservedSeat, Transform exitPoint)
@@ -178,8 +176,8 @@ public sealed class FrogCustomer : MonoBehaviour
         }
 
         order = beverages[UnityEngine.Random.Range(0, beverages.Length)];
-        orderIcon.sprite = order.icon;
-        orderIcon.enabled = order.icon != null;
+        orderSpriteRenderer.sprite = order.icon;
+        orderSpriteRenderer.enabled = order.icon != null;
         orderTaskId = TaskManager.Instance != null ? TaskManager.Instance.AddCustomerOrder(this, order) : -1;
         SetOrderUi(true);
     }
@@ -296,33 +294,21 @@ public sealed class FrogCustomer : MonoBehaviour
 
     private void SetOrderUi(bool visible)
     {
-        orderCanvas.gameObject.SetActive(visible);
+        if (orderSpriteRenderer != null)
+        {
+            orderSpriteRenderer.gameObject.SetActive(visible);
+        }
     }
 
-    private void CreateOrderUi()
+    private void CreateOrderDisplay()
     {
-        GameObject canvasObject = new GameObject(
-            "Order Bubble", typeof(RectTransform), typeof(Canvas));
-        canvasObject.transform.SetParent(transform, false);
-        canvasObject.transform.localPosition = new Vector3(0f, 1.05f, 0f);
-        canvasObject.transform.localScale = Vector3.one * 0.006f;
-        orderCanvas = canvasObject.GetComponent<Canvas>();
-        orderCanvas.renderMode = RenderMode.WorldSpace;
-        orderCanvas.sortingOrder = 2000;
-        RectTransform canvasRect = (RectTransform)canvasObject.transform;
-        canvasRect.sizeDelta = new Vector2(64f, 64f);
-
-        Image panel = canvasObject.AddComponent<Image>();
-        panel.color = new Color(1f, 1f, 1f, 0.96f);
-
-        GameObject iconObject = new GameObject("Wanted Beverage", typeof(RectTransform), typeof(Image));
-        iconObject.transform.SetParent(canvasObject.transform, false);
-        RectTransform iconRect = (RectTransform)iconObject.transform;
-        iconRect.anchorMin = new Vector2(0.16f, 0.16f);
-        iconRect.anchorMax = new Vector2(0.84f, 0.84f);
-        iconRect.offsetMin = iconRect.offsetMax = Vector2.zero;
-        orderIcon = iconObject.GetComponent<Image>();
-        orderIcon.preserveAspect = true;
+        GameObject spriteObject = new GameObject("Wanted Beverage Sprite");
+        spriteObject.transform.SetParent(transform, false);
+        spriteObject.transform.localPosition = new Vector3(0f, 1.05f, 0f);
+        spriteObject.transform.localScale = Vector3.one * 0.38f;
+        orderSpriteRenderer = spriteObject.AddComponent<SpriteRenderer>();
+        orderSpriteRenderer.sortingOrder = 2100;
+        orderSpriteRenderer.enabled = false;
     }
 
     public void ConfigureAnimationFrames(
@@ -360,7 +346,10 @@ public sealed class FrogCustomer : MonoBehaviour
     {
         if (orderTaskId >= 0)
         {
-            TaskManager.Instance?.CompleteCustomerOrder(orderTaskId);
+            if (TaskManager.Instance != null)
+            {
+                TaskManager.Instance.CancelCustomerOrder(orderTaskId);
+            }
         }
         seat?.Release();
         toilet?.Release();

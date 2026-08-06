@@ -17,6 +17,8 @@ public class PlayerCameraFollow : MonoBehaviour
     private Camera cam;
     private float splitAmount;
 
+    public Transform Player => player;
+
     private void Awake()
     {
         cam = GetComponent<Camera>();

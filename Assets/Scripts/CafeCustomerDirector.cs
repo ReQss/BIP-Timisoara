@@ -110,6 +110,38 @@ public sealed class CafeCustomerDirector : MonoBehaviour
         exit = exitPoint;
         seats = seatPoints;
         toilet = toiletPoint;
+        maximumCustomers = Mathf.Min(5, seats != null ? seats.Length : 5);
+    }
+
+    public void ApplyChairLayout(Vector3 entrancePosition, IReadOnlyList<Vector3> chairPositions)
+    {
+        if (entrance != null)
+        {
+            entrance.position = entrancePosition;
+        }
+        if (exit != null)
+        {
+            exit.position = entrancePosition + Vector3.left * 0.65f;
+        }
+
+        CafeDestination[] configuredSeats = new CafeDestination[chairPositions.Count];
+        for (int i = 0; i < chairPositions.Count; i++)
+        {
+            CafeDestination seat = seats != null && i < seats.Length ? seats[i] : null;
+            if (seat == null)
+            {
+                GameObject marker = new GameObject("Chair " + (i + 1));
+                marker.transform.SetParent(transform);
+                seat = marker.AddComponent<CafeDestination>();
+            }
+
+            seat.transform.position = chairPositions[i];
+            seat.Configure(CafeDestination.DestinationKind.Seat, Vector2.up);
+            configuredSeats[i] = seat;
+        }
+
+        seats = configuredSeats;
+        maximumCustomers = chairPositions.Count;
     }
 
     private static void EnsureUiEventSystem()
