@@ -33,3 +33,10 @@ public struct BeverageDefinition
     public string displayName;
     public Sprite icon;
 }
+
+public interface IBeverageCarrier
+{
+    bool UsesCatControls { get; }
+    void SetHeldBeverage(BeverageDefinition beverage);
+    void SetFridgeMenuOpen(bool open);
+}

@@ -1,23 +1,115 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class CatActions : MonoBehaviour
+public class CatActions : MonoBehaviour, IBeverageCarrier
 {
     // Przechowuje tag aktualnego obszaru, w którym znajduje się kot (np. "Garden", "Bathroom")
     public string currentAreaTag = "";
+    [SerializeField, Min(0.25f)] private float customerInteractionDistance = 1.25f;
 
-    void Start()
+    private BeverageDefinition heldBeverage;
+    private SpriteRenderer heldBeverageRenderer;
+    private bool fridgeMenuOpen;
+
+    public bool UsesCatControls => true;
+    public bool IsFridgeMenuOpen => fridgeMenuOpen;
+
+    private void Awake()
     {
-        
+        CreateHeldBeverageDisplay();
     }
 
     void Update()
     {
+        if (fridgeMenuOpen)
+        {
+            return;
+        }
+
         // Sprawdzamy wciśnięcie klawisza E w każdej klatce
         if (Input.GetKeyDown(KeyCode.E))
         {
-            PerformActionForCurrentArea();
+            if (!InteractWithCafe())
+            {
+                PerformActionForCurrentArea();
+            }
         }
+    }
+
+    private bool InteractWithCafe()
+    {
+        BeverageFridge fridge = FindAnyObjectByType<BeverageFridge>();
+        if (fridge != null && fridge.IsInRange(transform.position))
+        {
+            fridge.ShowDrinkSelection(this);
+            return true;
+        }
+
+        if (heldBeverage.type == BeverageType.None)
+        {
+            return false;
+        }
+
+        FrogCustomer[] customers = FindObjectsByType<FrogCustomer>();
+        FrogCustomer closest = null;
+        float closestDistance = customerInteractionDistance;
+        foreach (FrogCustomer customer in customers)
+        {
+            if (!customer.IsWaitingForOrder || customer.RequestedBeverage != heldBeverage.type)
+            {
+                continue;
+            }
+
+            float distance = Vector2.Distance(transform.position, customer.transform.position);
+            if (distance <= closestDistance)
+            {
+                closest = customer;
+                closestDistance = distance;
+            }
+        }
+
+        if (closest == null || !closest.TryServe(heldBeverage.type, transform.position))
+        {
+            return false;
+        }
+
+        heldBeverage = default;
+        UpdateHeldBeverageDisplay();
+        return true;
+    }
+
+    public void SetHeldBeverage(BeverageDefinition beverage)
+    {
+        heldBeverage = beverage;
+        UpdateHeldBeverageDisplay();
+    }
+
+    public void SetFridgeMenuOpen(bool open)
+    {
+        fridgeMenuOpen = open;
+        Rigidbody2D body = GetComponent<Rigidbody2D>();
+        if (open && body != null)
+        {
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+        }
+    }
+
+    private void CreateHeldBeverageDisplay()
+    {
+        GameObject display = new GameObject("Held Beverage");
+        display.transform.SetParent(transform, false);
+        display.transform.localPosition = new Vector3(0.42f, 0.3f, 0f);
+        display.transform.localScale = Vector3.one * 0.9f;
+        heldBeverageRenderer = display.AddComponent<SpriteRenderer>();
+        heldBeverageRenderer.sortingOrder = 2100;
+        heldBeverageRenderer.enabled = false;
+    }
+
+    private void UpdateHeldBeverageDisplay()
+    {
+        heldBeverageRenderer.sprite = heldBeverage.icon;
+        heldBeverageRenderer.enabled = heldBeverage.type != BeverageType.None && heldBeverage.icon != null;
     }
 
     // Uniwersalna metoda decydująca o akcji na podstawie tagu obszaru

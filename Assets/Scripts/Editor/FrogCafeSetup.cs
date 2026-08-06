@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -154,24 +153,24 @@ public static class FrogCafeSetup
         CafeCustomerDirector director = system.AddComponent<CafeCustomerDirector>();
 
         Tilemap insideTables = FindTilemap(scene, "Tables");
-        Tilemap outsideTables = FindTilemap(scene, "Outside tables");
-        List<Vector3> insideCenters = FindFurnitureCenters(insideTables, 5);
-        List<Vector3> outsideCenters = FindFurnitureCenters(outsideTables, 3);
-        List<Vector3> allCenters = insideCenters.Concat(outsideCenters).ToList();
-
         Bounds cafeBounds = insideTables != null ? insideTables.localBounds : new Bounds(Vector3.zero, new Vector3(12f, 8f));
-        Vector3 entrancePosition = outsideCenters.Count > 0
-            ? outsideCenters.OrderBy(point => point.x).First() + new Vector3(-2f, -1.5f, 0f)
-            : new Vector3(-6f, -3f, 0f);
+        const float customerPositionYOffset = -0.6f;
+        Vector3 entrancePosition = new Vector3(1.74f, -1.75f + customerPositionYOffset, 0f);
         Transform entrance = CreateMarker(system.transform, "Entrance", entrancePosition);
-        Transform exit = CreateMarker(system.transform, "Exit", entrancePosition + new Vector3(-0.8f, 0f, 0f));
+        Transform exit = CreateMarker(system.transform, "Exit", entrancePosition + Vector3.left * 0.65f);
 
-        CafeDestination[] seats = new CafeDestination[8];
+        Vector3[] chairPositions =
+        {
+            new Vector3(-0.08f, 2.17f + customerPositionYOffset, 0f),
+            new Vector3(3.43f, 0.36f + customerPositionYOffset, 0f),
+            new Vector3(6.01f, 2.65f + customerPositionYOffset, 0f),
+            new Vector3(7.41f, -1.61f + customerPositionYOffset, 0f),
+            new Vector3(11.03f, 0.08f + customerPositionYOffset, 0f)
+        };
+        CafeDestination[] seats = new CafeDestination[chairPositions.Length];
         for (int i = 0; i < seats.Length; i++)
         {
-            Vector3 table = i < allCenters.Count ? allCenters[i] : new Vector3(-3f + (i % 4) * 2f, -1f + (i / 4) * 3f, 0f);
-            Vector3 seatPosition = table + new Vector3(0f, -0.65f, 0f);
-            seats[i] = CreateDestination(system.transform, "Table Seat " + (i + 1), seatPosition, CafeDestination.DestinationKind.Seat, Vector2.up);
+            seats[i] = CreateDestination(system.transform, "Chair " + (i + 1), chairPositions[i], CafeDestination.DestinationKind.Seat, Vector2.up);
         }
 
         CafeDestination toilet = CreateDestination(
@@ -217,65 +216,6 @@ public static class FrogCafeSetup
         return scene.GetRootGameObjects()
             .SelectMany(root => root.GetComponentsInChildren<Tilemap>(true))
             .FirstOrDefault(tilemap => string.Equals(tilemap.name, objectName, StringComparison.OrdinalIgnoreCase));
-    }
-
-    private static List<Vector3> FindFurnitureCenters(Tilemap tilemap, int wantedCount)
-    {
-        if (tilemap == null)
-        {
-            return new List<Vector3>();
-        }
-
-        HashSet<Vector3Int> occupied = new HashSet<Vector3Int>();
-        foreach (Vector3Int position in tilemap.cellBounds.allPositionsWithin)
-        {
-            if (tilemap.HasTile(position))
-            {
-                occupied.Add(position);
-            }
-        }
-
-        List<List<Vector3Int>> clusters = new List<List<Vector3Int>>();
-        while (occupied.Count > 0)
-        {
-            Vector3Int start = occupied.First();
-            occupied.Remove(start);
-            Queue<Vector3Int> pending = new Queue<Vector3Int>();
-            pending.Enqueue(start);
-            List<Vector3Int> cluster = new List<Vector3Int>();
-            while (pending.Count > 0)
-            {
-                Vector3Int current = pending.Dequeue();
-                cluster.Add(current);
-                for (int y = -1; y <= 1; y++)
-                {
-                    for (int x = -1; x <= 1; x++)
-                    {
-                        Vector3Int neighbour = current + new Vector3Int(x, y, 0);
-                        if (occupied.Remove(neighbour))
-                        {
-                            pending.Enqueue(neighbour);
-                        }
-                    }
-                }
-            }
-            clusters.Add(cluster);
-        }
-
-        return clusters.OrderByDescending(cluster => cluster.Count)
-            .Take(wantedCount)
-            .Select(cluster =>
-            {
-                Vector3 total = Vector3.zero;
-                foreach (Vector3Int cell in cluster)
-                {
-                    total += tilemap.GetCellCenterWorld(cell);
-                }
-                return total / cluster.Count;
-            })
-            .OrderBy(point => point.y)
-            .ThenBy(point => point.x)
-            .ToList();
     }
 
     private static Transform CreateMarker(Transform parent, string name, Vector3 position)

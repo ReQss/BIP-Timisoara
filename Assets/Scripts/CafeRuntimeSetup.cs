@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -7,11 +6,27 @@ using UnityEngine.Tilemaps;
 public static class CafeRuntimeSetup
 {
     private const string SystemName = "Cafe Customer System";
+    private const float CustomerPositionYOffset = -0.6f;
+    private static readonly Vector3 EntrancePosition = new Vector3(1.74f, -1.75f + CustomerPositionYOffset, 0f);
+    private static readonly Vector3[] ChairPositions =
+    {
+        new Vector3(-0.08f, 2.17f + CustomerPositionYOffset, 0f),
+        new Vector3(3.43f, 0.36f + CustomerPositionYOffset, 0f),
+        new Vector3(6.01f, 2.65f + CustomerPositionYOffset, 0f),
+        new Vector3(7.41f, -1.61f + CustomerPositionYOffset, 0f),
+        new Vector3(11.03f, 0.08f + CustomerPositionYOffset, 0f)
+    };
 
     public static void Ensure(Texture2D characterSheet, BeverageDefinition[] beverages, Sprite fridgeSprite)
     {
-        if (UnityEngine.Object.FindAnyObjectByType<CafeCustomerDirector>() != null ||
-            characterSheet == null || beverages == null || beverages.Length == 0)
+        CafeCustomerDirector existingDirector = UnityEngine.Object.FindAnyObjectByType<CafeCustomerDirector>();
+        if (existingDirector != null)
+        {
+            existingDirector.ApplyChairLayout(EntrancePosition, ChairPositions);
+            return;
+        }
+
+        if (characterSheet == null || beverages == null || beverages.Length == 0)
         {
             return;
         }
@@ -20,25 +35,16 @@ public static class CafeRuntimeSetup
         GameObject system = new GameObject(SystemName);
         CafeCustomerDirector director = system.AddComponent<CafeCustomerDirector>();
 
-        Tilemap inside = FindTilemap("Tables");
-        Tilemap outside = FindTilemap("Outside tables");
-        List<Vector3> insideTables = FindFurnitureCenters(inside, 5);
-        List<Vector3> outsideTables = FindFurnitureCenters(outside, 3);
-        List<Vector3> tables = insideTables.Concat(outsideTables).ToList();
+        Transform entrance = CreateMarker(system.transform, "Entrance", EntrancePosition);
+        Transform exit = CreateMarker(system.transform, "Exit", EntrancePosition + Vector3.left * 0.65f);
 
-        Vector3 entrancePosition = outsideTables.Count > 0
-            ? outsideTables.OrderBy(point => point.x).First() + new Vector3(-2f, -1.5f)
-            : new Vector3(-6f, -3f);
-        Transform entrance = CreateMarker(system.transform, "Entrance", entrancePosition);
-        Transform exit = CreateMarker(system.transform, "Exit", entrancePosition + Vector3.left * 0.8f);
-
-        CafeDestination[] seats = new CafeDestination[8];
+        CafeDestination[] seats = new CafeDestination[ChairPositions.Length];
         for (int i = 0; i < seats.Length; i++)
         {
-            Vector3 table = i < tables.Count ? tables[i] : new Vector3(-3f + (i % 4) * 2f, -1f + (i / 4) * 3f);
-            seats[i] = CreateDestination(system.transform, "Table Seat " + (i + 1), table + Vector3.down * 0.65f, CafeDestination.DestinationKind.Seat, Vector2.up);
+            seats[i] = CreateDestination(system.transform, "Chair " + (i + 1), ChairPositions[i], CafeDestination.DestinationKind.Seat, Vector2.up);
         }
 
+        Tilemap inside = FindTilemap("Tables");
         Vector3 toiletPosition = inside != null
             ? inside.transform.TransformPoint(inside.localBounds.max + new Vector3(-0.5f, -0.5f))
             : new Vector3(4f, 3f);
@@ -132,46 +138,6 @@ public static class CafeRuntimeSetup
     {
         return UnityEngine.Object.FindObjectsByType<Tilemap>()
             .FirstOrDefault(tilemap => string.Equals(tilemap.name, name, StringComparison.OrdinalIgnoreCase));
-    }
-
-    private static List<Vector3> FindFurnitureCenters(Tilemap tilemap, int count)
-    {
-        if (tilemap == null)
-        {
-            return new List<Vector3>();
-        }
-
-        HashSet<Vector3Int> cells = new HashSet<Vector3Int>();
-        foreach (Vector3Int cell in tilemap.cellBounds.allPositionsWithin)
-        {
-            if (tilemap.HasTile(cell)) cells.Add(cell);
-        }
-
-        List<List<Vector3Int>> clusters = new List<List<Vector3Int>>();
-        while (cells.Count > 0)
-        {
-            Vector3Int start = cells.First();
-            cells.Remove(start);
-            Queue<Vector3Int> queue = new Queue<Vector3Int>();
-            queue.Enqueue(start);
-            List<Vector3Int> cluster = new List<Vector3Int>();
-            while (queue.Count > 0)
-            {
-                Vector3Int current = queue.Dequeue();
-                cluster.Add(current);
-                for (int y = -1; y <= 1; y++)
-                for (int x = -1; x <= 1; x++)
-                {
-                    Vector3Int neighbour = current + new Vector3Int(x, y);
-                    if (cells.Remove(neighbour)) queue.Enqueue(neighbour);
-                }
-            }
-            clusters.Add(cluster);
-        }
-
-        return clusters.OrderByDescending(cluster => cluster.Count).Take(count)
-            .Select(cluster => cluster.Select(tilemap.GetCellCenterWorld).Aggregate(Vector3.zero, (sum, point) => sum + point) / cluster.Count)
-            .OrderBy(point => point.y).ThenBy(point => point.x).ToList();
     }
 
     private static Transform CreateMarker(Transform parent, string name, Vector3 position)

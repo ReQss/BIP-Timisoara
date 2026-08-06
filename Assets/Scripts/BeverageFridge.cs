@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
@@ -9,6 +11,11 @@ public sealed class BeverageFridge : MonoBehaviour
     [SerializeField, Min(0.25f)] private float interactionDistance = 1.25f;
 
     private GameObject selectionCanvas;
+    private readonly List<Image> drinkButtons = new List<Image>();
+    private IBeverageCarrier selectingCarrier;
+    private int selectedIndex;
+    private int openedFrame;
+    private float nextStickMoveTime;
 
     public BeverageDefinition[] Beverages => beverages;
 
@@ -17,16 +24,16 @@ public sealed class BeverageFridge : MonoBehaviour
         return Vector2.Distance(position, transform.position) <= interactionDistance;
     }
 
-    public void ShowDrinkSelection(BarmanController dog)
+    public void ShowDrinkSelection(IBeverageCarrier carrier)
     {
-        if (dog == null || beverages == null || beverages.Length == 0)
+        if (carrier == null || beverages == null || beverages.Length == 0)
         {
             return;
         }
 
         if (selectionCanvas != null)
         {
-            Destroy(selectionCanvas);
+            CloseSelection();
             return;
         }
 
@@ -44,6 +51,11 @@ public sealed class BeverageFridge : MonoBehaviour
         scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
         scaler.referenceResolution = new Vector2(1920f, 1080f);
         scaler.matchWidthOrHeight = 0.5f;
+        selectingCarrier = carrier;
+        selectingCarrier.SetFridgeMenuOpen(true);
+        selectedIndex = 0;
+        openedFrame = Time.frameCount;
+        drinkButtons.Clear();
 
         GameObject panel = new GameObject("White Drink Table", typeof(RectTransform), typeof(Image));
         panel.transform.SetParent(selectionCanvas.transform, false);
@@ -72,11 +84,11 @@ public sealed class BeverageFridge : MonoBehaviour
         for (int i = 0; i < visibleCount; i++)
         {
             BeverageDefinition choice = beverages[i];
-            CreateDrinkButton(gridObject.transform, choice, () =>
+            Image buttonImage = CreateDrinkButton(gridObject.transform, choice, () =>
             {
-                dog.SetHeldBeverage(choice);
-                Destroy(selectionCanvas);
+                SelectDrink(choice);
             });
+            drinkButtons.Add(buttonImage);
         }
 
         GameObject close = new GameObject("Close", typeof(RectTransform), typeof(Image), typeof(Button));
@@ -87,8 +99,64 @@ public sealed class BeverageFridge : MonoBehaviour
         closeRect.anchoredPosition = new Vector2(-12f, -12f);
         closeRect.sizeDelta = new Vector2(42f, 42f);
         close.GetComponent<Image>().color = new Color(0.9f, 0.9f, 0.9f);
-        close.GetComponent<Button>().onClick.AddListener(() => Destroy(selectionCanvas));
+        close.GetComponent<Button>().onClick.AddListener(CloseSelection);
         CreateLabel(close.transform, "X", Vector2.zero, new Vector2(42f, 42f), 22, FontStyle.Bold);
+        UpdateSelectionHighlight();
+    }
+
+    private void Update()
+    {
+        if (selectionCanvas == null || Time.frameCount == openedFrame)
+        {
+            return;
+        }
+
+        Keyboard keyboard = Keyboard.current;
+        Gamepad gamepad = Gamepad.current;
+
+        bool catControls = selectingCarrier != null && selectingCarrier.UsesCatControls;
+        Key leftKey = catControls ? Key.A : Key.J;
+        Key rightKey = catControls ? Key.D : Key.L;
+        Key upKey = catControls ? Key.W : Key.I;
+        Key downKey = catControls ? Key.S : Key.K;
+        bool left = WasPressed(keyboard, leftKey, Key.LeftArrow) || (gamepad != null && gamepad.dpad.left.wasPressedThisFrame);
+        bool right = WasPressed(keyboard, rightKey, Key.RightArrow) || (gamepad != null && gamepad.dpad.right.wasPressedThisFrame);
+        bool up = WasPressed(keyboard, upKey, Key.UpArrow) || (gamepad != null && gamepad.dpad.up.wasPressedThisFrame);
+        bool down = WasPressed(keyboard, downKey, Key.DownArrow) || (gamepad != null && gamepad.dpad.down.wasPressedThisFrame);
+
+        if (gamepad != null && Time.unscaledTime >= nextStickMoveTime)
+        {
+            Vector2 stick = gamepad.leftStick.ReadValue();
+            if (Mathf.Abs(stick.x) > 0.65f || Mathf.Abs(stick.y) > 0.65f)
+            {
+                if (Mathf.Abs(stick.x) > Mathf.Abs(stick.y))
+                {
+                    left |= stick.x < 0f;
+                    right |= stick.x > 0f;
+                }
+                else
+                {
+                    down |= stick.y < 0f;
+                    up |= stick.y > 0f;
+                }
+                nextStickMoveTime = Time.unscaledTime + 0.18f;
+            }
+        }
+
+        if (left) MoveSelection(-1, 0);
+        else if (right) MoveSelection(1, 0);
+        else if (up) MoveSelection(0, -1);
+        else if (down) MoveSelection(0, 1);
+
+        bool keyboardConfirm = keyboard != null && (catControls
+            ? keyboard.eKey.wasPressedThisFrame
+            : keyboard.spaceKey.wasPressedThisFrame);
+        bool confirm = keyboardConfirm ||
+                       (gamepad != null && gamepad.buttonSouth.wasPressedThisFrame);
+        if (confirm && selectedIndex >= 0 && selectedIndex < beverages.Length)
+        {
+            SelectDrink(beverages[selectedIndex]);
+        }
     }
 
     public void Configure(BeverageDefinition[] definitions)
@@ -96,7 +164,7 @@ public sealed class BeverageFridge : MonoBehaviour
         beverages = definitions;
     }
 
-    private static void CreateDrinkButton(Transform parent, BeverageDefinition beverage, UnityEngine.Events.UnityAction action)
+    private static Image CreateDrinkButton(Transform parent, BeverageDefinition beverage, UnityEngine.Events.UnityAction action)
     {
         GameObject buttonObject = new GameObject(beverage.displayName, typeof(RectTransform), typeof(Image), typeof(Button));
         buttonObject.transform.SetParent(parent, false);
@@ -118,6 +186,62 @@ public sealed class BeverageFridge : MonoBehaviour
         icon.preserveAspect = true;
 
         CreateLabel(buttonObject.transform, beverage.displayName, new Vector2(0f, -32f), new Vector2(112f, 25f), 14, FontStyle.Normal);
+        return background;
+    }
+
+    private void MoveSelection(int horizontal, int vertical)
+    {
+        if (drinkButtons.Count == 0)
+        {
+            return;
+        }
+
+        const int columns = 5;
+        int rows = Mathf.CeilToInt(drinkButtons.Count / (float)columns);
+        int row = selectedIndex / columns;
+        int column = selectedIndex % columns;
+        column = (column + horizontal + columns) % columns;
+        row = (row + vertical + rows) % rows;
+        int candidate = row * columns + column;
+        if (candidate >= drinkButtons.Count)
+        {
+            candidate = drinkButtons.Count - 1;
+        }
+        selectedIndex = candidate;
+        UpdateSelectionHighlight();
+    }
+
+    private void UpdateSelectionHighlight()
+    {
+        for (int i = 0; i < drinkButtons.Count; i++)
+        {
+            drinkButtons[i].color = i == selectedIndex
+                ? new Color(0.55f, 0.82f, 1f)
+                : new Color(0.94f, 0.94f, 0.94f);
+        }
+    }
+
+    private void SelectDrink(BeverageDefinition beverage)
+    {
+        selectingCarrier?.SetHeldBeverage(beverage);
+        CloseSelection();
+    }
+
+    private void CloseSelection()
+    {
+        selectingCarrier?.SetFridgeMenuOpen(false);
+        selectingCarrier = null;
+        if (selectionCanvas != null)
+        {
+            Destroy(selectionCanvas);
+            selectionCanvas = null;
+        }
+        drinkButtons.Clear();
+    }
+
+    private static bool WasPressed(Keyboard keyboard, Key first, Key second)
+    {
+        return keyboard != null && (keyboard[first].wasPressedThisFrame || keyboard[second].wasPressedThisFrame);
     }
 
     private static Text CreateLabel(Transform parent, string value, Vector2 position, Vector2 size, int fontSize, FontStyle style)
@@ -152,10 +276,7 @@ public sealed class BeverageFridge : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (selectionCanvas != null)
-        {
-            Destroy(selectionCanvas);
-        }
+        CloseSelection();
     }
 
     private void OnDrawGizmosSelected()

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D))]
-public sealed class BarmanController : MonoBehaviour
+public sealed class BarmanController : MonoBehaviour, IBeverageCarrier
 {
     public enum FaceDirection
     {
@@ -27,8 +27,10 @@ public sealed class BarmanController : MonoBehaviour
     private Vector2 movement;
     private BeverageDefinition heldBeverage;
     private SpriteRenderer heldBeverageRenderer;
+    private bool fridgeMenuOpen;
 
     public BeverageType HeldBeverage => heldBeverage.type;
+    public bool UsesCatControls => false;
 
     private void Awake()
     {
@@ -79,6 +81,14 @@ public sealed class BarmanController : MonoBehaviour
 
     private void Update()
     {
+        if (fridgeMenuOpen)
+        {
+            movement = Vector2.zero;
+            dogSpriteAnimator?.SetMovement(Vector2.zero);
+            SetWalking(false);
+            return;
+        }
+
         movement = moveAction?.ReadValue<Vector2>() ?? Vector2.zero;
         movement = Vector2.ClampMagnitude(movement, 1f);
         dogSpriteAnimator?.SetMovement(movement);
@@ -104,7 +114,7 @@ public sealed class BarmanController : MonoBehaviour
 
         SetWalking(movement.sqrMagnitude > 0.001f);
 
-        bool keyboardInteract = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+        bool keyboardInteract = Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame;
         bool gamepadInteract = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
         if (keyboardInteract || gamepadInteract)
         {
@@ -156,7 +166,7 @@ public sealed class BarmanController : MonoBehaviour
         GameObject display = new GameObject("Held Beverage");
         display.transform.SetParent(transform, false);
         display.transform.localPosition = new Vector3(0.48f, 0.3f, 0f);
-        display.transform.localScale = Vector3.one * 1.35f;
+        display.transform.localScale = Vector3.one * 0.9f;
         heldBeverageRenderer = display.AddComponent<SpriteRenderer>();
         heldBeverageRenderer.sortingOrder = 2100;
         heldBeverageRenderer.enabled = false;
@@ -166,6 +176,18 @@ public sealed class BarmanController : MonoBehaviour
     {
         heldBeverage = beverage;
         UpdateHeldBeverageDisplay();
+    }
+
+    public void SetFridgeMenuOpen(bool open)
+    {
+        fridgeMenuOpen = open;
+        if (open)
+        {
+            movement = Vector2.zero;
+            body.linearVelocity = Vector2.zero;
+            dogSpriteAnimator?.SetMovement(Vector2.zero);
+            SetWalking(false);
+        }
     }
 
     private void IgnoreCatCollisions()

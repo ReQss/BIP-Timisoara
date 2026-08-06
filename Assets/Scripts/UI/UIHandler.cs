@@ -18,6 +18,7 @@ public class UIHandler : MonoBehaviour
     public List<JobItemInList> jobItemsInList = new List<JobItemInList>();
     private readonly List<CustomerOrderRow> customerOrderRows = new List<CustomerOrderRow>();
     private RectTransform customerOrderPanel;
+    private TextMeshProUGUI moneyText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
@@ -79,6 +80,30 @@ public class UIHandler : MonoBehaviour
             row.icon.sprite = order.beverage.icon;
             row.icon.enabled = order.beverage.icon != null;
             row.label.text = order.beverage.displayName;
+        }
+    }
+
+    public void SetMoney(int amount)
+    {
+        if (moneyText == null)
+        {
+            TextMeshProUGUI[] labels = FindObjectsByType<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI label in labels)
+            {
+                string value = label.text.Trim().TrimStart('$');
+                bool namedMoneyValue = label.name == "Money Value";
+                bool legacyMoneyValue = int.TryParse(value, out int parsed) && parsed == 300;
+                if (namedMoneyValue || legacyMoneyValue)
+                {
+                    moneyText = label;
+                    break;
+                }
+            }
+        }
+
+        if (moneyText != null)
+        {
+            moneyText.text = amount.ToString();
         }
     }
 

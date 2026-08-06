@@ -50,8 +50,12 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private Texture2D beverageSpriteSheet;
     [SerializeField] private BeverageDefinition[] cafeBeverages;
     [SerializeField] private Sprite fridgePlaceholder;
+    [Header("Money")]
+    [SerializeField, Min(0)] private int startingMoney = 0;
+    [SerializeField, Min(0)] private int moneyPerOrder = 5;
     private readonly List<CustomerOrderTask> customerOrders = new List<CustomerOrderTask>();
     private int customerOrderIdCounter;
+    private int money;
 
     public IReadOnlyList<CustomerOrderTask> CustomerOrders => customerOrders;
     public IReadOnlyList<BeverageDefinition> CafeBeverages => cafeBeverages;
@@ -59,6 +63,7 @@ public class TaskManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        money = startingMoney;
         if (beverageSpriteSheet != null)
         {
             cafeBeverages = CafeRuntimeSetup.CreateBeverageMenu(beverageSpriteSheet, 20);
@@ -79,6 +84,17 @@ public class TaskManager : MonoBehaviour
     }
 
     public void CompleteCustomerOrder(int id)
+    {
+        int removed = customerOrders.RemoveAll(order => order.id == id);
+        if (removed > 0)
+        {
+            money += moneyPerOrder;
+            uiHandler?.SetMoney(money);
+        }
+        uiHandler?.RefreshCustomerOrders(customerOrders);
+    }
+
+    public void CancelCustomerOrder(int id)
     {
         customerOrders.RemoveAll(order => order.id == id);
         uiHandler?.RefreshCustomerOrders(customerOrders);
@@ -145,6 +161,7 @@ public class TaskManager : MonoBehaviour
         CafeRuntimeSetup.Ensure(travellerSpriteSheet, cafeBeverages, fridgePlaceholder);
         FindAnyObjectByType<BeverageFridge>()?.Configure(cafeBeverages);
         uiHandler?.CleanJobList();
+        uiHandler?.SetMoney(money);
         uiHandler?.RefreshCustomerOrders(customerOrders);
         StartCoroutine(StartRandomTasks());
     }
