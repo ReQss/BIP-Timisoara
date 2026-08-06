@@ -143,7 +143,9 @@ public class SplitScreenManager : MonoBehaviour
         Canvas dividerCanvas = canvasObject.GetComponent<Canvas>();
         dividerCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
         dividerCanvas.overrideSorting = true;
-        dividerCanvas.sortingOrder = 50;
+        // The camera composite is -100. Keep the line immediately above it,
+        // but below normal UI canvases so the HUD and menus stay on top.
+        dividerCanvas.sortingOrder = -99;
 
         GameObject lineObject = new GameObject("Split Screen Divider", typeof(RectTransform));
 
