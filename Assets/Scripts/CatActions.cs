@@ -12,6 +12,7 @@ public class CatActions : MonoBehaviour, IBeverageCarrier
     private bool fridgeMenuOpen;
 
     public bool UsesCatControls => true;
+    public Transform CarrierTransform => transform;
     public bool IsFridgeMenuOpen => fridgeMenuOpen;
 
     private void Awake()

@@ -346,7 +346,10 @@ public sealed class FrogCustomer : MonoBehaviour
     {
         if (orderTaskId >= 0)
         {
-            TaskManager.Instance?.CancelCustomerOrder(orderTaskId);
+            if (TaskManager.Instance != null)
+            {
+                TaskManager.Instance.CancelCustomerOrder(orderTaskId);
+            }
         }
         seat?.Release();
         toilet?.Release();

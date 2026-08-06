@@ -79,7 +79,7 @@ public class TaskManager : MonoBehaviour
     {
         int id = customerOrderIdCounter++;
         customerOrders.Add(new CustomerOrderTask(id, customer, beverage));
-        uiHandler?.RefreshCustomerOrders(customerOrders);
+        RefreshCustomerOrderUi();
         return id;
     }
 
@@ -89,15 +89,26 @@ public class TaskManager : MonoBehaviour
         if (removed > 0)
         {
             money += moneyPerOrder;
-            uiHandler?.SetMoney(money);
+            if (uiHandler != null)
+            {
+                uiHandler.SetMoney(money);
+            }
         }
-        uiHandler?.RefreshCustomerOrders(customerOrders);
+        RefreshCustomerOrderUi();
     }
 
     public void CancelCustomerOrder(int id)
     {
         customerOrders.RemoveAll(order => order.id == id);
-        uiHandler?.RefreshCustomerOrders(customerOrders);
+        RefreshCustomerOrderUi();
+    }
+
+    private void RefreshCustomerOrderUi()
+    {
+        if (uiHandler != null && uiHandler.isActiveAndEnabled)
+        {
+            uiHandler.RefreshCustomerOrders(customerOrders);
+        }
     }
 
     public BeverageType GetOldestCustomerOrderType()

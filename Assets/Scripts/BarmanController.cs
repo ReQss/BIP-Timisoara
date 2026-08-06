@@ -31,6 +31,7 @@ public sealed class BarmanController : MonoBehaviour, IBeverageCarrier
 
     public BeverageType HeldBeverage => heldBeverage.type;
     public bool UsesCatControls => false;
+    public Transform CarrierTransform => transform;
 
     private void Awake()
     {

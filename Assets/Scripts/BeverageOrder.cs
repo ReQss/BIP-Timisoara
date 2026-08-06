@@ -37,6 +37,7 @@ public struct BeverageDefinition
 public interface IBeverageCarrier
 {
     bool UsesCatControls { get; }
+    Transform CarrierTransform { get; }
     void SetHeldBeverage(BeverageDefinition beverage);
     void SetFridgeMenuOpen(bool open);
 }

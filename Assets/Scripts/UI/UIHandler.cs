@@ -55,6 +55,11 @@ public class UIHandler : MonoBehaviour
 
     public void RefreshCustomerOrders(IReadOnlyList<CustomerOrderTask> orders)
     {
+        if (this == null || !isActiveAndEnabled)
+        {
+            return;
+        }
+
         EnsureCustomerOrderPanel();
         if (customerOrderPanel == null)
         {
@@ -70,6 +75,12 @@ public class UIHandler : MonoBehaviour
         {
             bool visible = i < orders.Count;
             CustomerOrderRow row = customerOrderRows[i];
+            if (row.root == null)
+            {
+                customerOrderRows.Clear();
+                RefreshCustomerOrders(orders);
+                return;
+            }
             row.root.SetActive(visible);
             if (!visible)
             {
@@ -113,6 +124,8 @@ public class UIHandler : MonoBehaviour
         {
             return;
         }
+
+        customerOrderRows.Clear();
 
         Canvas canvas = GetComponentInParent<Canvas>();
         if (canvas == null && jobItemsInList.Count > 0 && jobItemsInList[0].jobDescription != null)
@@ -230,6 +243,13 @@ public class UIHandler : MonoBehaviour
     public void ActiveOrDisablePanel(GameObject panel)
     {
         panel.SetActive(!panel.activeSelf);
+    }
+
+    private void OnDestroy()
+    {
+        customerOrderRows.Clear();
+        customerOrderPanel = null;
+        moneyText = null;
     }
 }
 
