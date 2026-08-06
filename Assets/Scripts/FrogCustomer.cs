@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -23,21 +22,28 @@ public sealed class FrogCustomer : MonoBehaviour
 
     [Header("Visit timing")]
     [SerializeField] private Vector2 decisionTimeRange = new Vector2(1.5f, 3f);
-    [SerializeField, Min(1f)] private float patienceSeconds = 18f;
     [SerializeField] private Vector2 eatingTimeRange = new Vector2(4f, 7f);
     [SerializeField, Range(0f, 1f)] private float toiletChance = 0.35f;
     [SerializeField, Min(0.5f)] private float toiletUseSeconds = 3.5f;
-    [SerializeField, Min(0.1f)] private float barmanServeDistance = 1.15f;
+    [SerializeField, Min(0.1f)] private float serveDistance = 1.15f;
 
     [Header("Directional frames")]
     [SerializeField] private Sprite[] idleFront;
     [SerializeField] private Sprite[] idleBack;
     [SerializeField] private Sprite[] idleLeft;
     [SerializeField] private Sprite[] idleRight;
+    [SerializeField] private Sprite[] idleFrontRight;
+    [SerializeField] private Sprite[] idleBackRight;
+    [SerializeField] private Sprite[] idleFrontLeft;
+    [SerializeField] private Sprite[] idleBackLeft;
     [SerializeField] private Sprite[] runFront;
     [SerializeField] private Sprite[] runBack;
     [SerializeField] private Sprite[] runLeft;
     [SerializeField] private Sprite[] runRight;
+    [SerializeField] private Sprite[] runFrontRight;
+    [SerializeField] private Sprite[] runBackRight;
+    [SerializeField] private Sprite[] runFrontLeft;
+    [SerializeField] private Sprite[] runBackLeft;
     [SerializeField, Min(1f)] private float idleFramesPerSecond = 4f;
     [SerializeField, Min(1f)] private float runFramesPerSecond = 10f;
 
@@ -45,22 +51,22 @@ public sealed class FrogCustomer : MonoBehaviour
     private CafeDestination seat;
     private CafeDestination toilet;
     private Transform exit;
-    private Transform barman;
     private SpriteRenderer spriteRenderer;
     private CustomerState state;
     private Vector3 destination;
     private Vector2 facing = Vector2.down;
     private float stateTimer;
-    private float patienceRemaining;
     private float animationTime;
     private bool served;
 
     private Canvas orderCanvas;
-    private Text orderText;
-    private Button serveButton;
-    private Image patienceFill;
+    private Image orderIcon;
+    [SerializeField] private BeverageDefinition[] beverages;
+    private BeverageDefinition order;
+    private int orderTaskId = -1;
 
-    private static readonly string[] Orders = { "Tea", "Coffee", "Cake", "Soup" };
+    public BeverageType RequestedBeverage => state == CustomerState.WaitingForOrder ? order.type : BeverageType.None;
+    public bool IsWaitingForOrder => state == CustomerState.WaitingForOrder;
 
     private void Awake()
     {
@@ -70,12 +76,21 @@ public sealed class FrogCustomer : MonoBehaviour
 
     public void Initialize(CafeCustomerDirector owner, CafeDestination reservedSeat, Transform exitPoint)
     {
+        BeverageDefinition[] currentMenu = TaskManager.Instance?.GetCafeBeverages();
+        if (currentMenu == null || currentMenu.Length == 0)
+        {
+            currentMenu = FindAnyObjectByType<BeverageFridge>()?.Beverages;
+        }
+        if (currentMenu != null && currentMenu.Length > 0)
+        {
+            beverages = currentMenu;
+        }
+
         director = owner;
         seat = reservedSeat;
         exit = exitPoint;
         destination = seat.transform.position;
         state = CustomerState.WalkingToSeat;
-        barman = FindAnyObjectByType<BarmanController>()?.transform;
         SetOrderUi(false);
     }
 
@@ -127,14 +142,15 @@ public sealed class FrogCustomer : MonoBehaviour
         {
             state = CustomerState.Deciding;
             stateTimer = UnityEngine.Random.Range(decisionTimeRange.x, decisionTimeRange.y);
-            ShowMessage("Hmm...");
+            facing = seat.SeatedFacing;
+            SetOrderUi(false);
         }
         else if (state == CustomerState.WalkingToToilet)
         {
             state = CustomerState.UsingToilet;
             stateTimer = toiletUseSeconds;
             spriteRenderer.enabled = false;
-            ShowMessage("Occupied");
+            SetOrderUi(false);
         }
         else
         {
@@ -154,49 +170,43 @@ public sealed class FrogCustomer : MonoBehaviour
     private void BeginWaitingForOrder()
     {
         state = CustomerState.WaitingForOrder;
-        patienceRemaining = patienceSeconds;
-        string order = Orders[UnityEngine.Random.Range(0, Orders.Length)];
-        orderText.text = order + "?";
-        serveButton.gameObject.SetActive(true);
-        serveButton.interactable = true;
-        patienceFill.transform.parent.gameObject.SetActive(true);
+        if (beverages == null || beverages.Length == 0)
+        {
+            Debug.LogError("Cafe beverage menu is unavailable; customer visit was cancelled.", this);
+            LeaveToExit();
+            return;
+        }
+
+        order = beverages[UnityEngine.Random.Range(0, beverages.Length)];
+        orderIcon.sprite = order.icon;
+        orderIcon.enabled = order.icon != null;
+        orderTaskId = TaskManager.Instance != null ? TaskManager.Instance.AddCustomerOrder(this, order) : -1;
         SetOrderUi(true);
     }
 
     private void UpdateWaitingForOrder()
     {
-        patienceRemaining -= Time.deltaTime;
-        patienceFill.fillAmount = Mathf.Clamp01(patienceRemaining / patienceSeconds);
-
-        bool keyboardServe = Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
-        bool gamepadServe = Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame;
-        if ((keyboardServe || gamepadServe) && barman != null &&
-            Vector2.Distance(transform.position, barman.position) <= barmanServeDistance)
-        {
-            ServeOrder();
-        }
-
-        if (patienceRemaining <= 0f)
-        {
-            ShowMessage("Too slow!");
-            LeaveToExit();
-        }
+        // Orders intentionally have no patience timer. The customer waits until served.
     }
 
-    public void ServeOrder()
+    public bool TryServe(BeverageType beverage, Vector3 serverPosition)
     {
-        if (state != CustomerState.WaitingForOrder)
+        if (state != CustomerState.WaitingForOrder || beverage != order.type ||
+            Vector2.Distance(transform.position, serverPosition) > serveDistance)
         {
-            return;
+            return false;
         }
 
         served = true;
+        if (orderTaskId >= 0)
+        {
+            TaskManager.Instance?.CompleteCustomerOrder(orderTaskId);
+            orderTaskId = -1;
+        }
         state = CustomerState.Eating;
         stateTimer = UnityEngine.Random.Range(eatingTimeRange.x, eatingTimeRange.y);
-        serveButton.gameObject.SetActive(true);
-        serveButton.interactable = false;
-        patienceFill.transform.parent.gameObject.SetActive(false);
-        ShowMessage("Yum!");
+        SetOrderUi(false);
+        return true;
     }
 
     private void FinishEating()
@@ -253,21 +263,35 @@ public sealed class FrogCustomer : MonoBehaviour
 
     private Sprite[] SelectFrames(bool walking)
     {
+        bool diagonal = Mathf.Abs(facing.x) > 0.2f && Mathf.Abs(facing.y) > 0.2f;
+        if (diagonal)
+        {
+            Sprite[] diagonalFrames;
+            if (facing.y < 0f)
+            {
+                diagonalFrames = facing.x < 0f
+                    ? (walking ? runFrontLeft : idleFrontLeft)
+                    : (walking ? runFrontRight : idleFrontRight);
+            }
+            else
+            {
+                diagonalFrames = facing.x < 0f
+                    ? (walking ? runBackLeft : idleBackLeft)
+                    : (walking ? runBackRight : idleBackRight);
+            }
+
+            if (diagonalFrames != null && diagonalFrames.Length > 0)
+            {
+                return diagonalFrames;
+            }
+        }
+
         if (Mathf.Abs(facing.x) > Mathf.Abs(facing.y))
         {
             return facing.x < 0f ? (walking ? runLeft : idleLeft) : (walking ? runRight : idleRight);
         }
 
         return facing.y > 0f ? (walking ? runBack : idleBack) : (walking ? runFront : idleFront);
-    }
-
-    private void ShowMessage(string message)
-    {
-        orderText.text = message;
-        serveButton.gameObject.SetActive(true);
-        serveButton.interactable = false;
-        patienceFill.transform.parent.gameObject.SetActive(false);
-        SetOrderUi(true);
     }
 
     private void SetOrderUi(bool visible)
@@ -278,65 +302,36 @@ public sealed class FrogCustomer : MonoBehaviour
     private void CreateOrderUi()
     {
         GameObject canvasObject = new GameObject(
-            "Order UI", typeof(RectTransform), typeof(Canvas), typeof(GraphicRaycaster));
+            "Order Bubble", typeof(RectTransform), typeof(Canvas));
         canvasObject.transform.SetParent(transform, false);
-        canvasObject.transform.localPosition = new Vector3(0f, 0.92f, 0f);
-        canvasObject.transform.localScale = Vector3.one * 0.0075f;
+        canvasObject.transform.localPosition = new Vector3(0f, 1.05f, 0f);
+        canvasObject.transform.localScale = Vector3.one * 0.006f;
         orderCanvas = canvasObject.GetComponent<Canvas>();
         orderCanvas.renderMode = RenderMode.WorldSpace;
         orderCanvas.sortingOrder = 2000;
         RectTransform canvasRect = (RectTransform)canvasObject.transform;
-        canvasRect.sizeDelta = new Vector2(130f, 58f);
+        canvasRect.sizeDelta = new Vector2(64f, 64f);
 
         Image panel = canvasObject.AddComponent<Image>();
-        panel.color = new Color(0.12f, 0.16f, 0.18f, 0.94f);
+        panel.color = new Color(1f, 1f, 1f, 0.96f);
 
-        GameObject buttonObject = new GameObject("Serve Button", typeof(RectTransform), typeof(Image), typeof(Button));
-        buttonObject.transform.SetParent(canvasObject.transform, false);
-        RectTransform buttonRect = (RectTransform)buttonObject.transform;
-        buttonRect.anchorMin = new Vector2(0.06f, 0.35f);
-        buttonRect.anchorMax = new Vector2(0.94f, 0.94f);
-        buttonRect.offsetMin = buttonRect.offsetMax = Vector2.zero;
-        buttonObject.GetComponent<Image>().color = new Color(0.38f, 0.72f, 0.42f, 1f);
-        serveButton = buttonObject.GetComponent<Button>();
-        serveButton.onClick.AddListener(ServeOrder);
-
-        GameObject textObject = new GameObject("Label", typeof(RectTransform), typeof(Text));
-        textObject.transform.SetParent(buttonObject.transform, false);
-        RectTransform textRect = (RectTransform)textObject.transform;
-        textRect.anchorMin = Vector2.zero;
-        textRect.anchorMax = Vector2.one;
-        textRect.offsetMin = textRect.offsetMax = Vector2.zero;
-        orderText = textObject.GetComponent<Text>();
-        orderText.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
-        orderText.fontSize = 22;
-        orderText.alignment = TextAnchor.MiddleCenter;
-        orderText.color = Color.white;
-
-        GameObject patienceBackground = new GameObject("Patience", typeof(RectTransform), typeof(Image));
-        patienceBackground.transform.SetParent(canvasObject.transform, false);
-        RectTransform patienceRect = (RectTransform)patienceBackground.transform;
-        patienceRect.anchorMin = new Vector2(0.06f, 0.1f);
-        patienceRect.anchorMax = new Vector2(0.94f, 0.25f);
-        patienceRect.offsetMin = patienceRect.offsetMax = Vector2.zero;
-        patienceBackground.GetComponent<Image>().color = new Color(0.25f, 0.25f, 0.25f, 1f);
-
-        GameObject fillObject = new GameObject("Fill", typeof(RectTransform), typeof(Image));
-        fillObject.transform.SetParent(patienceBackground.transform, false);
-        RectTransform fillRect = (RectTransform)fillObject.transform;
-        fillRect.anchorMin = Vector2.zero;
-        fillRect.anchorMax = Vector2.one;
-        fillRect.offsetMin = fillRect.offsetMax = Vector2.zero;
-        patienceFill = fillObject.GetComponent<Image>();
-        patienceFill.color = new Color(1f, 0.72f, 0.2f, 1f);
-        patienceFill.type = Image.Type.Filled;
-        patienceFill.fillMethod = Image.FillMethod.Horizontal;
-        patienceFill.fillOrigin = (int)Image.OriginHorizontal.Left;
+        GameObject iconObject = new GameObject("Wanted Beverage", typeof(RectTransform), typeof(Image));
+        iconObject.transform.SetParent(canvasObject.transform, false);
+        RectTransform iconRect = (RectTransform)iconObject.transform;
+        iconRect.anchorMin = new Vector2(0.16f, 0.16f);
+        iconRect.anchorMax = new Vector2(0.84f, 0.84f);
+        iconRect.offsetMin = iconRect.offsetMax = Vector2.zero;
+        orderIcon = iconObject.GetComponent<Image>();
+        orderIcon.preserveAspect = true;
     }
 
     public void ConfigureAnimationFrames(
         Sprite[] frontIdle, Sprite[] backIdle, Sprite[] leftIdle, Sprite[] rightIdle,
-        Sprite[] frontRun, Sprite[] backRun, Sprite[] leftRun, Sprite[] rightRun)
+        Sprite[] frontRun, Sprite[] backRun, Sprite[] leftRun, Sprite[] rightRun,
+        Sprite[] frontRightIdle = null, Sprite[] backRightIdle = null,
+        Sprite[] frontLeftIdle = null, Sprite[] backLeftIdle = null,
+        Sprite[] frontRightRun = null, Sprite[] backRightRun = null,
+        Sprite[] frontLeftRun = null, Sprite[] backLeftRun = null)
     {
         idleFront = frontIdle;
         idleBack = backIdle;
@@ -346,10 +341,27 @@ public sealed class FrogCustomer : MonoBehaviour
         runBack = backRun;
         runLeft = leftRun;
         runRight = rightRun;
+        idleFrontRight = frontRightIdle;
+        idleBackRight = backRightIdle;
+        idleFrontLeft = frontLeftIdle;
+        idleBackLeft = backLeftIdle;
+        runFrontRight = frontRightRun;
+        runBackRight = backRightRun;
+        runFrontLeft = frontLeftRun;
+        runBackLeft = backLeftRun;
+    }
+
+    public void ConfigureBeverages(BeverageDefinition[] menu)
+    {
+        beverages = menu;
     }
 
     private void OnDestroy()
     {
+        if (orderTaskId >= 0)
+        {
+            TaskManager.Instance?.CompleteCustomerOrder(orderTaskId);
+        }
         seat?.Release();
         toilet?.Release();
     }

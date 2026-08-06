@@ -9,9 +9,11 @@ public sealed class CafeDestination : MonoBehaviour
     }
 
     [SerializeField] private DestinationKind kind;
+    [SerializeField] private Vector2 seatedFacing = Vector2.down;
 
     public DestinationKind Kind => kind;
     public bool IsOccupied { get; private set; }
+    public Vector2 SeatedFacing => seatedFacing.sqrMagnitude > 0f ? seatedFacing.normalized : Vector2.down;
 
     public bool TryReserve()
     {
@@ -29,9 +31,13 @@ public sealed class CafeDestination : MonoBehaviour
         IsOccupied = false;
     }
 
-    public void Configure(DestinationKind destinationKind)
+    public void Configure(DestinationKind destinationKind, Vector2 facing = default)
     {
         kind = destinationKind;
+        if (facing.sqrMagnitude > 0f)
+        {
+            seatedFacing = facing.normalized;
+        }
     }
 
     private void OnDrawGizmos()

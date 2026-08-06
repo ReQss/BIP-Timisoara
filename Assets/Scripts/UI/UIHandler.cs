@@ -16,6 +16,8 @@ public class UIHandler : MonoBehaviour
     public GameObject pauseMenu;
     //5 elements for jobs
     public List<JobItemInList> jobItemsInList = new List<JobItemInList>();
+    private readonly List<CustomerOrderRow> customerOrderRows = new List<CustomerOrderRow>();
+    private RectTransform customerOrderPanel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
@@ -48,6 +50,123 @@ public class UIHandler : MonoBehaviour
         newJobItem.job = job;
         newJobItem.jobDescription.text = job.assignedTask.taskDescription;
         newJobItem.timeLeft.text = job.waitingTime.ToString();
+    }
+
+    public void RefreshCustomerOrders(IReadOnlyList<CustomerOrderTask> orders)
+    {
+        EnsureCustomerOrderPanel();
+        if (customerOrderPanel == null)
+        {
+            return;
+        }
+
+        while (customerOrderRows.Count < orders.Count)
+        {
+            customerOrderRows.Add(CreateCustomerOrderRow(customerOrderRows.Count));
+        }
+
+        for (int i = 0; i < customerOrderRows.Count; i++)
+        {
+            bool visible = i < orders.Count;
+            CustomerOrderRow row = customerOrderRows[i];
+            row.root.SetActive(visible);
+            if (!visible)
+            {
+                continue;
+            }
+
+            CustomerOrderTask order = orders[i];
+            row.icon.sprite = order.beverage.icon;
+            row.icon.enabled = order.beverage.icon != null;
+            row.label.text = order.beverage.displayName;
+        }
+    }
+
+    private void EnsureCustomerOrderPanel()
+    {
+        if (customerOrderPanel != null)
+        {
+            return;
+        }
+
+        Canvas canvas = GetComponentInParent<Canvas>();
+        if (canvas == null && jobItemsInList.Count > 0 && jobItemsInList[0].jobDescription != null)
+        {
+            canvas = jobItemsInList[0].jobDescription.GetComponentInParent<Canvas>();
+        }
+
+        if (canvas == null)
+        {
+            canvas = FindAnyObjectByType<Canvas>();
+        }
+
+        if (canvas == null)
+        {
+            return;
+        }
+
+        GameObject panel = new GameObject("Customer Order Tasks", typeof(RectTransform), typeof(Image));
+        panel.transform.SetParent(canvas.transform, false);
+        customerOrderPanel = panel.GetComponent<RectTransform>();
+        customerOrderPanel.anchorMin = new Vector2(1f, 1f);
+        customerOrderPanel.anchorMax = new Vector2(1f, 1f);
+        customerOrderPanel.pivot = new Vector2(1f, 1f);
+        customerOrderPanel.anchoredPosition = new Vector2(-24f, -90f);
+        customerOrderPanel.sizeDelta = new Vector2(280f, 260f);
+        panel.GetComponent<Image>().color = new Color(0.08f, 0.11f, 0.13f, 0.9f);
+
+        GameObject heading = new GameObject("Heading", typeof(RectTransform), typeof(TextMeshProUGUI));
+        heading.transform.SetParent(panel.transform, false);
+        RectTransform headingRect = heading.GetComponent<RectTransform>();
+        headingRect.anchorMin = new Vector2(0f, 1f);
+        headingRect.anchorMax = new Vector2(1f, 1f);
+        headingRect.pivot = new Vector2(0.5f, 1f);
+        headingRect.anchoredPosition = new Vector2(0f, -10f);
+        headingRect.sizeDelta = new Vector2(-20f, 34f);
+        TextMeshProUGUI headingText = heading.GetComponent<TextMeshProUGUI>();
+        headingText.text = "CUSTOMER ORDERS";
+        headingText.fontSize = 22f;
+        headingText.fontStyle = FontStyles.Bold;
+        headingText.alignment = TextAlignmentOptions.Center;
+        headingText.color = new Color(1f, 0.86f, 0.55f);
+    }
+
+    private CustomerOrderRow CreateCustomerOrderRow(int index)
+    {
+        GameObject root = new GameObject("Order " + (index + 1), typeof(RectTransform), typeof(Image));
+        root.transform.SetParent(customerOrderPanel, false);
+        RectTransform rect = root.GetComponent<RectTransform>();
+        rect.anchorMin = new Vector2(0f, 1f);
+        rect.anchorMax = new Vector2(1f, 1f);
+        rect.pivot = new Vector2(0.5f, 1f);
+        rect.anchoredPosition = new Vector2(0f, -50f - index * 40f);
+        rect.sizeDelta = new Vector2(-20f, 34f);
+        root.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.08f);
+
+        GameObject iconObject = new GameObject("Icon", typeof(RectTransform), typeof(Image));
+        iconObject.transform.SetParent(root.transform, false);
+        RectTransform iconRect = iconObject.GetComponent<RectTransform>();
+        iconRect.anchorMin = new Vector2(0f, 0.5f);
+        iconRect.anchorMax = new Vector2(0f, 0.5f);
+        iconRect.pivot = new Vector2(0f, 0.5f);
+        iconRect.anchoredPosition = new Vector2(5f, 0f);
+        iconRect.sizeDelta = new Vector2(28f, 28f);
+        Image icon = iconObject.GetComponent<Image>();
+        icon.preserveAspect = true;
+
+        GameObject labelObject = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
+        labelObject.transform.SetParent(root.transform, false);
+        RectTransform labelRect = labelObject.GetComponent<RectTransform>();
+        labelRect.anchorMin = Vector2.zero;
+        labelRect.anchorMax = Vector2.one;
+        labelRect.offsetMin = new Vector2(42f, 0f);
+        labelRect.offsetMax = new Vector2(-6f, 0f);
+        TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
+        label.fontSize = 18f;
+        label.alignment = TextAlignmentOptions.MidlineLeft;
+        label.color = Color.white;
+
+        return new CustomerOrderRow(root, icon, label);
     }
     
        
@@ -86,5 +205,19 @@ public class UIHandler : MonoBehaviour
     public void ActiveOrDisablePanel(GameObject panel)
     {
         panel.SetActive(!panel.activeSelf);
+    }
+}
+
+internal sealed class CustomerOrderRow
+{
+    public readonly GameObject root;
+    public readonly Image icon;
+    public readonly TextMeshProUGUI label;
+
+    public CustomerOrderRow(GameObject root, Image icon, TextMeshProUGUI label)
+    {
+        this.root = root;
+        this.icon = icon;
+        this.label = label;
     }
 }

@@ -52,7 +52,8 @@ public sealed class CafeCustomerDirector : MonoBehaviour
         }
 
         FrogCustomer customer = Instantiate(customerPrefab, entrance.position, Quaternion.identity);
-        customer.name = "Frog Customer";
+        customer.name = "Traveller Customer";
+        customer.gameObject.SetActive(true);
         customer.Initialize(this, seat, exit);
         customers.Add(customer);
     }
