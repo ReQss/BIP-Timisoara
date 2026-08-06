@@ -23,6 +23,8 @@ public class DiagonalSplitScreenComposite : MonoBehaviour
     private RenderTexture rightTexture;
     private int textureWidth;
     private int textureHeight;
+    private int screenWidth;
+    private int screenHeight;
 
     public void Initialize(Camera firstCamera, Camera secondCamera)
     {
@@ -39,7 +41,8 @@ public class DiagonalSplitScreenComposite : MonoBehaviour
         camera1.rect = new Rect(0f, 0f, 1f, 1f);
         camera2.rect = new Rect(0f, 0f, 1f, 1f);
         camera1.enabled = true;
-        camera2.enabled = true;
+        camera2.enabled = false;
+        canvas.enabled = false;
     }
 
     public void SetSplitAmount(float amount)
@@ -49,11 +52,29 @@ public class DiagonalSplitScreenComposite : MonoBehaviour
             return;
         }
 
+        float splitAmount = Mathf.Clamp01(amount);
+        if (splitAmount < 0.01f)
+        {
+            canvas.enabled = false;
+            camera1.targetTexture = null;
+            camera2.targetTexture = null;
+            camera1.ResetAspect();
+            camera2.ResetAspect();
+            camera1.enabled = true;
+            camera2.enabled = false;
+            return;
+        }
+
+        canvas.enabled = true;
+        camera1.enabled = true;
+        camera2.enabled = true;
         EnsureRenderTextures();
 
         float aspect = (float)Screen.width / Screen.height;
         float diagonalOffset = Mathf.Tan(seamAngle * Mathf.Deg2Rad) / aspect * 0.5f;
-        float boundary = Mathf.Lerp(1f + diagonalOffset, 0.5f, Mathf.Clamp01(amount));
+        float boundary = Mathf.Lerp(1f + diagonalOffset, 0.5f, splitAmount);
+
+        ConfigureCameraPanels(boundary, diagonalOffset, aspect);
 
         leftMaterial.SetFloat("_Boundary", boundary);
         rightMaterial.SetFloat("_Boundary", boundary);
@@ -112,12 +133,19 @@ public class DiagonalSplitScreenComposite : MonoBehaviour
 
     private void EnsureRenderTextures()
     {
-        if (Screen.width == textureWidth && Screen.height == textureHeight && leftTexture != null)
+        if (Screen.width == screenWidth && Screen.height == screenHeight && leftTexture != null)
         {
+            camera1.targetTexture = leftTexture;
+            camera2.targetTexture = rightTexture;
             return;
         }
 
         ReleaseRenderTextures();
+        screenWidth = Screen.width;
+        screenHeight = Screen.height;
+        // The camera projection is set to each panel's aspect every frame.
+        // Keeping the textures full size avoids repeatedly reallocating them
+        // during the split animation.
         textureWidth = Screen.width;
         textureHeight = Screen.height;
 
@@ -127,6 +155,36 @@ public class DiagonalSplitScreenComposite : MonoBehaviour
         camera2.targetTexture = rightTexture;
         leftImage.texture = leftTexture;
         rightImage.texture = rightTexture;
+    }
+
+    private void ConfigureCameraPanels(float boundary, float diagonalOffset, float screenAspect)
+    {
+        // The panels shrink with the animated seam. Their cameras use the
+        // exact same aspect ratio, so the view changes its field of view
+        // naturally instead of being stretched by the UI.
+        float leftMin = -diagonalOffset;
+        float leftWidth = boundary + diagonalOffset - leftMin;
+        float rightMin = boundary - diagonalOffset;
+        float rightWidth = 1f + diagonalOffset - rightMin;
+
+        SetPanelRect(leftImage.rectTransform, leftMin, leftWidth);
+        SetPanelRect(rightImage.rectTransform, rightMin, rightWidth);
+
+        leftMaterial.SetFloat("_RectMinX", leftMin);
+        rightMaterial.SetFloat("_RectMinX", rightMin);
+        leftMaterial.SetFloat("_RectWidth", leftWidth);
+        rightMaterial.SetFloat("_RectWidth", rightWidth);
+
+        camera1.aspect = screenAspect * leftWidth;
+        camera2.aspect = screenAspect * rightWidth;
+    }
+
+    private static void SetPanelRect(RectTransform rect, float minX, float width)
+    {
+        rect.anchorMin = new Vector2(minX, 0f);
+        rect.anchorMax = new Vector2(minX + width, 1f);
+        rect.offsetMin = Vector2.zero;
+        rect.offsetMax = Vector2.zero;
     }
 
     private RenderTexture CreateRenderTexture(string textureName)

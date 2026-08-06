@@ -7,6 +7,8 @@ Shader "UI/DiagonalSplitMask"
         _Boundary ("Boundary", Float) = 0.5
         _Aspect ("Aspect", Float) = 1.77778
         _Angle ("Angle", Float) = 15
+        _RectMinX ("Panel Left", Float) = 0
+        _RectWidth ("Panel Width", Float) = 1
         _Side ("Side", Float) = -1
     }
 
@@ -44,6 +46,8 @@ Shader "UI/DiagonalSplitMask"
             float _Boundary;
             float _Aspect;
             float _Angle;
+            float _RectMinX;
+            float _RectWidth;
             float _Side;
 
             v2f vert(appdata input)
@@ -59,7 +63,8 @@ Shader "UI/DiagonalSplitMask"
             {
                 // The aspect correction keeps the seam angle consistent on every resolution.
                 float lineX = _Boundary + (0.5 - input.uv.y) * tan(radians(_Angle)) / _Aspect;
-                float signedDistance = (input.uv.x - lineX) * _Side;
+                float screenX = _RectMinX + input.uv.x * _RectWidth;
+                float signedDistance = (screenX - lineX) * _Side;
                 clip(signedDistance);
                 return tex2D(_MainTex, input.uv) * input.color;
             }
