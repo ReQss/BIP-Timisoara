@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SplitScreenManager : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class SplitScreenManager : MonoBehaviour
     [SerializeField] private PlayerCameraFollow follow1;
     [SerializeField] private PlayerCameraFollow follow2;
 
+    [Header("Divider")]
+    [SerializeField] private SplitScreenDivider divider;
+    [SerializeField] private Sprite dividerSprite;
+
+    [Header("Diagonal Split Rendering")]
+    [SerializeField] private DiagonalSplitScreenComposite diagonalComposite;
+
     [Header("Distances")]
     [SerializeField] private float splitDistance = 10f;
     [SerializeField] private float mergeDistance = 7f;
@@ -24,6 +32,12 @@ public class SplitScreenManager : MonoBehaviour
     private float splitAmount;
     private float splitVelocity; // Używane wewnętrznie przez Mathf.SmoothDamp
     private int menuSplitLocks;
+
+    private void Awake()
+    {
+        EnsureDivider();
+        EnsureDiagonalComposite();
+    }
 
     public void PushMenuSplit()
     {
@@ -42,7 +56,7 @@ public class SplitScreenManager : MonoBehaviour
     {
         // Na starcie ustawiamy pełen ekran dla kamery 1
         camera1.rect = new Rect(0f, 0f, 1f, 1f);
-        camera2.rect = new Rect(1f, 0f, 0f, 1f);
+        camera2.rect = new Rect(0f, 0f, 1f, 1f);
 
         splitAmount = 0f;
     }
@@ -84,6 +98,17 @@ public class SplitScreenManager : MonoBehaviour
 
     private void UpdateRects()
     {
+        if (divider != null)
+        {
+            divider.SetSplitAmount(splitAmount);
+        }
+
+        if (diagonalComposite != null)
+        {
+            diagonalComposite.SetSplitAmount(splitAmount);
+            return;
+        }
+
         // Wyłączenie 2. kamery gdy podział nie jest używany (optymalizacja)
         if (splitAmount < 0.01f)
         {
@@ -99,5 +124,44 @@ public class SplitScreenManager : MonoBehaviour
 
         camera1.rect = new Rect(0f, 0f, leftWidth, 1f);
         camera2.rect = new Rect(leftWidth, 0f, 1f - leftWidth, 1f);
+    }
+
+    private void EnsureDivider()
+    {
+        if (divider != null)
+        {
+            divider.SetSprite(dividerSprite);
+            return;
+        }
+
+        GameObject canvasObject = new GameObject(
+            "Split Screen Divider Canvas",
+            typeof(Canvas),
+            typeof(CanvasScaler),
+            typeof(GraphicRaycaster));
+
+        Canvas dividerCanvas = canvasObject.GetComponent<Canvas>();
+        dividerCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        dividerCanvas.overrideSorting = true;
+        dividerCanvas.sortingOrder = 50;
+
+        GameObject lineObject = new GameObject("Split Screen Divider", typeof(RectTransform));
+
+        lineObject.transform.SetParent(canvasObject.transform, false);
+        Image lineImage = lineObject.AddComponent<Image>();
+        lineImage.raycastTarget = false;
+
+        divider = lineObject.AddComponent<SplitScreenDivider>();
+        divider.SetSprite(dividerSprite);
+    }
+
+    private void EnsureDiagonalComposite()
+    {
+        if (diagonalComposite == null)
+        {
+            diagonalComposite = gameObject.AddComponent<DiagonalSplitScreenComposite>();
+        }
+
+        diagonalComposite.Initialize(camera1, camera2);
     }
 }
