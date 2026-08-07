@@ -1,0 +1,3133 @@
+fileFormatVersion: 2
+guid: 1339c937cab8c43339474e771645851a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -793595800747055960
+    second: furniture_free_0
+  - first:
+      213: -1399805125318029670
+    second: furniture_free_1
+  - first:
+      213: -4942284377221567954
+    second: furniture_free_2
+  - first:
+      213: 6367854183858305719
+    second: furniture_free_3
+  - first:
+      213: -4065621815758972224
+    second: furniture_free_4
+  - first:
+      213: 769194249659768214
+    second: furniture_free_5
+  - first:
+      213: 3685501620915443488
+    second: furniture_free_6
+  - first:
+      213: 7922683450788729991
+    second: furniture_free_7
+  - first:
+      213: -7665642808883631375
+    second: furniture_free_8
+  - first:
+      213: -1285732658657676777
+    second: furniture_free_9
+  - first:
+      213: 3622795944854704568
+    second: furniture_free_10
+  - first:
+      213: -4507112280622721421
+    second: furniture_free_11
+  - first:
+      213: -1394775081331518211
+    second: furniture_free_12
+  - first:
+      213: -5332663219357620839
+    second: furniture_free_13
+  - first:
+      213: 6894070068341420922
+    second: furniture_free_14
+  - first:
+      213: 4991610722191063667
+    second: furniture_free_15
+  - first:
+      213: 7278827181043095480
+    second: furniture_free_16
+  - first:
+      213: -3823429671115012989
+    second: furniture_free_17
+  - first:
+      213: 8203906572393085450
+    second: furniture_free_18
+  - first:
+      213: -7920690610733060641
+    second: furniture_free_19
+  - first:
+      213: -2882264095085306870
+    second: furniture_free_20
+  - first:
+      213: 2458700421026828179
+    second: furniture_free_21
+  - first:
+      213: -6416484875898518419
+    second: furniture_free_22
+  - first:
+      213: 3358907295007740178
+    second: furniture_free_23
+  - first:
+      213: -86338386716527734
+    second: furniture_free_24
+  - first:
+      213: 2883745048636083286
+    second: furniture_free_25
+  - first:
+      213: -8611024381477419847
+    second: furniture_free_26
+  - first:
+      213: 7681351403372282491
+    second: furniture_free_27
+  - first:
+      213: 2903712698566396685
+    second: furniture_free_28
+  - first:
+      213: 5531964524629053474
+    second: furniture_free_29
+  - first:
+      213: -701694219136010890
+    second: furniture_free_30
+  - first:
+      213: 8179725031049845329
+    second: furniture_free_31
+  - first:
+      213: 6497151894380772663
+    second: furniture_free_32
+  - first:
+      213: 5416384927360499930
+    second: furniture_free_33
+  - first:
+      213: -6997855604852799486
+    second: furniture_free_34
+  - first:
+      213: -4779353829072600483
+    second: furniture_free_35
+  - first:
+      213: -2217911686902998500
+    second: furniture_free_36
+  - first:
+      213: -4142205303840074202
+    second: furniture_free_37
+  - first:
+      213: 6376699570617995218
+    second: furniture_free_38
+  - first:
+      213: 7757067024733525158
+    second: furniture_free_39
+  - first:
+      213: 7031520401405049659
+    second: furniture_free_40
+  - first:
+      213: -5456093920456760158
+    second: furniture_free_41
+  - first:
+      213: 7650326635152682673
+    second: furniture_free_42
+  - first:
+      213: -3954413435809862943
+    second: furniture_free_43
+  - first:
+      213: -2504412808655942311
+    second: furniture_free_44
+  - first:
+      213: -5014856160636599284
+    second: furniture_free_45
+  - first:
+      213: 6403152258744901074
+    second: furniture_free_46
+  - first:
+      213: -1337066495680580400
+    second: furniture_free_47
+  - first:
+      213: 4501597649747785569
+    second: furniture_free_48
+  - first:
+      213: -5295521632869616111
+    second: furniture_free_49
+  - first:
+      213: -8631746102481653870
+    second: furniture_free_50
+  - first:
+      213: -4638347382437962876
+    second: furniture_free_51
+  - first:
+      213: -1255565073629042598
+    second: furniture_free_52
+  - first:
+      213: -2561285913009777645
+    second: furniture_free_53
+  - first:
+      213: -8744388146049837481
+    second: furniture_free_54
+  - first:
+      213: -7534842185158855881
+    second: furniture_free_55
+  - first:
+      213: -8715337347225279558
+    second: furniture_free_56
+  - first:
+      213: -287147297391244644
+    second: furniture_free_57
+  - first:
+      213: -1870655671944208240
+    second: furniture_free_58
+  - first:
+      213: 3086957776263642279
+    second: furniture_free_59
+  - first:
+      213: -7104584638934552388
+    second: furniture_free_60
+  - first:
+      213: -5116275898397997369
+    second: furniture_free_61
+  - first:
+      213: 6133970863746131929
+    second: furniture_free_62
+  - first:
+      213: 8747536698660421575
+    second: furniture_free_63
+  - first:
+      213: 5711425738599350451
+    second: furniture_free_64
+  - first:
+      213: -7933214944025545731
+    second: furniture_free_65
+  - first:
+      213: -536470841489149869
+    second: furniture_free_66
+  - first:
+      213: 8786417966598202419
+    second: furniture_free_67
+  - first:
+      213: -6346561495271059813
+    second: furniture_free_68
+  - first:
+      213: -816894560554256953
+    second: furniture_free_69
+  - first:
+      213: 457963366614171340
+    second: furniture_free_70
+  - first:
+      213: 6378074847766956623
+    second: furniture_free_71
+  - first:
+      213: -8963630389371173046
+    second: furniture_free_72
+  - first:
+      213: -9021046342899701284
+    second: furniture_free_73
+  - first:
+      213: 6047468604864240318
+    second: furniture_free_74
+  - first:
+      213: 1055249108131042804
+    second: furniture_free_75
+  - first:
+      213: -253604034063182193
+    second: furniture_free_76
+  - first:
+      213: 8268320455640990126
+    second: furniture_free_77
+  - first:
+      213: 396315192964765695
+    second: furniture_free_78
+  - first:
+      213: -1240572046402221451
+    second: furniture_free_79
+  - first:
+      213: -5086536816856048748
+    second: furniture_free_80
+  - first:
+      213: -7349348486961614678
+    second: furniture_free_81
+  - first:
+      213: -6525476767785695636
+    second: furniture_free_82
+  - first:
+      213: 4798610542978144762
+    second: furniture_free_83
+  - first:
+      213: 6363374109764972141
+    second: furniture_free_84
+  - first:
+      213: -3254867643675925211
+    second: furniture_free_85
+  - first:
+      213: -6010883366241871638
+    second: furniture_free_86
+  - first:
+      213: 7064412070857607273
+    second: furniture_free_87
+  - first:
+      213: 2980530159298533834
+    second: furniture_free_88
+  - first:
+      213: 6579266923772295402
+    second: furniture_free_89
+  - first:
+      213: 5169884263708113292
+    second: furniture_free_90
+  - first:
+      213: -2861091495025644215
+    second: furniture_free_91
+  - first:
+      213: -6482545760466895271
+    second: furniture_free_92
+  - first:
+      213: -3768471176766633918
+    second: furniture_free_93
+  - first:
+      213: -2673450541354025811
+    second: furniture_free_94
+  - first:
+      213: 4193850331935958432
+    second: furniture_free_95
+  - first:
+      213: -107261309763771037
+    second: furniture_free_96
+  - first:
+      213: 1939731997212631843
+    second: furniture_free_97
+  - first:
+      213: 1865705346184243919
+    second: furniture_free_98
+  - first:
+      213: -6811704825428630877
+    second: furniture_free_99
+  - first:
+      213: -3648134331498497590
+    second: furniture_free_100
+  - first:
+      213: 5838081864219316199
+    second: furniture_free_101
+  - first:
+      213: -3106482465879133711
+    second: furniture_free_102
+  - first:
+      213: 3858392028805723236
+    second: furniture_free_103
+  - first:
+      213: 23791199562573912
+    second: furniture_free_104
+  - first:
+      213: 1895932913201970737
+    second: furniture_free_105
+  - first:
+      213: -3711199260241440933
+    second: furniture_free_106
+  - first:
+      213: -2526154505308594950
+    second: furniture_free_107
+  - first:
+      213: 2303828970762885164
+    second: furniture_free_108
+  - first:
+      213: -5492172005116703866
+    second: furniture_free_109
+  - first:
+      213: 7680211567115420942
+    second: furniture_free_110
+  - first:
+      213: -7395294283054746306
+    second: furniture_free_111
+  - first:
+      213: 6334721319739819783
+    second: furniture_free_112
+  - first:
+      213: 8697995711342414009
+    second: furniture_free_113
+  - first:
+      213: 7203567434939869729
+    second: furniture_free_114
+  - first:
+      213: -6741720854832400435
+    second: furniture_free_115
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: furniture_free_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 707
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4ea39e2d49cf4f0800000000000000
+      internalID: -793595800747055960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 735
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ec5aea7a4e29ce0800000000000000
+      internalID: -1399805125318029670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 727
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2aeeb45b8a796bb0800000000000000
+      internalID: -4942284377221567954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 734
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bafb5254a92f5850800000000000000
+      internalID: 6367854183858305719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 734
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca9b98cf720497c0800000000000000
+      internalID: -4065621815758972224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_5
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 715
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d5e3e381abcaa00800000000000000
+      internalID: 769194249659768214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 647
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0279ac59238852330800000000000000
+      internalID: 3685501620915443488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_7
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 655
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784d0205f9603fd60800000000000000
+      internalID: 7922683450788729991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 657
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1faa679ca7a2e9590800000000000000
+      internalID: -7665642808883631375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_9
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 657
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712379485f8282ee0800000000000000
+      internalID: -1285732658657676777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 659
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b15acaa7b1c64230800000000000000
+      internalID: 3622795944854704568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 608
+        width: 41
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3769eaea2458371c0800000000000000
+      internalID: -4507112280622721421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_12
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 658
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df41baf0473c4ace0800000000000000
+      internalID: -1394775081331518211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_13
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 607
+        width: 36
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995e56f3e039ef5b0800000000000000
+      internalID: -5332663219357620839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 623
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73b4286338acaf50800000000000000
+      internalID: 6894070068341420922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 615
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37aba315183c54540800000000000000
+      internalID: 4991610722191063667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 608
+        width: 24
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7188b91c6930560800000000000000
+      internalID: 7278827181043095480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_17
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 609
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3844085b8f270fac0800000000000000
+      internalID: -3823429671115012989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_18
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 609
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a7bf9bf812ad170800000000000000
+      internalID: 8203906572393085450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 572
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddeb7beadd041290800000000000000
+      internalID: -7920690610733060641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_20
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 571
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0cd39f83142008d0800000000000000
+      internalID: -2882264095085306870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 574
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f4864910f0f1220800000000000000
+      internalID: 2458700421026828179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_22
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 575
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d640769500114f6a0800000000000000
+      internalID: -6416484875898518419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_23
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 572
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2119768736c3d9e20800000000000000
+      internalID: 3358907295007740178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_24
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 571
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83f749d1b34dcef0800000000000000
+      internalID: -86338386716527734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_25
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 574
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ccebec7de150820800000000000000
+      internalID: 2883745048636083286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_26
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 575
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b48fcdb2fe7f7880800000000000000
+      internalID: -8611024381477419847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_27
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 579
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7204f06764a99a60800000000000000
+      internalID: 7681351403372282491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_28
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 579
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b47d7905f0c4820800000000000000
+      internalID: 2903712698566396685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_29
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 581
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220d390fc6c75cc40800000000000000
+      internalID: 5531964524629053474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_30
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 581
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675f37f43d41346f0800000000000000
+      internalID: -701694219136010890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_31
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 580
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ad814e398348170800000000000000
+      internalID: 8179725031049845329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 531
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d725c79358a2a50800000000000000
+      internalID: 6497151894380772663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_33
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 531
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad04a1ae46dda2b40800000000000000
+      internalID: 5416384927360499930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_34
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 533
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208c543576f92ee90800000000000000
+      internalID: -6997855604852799486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_35
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 533
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52893ab3035cadb0800000000000000
+      internalID: -4779353829072600483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_36
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 531
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a95fe52156831e0800000000000000
+      internalID: -2217911686902998500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_37
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 532
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6269fd5f83ee386c0800000000000000
+      internalID: -4142205303840074202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_38
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 540
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df421a69769e7850800000000000000
+      internalID: 6376699570617995218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_39
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 531
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4532c3c53a6ab60800000000000000
+      internalID: 7757067024733525158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_40
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 531
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bf8acec8af49160800000000000000
+      internalID: 7031520401405049659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_41
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 536
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4a10aac7f0844b0800000000000000
+      internalID: -5456093920456760158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_42
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 536
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be2cff9a8b6b2a60800000000000000
+      internalID: 7650326635152682673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_43
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 531
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea65877ee91f19c0800000000000000
+      internalID: -3954413435809862943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_44
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 531
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95dcf19c1d98e3dd0800000000000000
+      internalID: -2504412808655942311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 456
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04839944e6a76ab0800000000000000
+      internalID: -5014856160636599284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_46
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 454
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ddda31dd019cd850800000000000000
+      internalID: 6403152258744901074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_47
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 457
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4f1e33b19c17de0800000000000000
+      internalID: -1337066495680580400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_48
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 457
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16733f24633e87e30800000000000000
+      internalID: 4501597649747785569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_49
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 456
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116f86cb1278286b0800000000000000
+      internalID: -5295521632869616111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_50
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 456
+        width: 46
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fe73a17a0e53880800000000000000
+      internalID: -8631746102481653870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_51
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 468
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b1ce471a741afb0800000000000000
+      internalID: -4638347382437962876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_52
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 445
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5824f1c736539ee0800000000000000
+      internalID: -1255565073629042598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_53
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 445
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31417da480c747cd0800000000000000
+      internalID: -2561285913009777645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_54
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 461
+        width: 36
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75610989f41b5a680800000000000000
+      internalID: -8744388146049837481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_55
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 457
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7337af234fcde6790800000000000000
+      internalID: -7534842185158855881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 416
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab321f8cbd6ec0780800000000000000
+      internalID: -8715337347225279558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_57
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 383
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a08cced09d30cf0800000000000000
+      internalID: -287147297391244644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_58
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 414
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09022b8d3981a06e0800000000000000
+      internalID: -1870655671944208240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_59
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 411
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acf2dafdb317da20800000000000000
+      internalID: 3086957776263642279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_60
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 334
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0fb9f99e1776d90800000000000000
+      internalID: -7104584638934552388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_61
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 335
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c648177d265ff8b0800000000000000
+      internalID: -5116275898397997369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_62
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 335
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d72f2c500e302550800000000000000
+      internalID: 6133970863746131929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_63
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 343
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cff85fe74e756970800000000000000
+      internalID: 8747536698660421575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_64
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 343
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0cc36e27f034f40800000000000000
+      internalID: 5711425738599350451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_65
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 344
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df379865a0f87e190800000000000000
+      internalID: -7933214944025545731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_66
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 344
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3503facac921e88f0800000000000000
+      internalID: -536470841489149869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_67
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 344
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33422339690afe970800000000000000
+      internalID: 8786417966598202419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_68
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 344
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e423112fb7ce7a0800000000000000
+      internalID: -6346561495271059813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_69
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 333
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5f63ba9bec9a4f0800000000000000
+      internalID: -816894560554256953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_70
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 335
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccefd2b61430b5600800000000000000
+      internalID: 457963366614171340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_71
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 335
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ac0041849738850800000000000000
+      internalID: 6378074847766956623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_72
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 335
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4782a7f6a9ca9380800000000000000
+      internalID: -8963630389371173046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_73
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 298
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9602d852ecec280800000000000000
+      internalID: -9021046342899701284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_74
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 298
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba924fb7acece350800000000000000
+      internalID: 6047468604864240318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_75
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 311
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5d2bf097ff4ae00800000000000000
+      internalID: 1055249108131042804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_76
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 305
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86de0489740b7cf0800000000000000
+      internalID: -253604034063182193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_77
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 303
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1c39f95a9feb270800000000000000
+      internalID: 8268320455640990126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_78
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 303
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff751c7719eff7500800000000000000
+      internalID: 396315192964765695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_79
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 310
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a8aefeb4a98cee0800000000000000
+      internalID: -1240572046402221451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_80
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 310
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b5956f6bdf869b0800000000000000
+      internalID: -5086536816856048748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_81
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 303
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa039185d7ed10a90800000000000000
+      internalID: -7349348486961614678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_82
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 303
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66c1120479d075a0800000000000000
+      internalID: -6525476767785695636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_83
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 310
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af918ad5dd6189240800000000000000
+      internalID: 4798610542978144762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_84
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 310
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e6579c90f3f4850800000000000000
+      internalID: 6363374109764972141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_85
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 289
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525a8c38f1364d2d0800000000000000
+      internalID: -3254867643675925211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_86
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 297
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae859d8ec6d059ca0800000000000000
+      internalID: -6010883366241871638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_87
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 250
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968037e7955d90260800000000000000
+      internalID: 7064412070857607273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_88
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 250
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9d35b6368fc5920800000000000000
+      internalID: 2980530159298533834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_89
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 256
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8bce1a8604e4b50800000000000000
+      internalID: 6579266923772295402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_90
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 248
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89343cb85e1fb740800000000000000
+      internalID: 5169884263708113292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_91
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 232
+        width: 114
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94dea19a17c5b48d0800000000000000
+      internalID: -2861091495025644215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_92
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 205
+        width: 94
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ef7231afe5906a0800000000000000
+      internalID: -6482545760466895271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_93
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 205
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248c6825e63b3bbc0800000000000000
+      internalID: -3768471176766633918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_94
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 205
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac740ea5eef5ead0800000000000000
+      internalID: -2673450541354025811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_95
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 206
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5623c28ac833a30800000000000000
+      internalID: 4193850331935958432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_96
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 206
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3652365386ee28ef0800000000000000
+      internalID: -107261309763771037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_97
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 159
+        width: 68
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323615d69ff4bea10800000000000000
+      internalID: 1939731997212631843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_98
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 167
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcaebde902154e910800000000000000
+      internalID: 1865705346184243919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_99
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 167
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2238d1d86f771a0800000000000000
+      internalID: -6811704825428630877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_100
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 167
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9ff1677293f5dc0800000000000000
+      internalID: -3648134331498497590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_101
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 167
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef41762688050150800000000000000
+      internalID: 5838081864219316199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_102
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 119
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f17b48f7ae83e4d0800000000000000
+      internalID: -3106482465879133711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_103
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 119
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464f9298b13cb8530800000000000000
+      internalID: 3858392028805723236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_104
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 119
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85825be48f5845000800000000000000
+      internalID: 23791199562573912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_105
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 111
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13eff5180f4bf4a10800000000000000
+      internalID: 1895932913201970737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_106
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 119
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5fcd928feb2f7cc0800000000000000
+      internalID: -3711199260241440933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_107
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 119
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc145f8cdb41fcd0800000000000000
+      internalID: -2526154505308594950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_108
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2853912e38d8ff10800000000000000
+      internalID: 2303828970762885164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_109
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 47
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b8cadf8a2e7c3b0800000000000000
+      internalID: -5492172005116703866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_110
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 48
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05c2c19ab7959a60800000000000000
+      internalID: 7680211567115420942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_111
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 47
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e357b011803ae5990800000000000000
+      internalID: -7395294283054746306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_112
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 47
+        width: 68
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7078f2e3a7379e750800000000000000
+      internalID: 6334721319739819783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_113
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b88f68f30d75b870800000000000000
+      internalID: 8697995711342414009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_114
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12aa92b7a6638f360800000000000000
+      internalID: 7203567434939869729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: furniture_free_115
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc73fd80a989072a0800000000000000
+      internalID: -6741720854832400435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      furniture_free_0: -793595800747055960
+      furniture_free_1: -1399805125318029670
+      furniture_free_10: 3622795944854704568
+      furniture_free_100: -3648134331498497590
+      furniture_free_101: 5838081864219316199
+      furniture_free_102: -3106482465879133711
+      furniture_free_103: 3858392028805723236
+      furniture_free_104: 23791199562573912
+      furniture_free_105: 1895932913201970737
+      furniture_free_106: -3711199260241440933
+      furniture_free_107: -2526154505308594950
+      furniture_free_108: 2303828970762885164
+      furniture_free_109: -5492172005116703866
+      furniture_free_11: -4507112280622721421
+      furniture_free_110: 7680211567115420942
+      furniture_free_111: -7395294283054746306
+      furniture_free_112: 6334721319739819783
+      furniture_free_113: 8697995711342414009
+      furniture_free_114: 7203567434939869729
+      furniture_free_115: -6741720854832400435
+      furniture_free_12: -1394775081331518211
+      furniture_free_13: -5332663219357620839
+      furniture_free_14: 6894070068341420922
+      furniture_free_15: 4991610722191063667
+      furniture_free_16: 7278827181043095480
+      furniture_free_17: -3823429671115012989
+      furniture_free_18: 8203906572393085450
+      furniture_free_19: -7920690610733060641
+      furniture_free_2: -4942284377221567954
+      furniture_free_20: -2882264095085306870
+      furniture_free_21: 2458700421026828179
+      furniture_free_22: -6416484875898518419
+      furniture_free_23: 3358907295007740178
+      furniture_free_24: -86338386716527734
+      furniture_free_25: 2883745048636083286
+      furniture_free_26: -8611024381477419847
+      furniture_free_27: 7681351403372282491
+      furniture_free_28: 2903712698566396685
+      furniture_free_29: 5531964524629053474
+      furniture_free_3: 6367854183858305719
+      furniture_free_30: -701694219136010890
+      furniture_free_31: 8179725031049845329
+      furniture_free_32: 6497151894380772663
+      furniture_free_33: 5416384927360499930
+      furniture_free_34: -6997855604852799486
+      furniture_free_35: -4779353829072600483
+      furniture_free_36: -2217911686902998500
+      furniture_free_37: -4142205303840074202
+      furniture_free_38: 6376699570617995218
+      furniture_free_39: 7757067024733525158
+      furniture_free_4: -4065621815758972224
+      furniture_free_40: 7031520401405049659
+      furniture_free_41: -5456093920456760158
+      furniture_free_42: 7650326635152682673
+      furniture_free_43: -3954413435809862943
+      furniture_free_44: -2504412808655942311
+      furniture_free_45: -5014856160636599284
+      furniture_free_46: 6403152258744901074
+      furniture_free_47: -1337066495680580400
+      furniture_free_48: 4501597649747785569
+      furniture_free_49: -5295521632869616111
+      furniture_free_5: 769194249659768214
+      furniture_free_50: -8631746102481653870
+      furniture_free_51: -4638347382437962876
+      furniture_free_52: -1255565073629042598
+      furniture_free_53: -2561285913009777645
+      furniture_free_54: -8744388146049837481
+      furniture_free_55: -7534842185158855881
+      furniture_free_56: -8715337347225279558
+      furniture_free_57: -287147297391244644
+      furniture_free_58: -1870655671944208240
+      furniture_free_59: 3086957776263642279
+      furniture_free_6: 3685501620915443488
+      furniture_free_60: -7104584638934552388
+      furniture_free_61: -5116275898397997369
+      furniture_free_62: 6133970863746131929
+      furniture_free_63: 8747536698660421575
+      furniture_free_64: 5711425738599350451
+      furniture_free_65: -7933214944025545731
+      furniture_free_66: -536470841489149869
+      furniture_free_67: 8786417966598202419
+      furniture_free_68: -6346561495271059813
+      furniture_free_69: -816894560554256953
+      furniture_free_7: 7922683450788729991
+      furniture_free_70: 457963366614171340
+      furniture_free_71: 6378074847766956623
+      furniture_free_72: -8963630389371173046
+      furniture_free_73: -9021046342899701284
+      furniture_free_74: 6047468604864240318
+      furniture_free_75: 1055249108131042804
+      furniture_free_76: -253604034063182193
+      furniture_free_77: 8268320455640990126
+      furniture_free_78: 396315192964765695
+      furniture_free_79: -1240572046402221451
+      furniture_free_8: -7665642808883631375
+      furniture_free_80: -5086536816856048748
+      furniture_free_81: -7349348486961614678
+      furniture_free_82: -6525476767785695636
+      furniture_free_83: 4798610542978144762
+      furniture_free_84: 6363374109764972141
+      furniture_free_85: -3254867643675925211
+      furniture_free_86: -6010883366241871638
+      furniture_free_87: 7064412070857607273
+      furniture_free_88: 2980530159298533834
+      furniture_free_89: 6579266923772295402
+      furniture_free_9: -1285732658657676777
+      furniture_free_90: 5169884263708113292
+      furniture_free_91: -2861091495025644215
+      furniture_free_92: -6482545760466895271
+      furniture_free_93: -3768471176766633918
+      furniture_free_94: -2673450541354025811
+      furniture_free_95: 4193850331935958432
+      furniture_free_96: -107261309763771037
+      furniture_free_97: 1939731997212631843
+      furniture_free_98: 1865705346184243919
+      furniture_free_99: -6811704825428630877
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

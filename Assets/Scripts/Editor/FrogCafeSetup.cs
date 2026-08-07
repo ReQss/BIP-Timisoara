@@ -189,26 +189,7 @@ public static class FrogCafeSetup
 
     private static void CreateFridge(Scene scene, BeverageDefinition[] beverages)
     {
-        GameObject oldFridge = scene.GetRootGameObjects().FirstOrDefault(root => root.name == "Beverage Fridge");
-        if (oldFridge != null)
-        {
-            UnityEngine.Object.DestroyImmediate(oldFridge);
-        }
-
-        GameObject fridge = new GameObject("Beverage Fridge");
-        SceneManager.MoveGameObjectToScene(fridge, scene);
-        Tile tallCupboard = AssetDatabase.LoadAssetAtPath<Tile>("Assets/TallCupboard.asset");
-        SpriteRenderer renderer = fridge.AddComponent<SpriteRenderer>();
-        renderer.sprite = tallCupboard != null ? tallCupboard.sprite : beverages[0].icon;
-        renderer.color = new Color(0.65f, 0.88f, 1f);
-        renderer.sortingOrder = 20;
-        BeverageFridge component = fridge.AddComponent<BeverageFridge>();
-        component.Configure(beverages);
-
-        Tilemap kitchen = FindTilemap(scene, "Kitchen");
-        Bounds bounds = kitchen != null ? kitchen.localBounds : new Bounds(new Vector3(4f, 2f), new Vector3(4f, 4f));
-        Vector3 position = kitchen != null ? kitchen.transform.TransformPoint(bounds.center) : bounds.center;
-        fridge.transform.position = position + new Vector3(bounds.extents.x - 0.75f, 0f, 0f);
+        FridgeSceneSetup.CreateOrUpdateFridge(scene, beverages);
     }
 
     private static Tilemap FindTilemap(Scene scene, string objectName)

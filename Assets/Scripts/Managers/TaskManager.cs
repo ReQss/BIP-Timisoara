@@ -47,14 +47,14 @@ public class TaskManager : MonoBehaviour
     public UIHandler uiHandler;
     [Header("Cafe customer bootstrap")]
     [SerializeField] private Texture2D travellerSpriteSheet;
-    [SerializeField] private Texture2D beverageSpriteSheet;
+    [SerializeField] private Sprite[] beverageIcons;
     [SerializeField] private BeverageDefinition[] cafeBeverages;
-    [SerializeField] private Sprite fridgePlaceholder;
     [Header("Money")]
     [SerializeField, Min(0)] private int startingMoney = 0;
     [SerializeField, Min(0)] private int moneyPerOrder = 5;
     private readonly List<CustomerOrderTask> customerOrders = new List<CustomerOrderTask>();
     private int customerOrderIdCounter;
+    private int completedOrderCount;
     private int money;
     private int completedCustomerOrders;
 
@@ -62,10 +62,13 @@ public class TaskManager : MonoBehaviour
     public IReadOnlyList<BeverageDefinition> CafeBeverages => cafeBeverages;
     public int Money => money;
     public int CompletedCustomerOrders => completedCustomerOrders;
+    public int CompletedOrderCount => completedOrderCount;
+    public int MoneyEarned => Mathf.Max(0, money - startingMoney);
 
     public void ResetRoundStatistics()
     {
         money = startingMoney;
+        completedOrderCount = 0;
         completedCustomerOrders = 0;
         uiHandler?.SetMoney(money);
     }
@@ -74,9 +77,9 @@ public class TaskManager : MonoBehaviour
     {
         Instance = this;
         money = startingMoney;
-        if (beverageSpriteSheet != null)
+        if (beverageIcons != null && beverageIcons.Length > 0)
         {
-            cafeBeverages = CafeRuntimeSetup.CreateBeverageMenu(beverageSpriteSheet, 20);
+            cafeBeverages = CafeRuntimeSetup.CreateBeverageMenu(beverageIcons, 20);
         }
     }
 
@@ -98,6 +101,7 @@ public class TaskManager : MonoBehaviour
         int removed = customerOrders.RemoveAll(order => order.id == id);
         if (removed > 0)
         {
+            completedOrderCount++;
             money += moneyPerOrder;
             completedCustomerOrders += removed;
             if (uiHandler != null)
@@ -151,6 +155,8 @@ public class TaskManager : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitUntil(() => GameManager.IsGameActiveNow);
+
             Job newJob = GetRandomJob();
             if(currentJobs.Count < maxJobs)
             {
@@ -169,6 +175,24 @@ public class TaskManager : MonoBehaviour
 
         }
     }
+
+    public void ResetRound()
+    {
+        StopAllCoroutines();
+        currentJobs.Clear();
+        customerOrders.Clear();
+        lastJob = null;
+        jobIdCounter = 0;
+        customerOrderIdCounter = 0;
+        completedOrderCount = 0;
+        completedCustomerOrders = 0;
+        money = startingMoney;
+
+        uiHandler?.CleanJobList();
+        uiHandler?.SetMoney(money);
+        RefreshCustomerOrderUi();
+        StartCoroutine(StartRandomTasks());
+    }
     public IEnumerator RemoveJob(Job jobToRemove)
     {
         //wait for the job to be completed
@@ -180,7 +204,7 @@ public class TaskManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        CafeRuntimeSetup.Ensure(travellerSpriteSheet, cafeBeverages, fridgePlaceholder);
+        CafeRuntimeSetup.Ensure(travellerSpriteSheet, cafeBeverages);
         FindAnyObjectByType<BeverageFridge>()?.Configure(cafeBeverages);
         uiHandler?.CleanJobList();
         uiHandler?.SetMoney(money);

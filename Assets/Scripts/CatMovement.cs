@@ -6,17 +6,30 @@ public class CatMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private bool useArrowKeys;
     [SerializeField] private bool useGamepadAndIJKL;
+    [SerializeField] private AudioClip walkingClip;
+    [SerializeField, Range(0f, 1f)] private float walkingVolume = 0.35f;
 
     private Vector2 input;
     private Animator animator;
     private DogSpriteAnimator dogSpriteAnimator;
     private CatActions catActions;
+    private AudioSource walkingAudioSource;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
         dogSpriteAnimator = GetComponent<DogSpriteAnimator>();
         catActions = GetComponent<CatActions>();
+
+        if (walkingClip != null)
+        {
+            walkingAudioSource = gameObject.AddComponent<AudioSource>();
+            walkingAudioSource.clip = walkingClip;
+            walkingAudioSource.loop = true;
+            walkingAudioSource.playOnAwake = false;
+            walkingAudioSource.spatialBlend = 0f;
+            walkingAudioSource.volume = walkingVolume;
+        }
     }
 
     private void Update()
@@ -70,6 +83,8 @@ public class CatMovement : MonoBehaviour
         {
             dogSpriteAnimator.SetMovement(input);
         }
+
+        UpdateWalkingAudio(input.sqrMagnitude > 0.01f);
     }
 
     private void StopMovement()
@@ -82,6 +97,29 @@ public class CatMovement : MonoBehaviour
         }
 
         dogSpriteAnimator?.SetMovement(Vector2.zero);
+        UpdateWalkingAudio(false);
+    }
+
+    private void UpdateWalkingAudio(bool isWalking)
+    {
+        if (walkingAudioSource == null)
+        {
+            return;
+        }
+
+        if (isWalking && !walkingAudioSource.isPlaying)
+        {
+            walkingAudioSource.Play();
+        }
+        else if (!isWalking && walkingAudioSource.isPlaying)
+        {
+            walkingAudioSource.Stop();
+        }
+    }
+
+    private void OnDisable()
+    {
+        UpdateWalkingAudio(false);
     }
 
     private static float ReadAxis(Keyboard keyboard, Key negative, Key positive)

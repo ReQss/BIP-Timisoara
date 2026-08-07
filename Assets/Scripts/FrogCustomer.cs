@@ -94,6 +94,11 @@ public sealed class FrogCustomer : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.IsGameActiveNow)
+        {
+            return;
+        }
+
         animationTime += Time.deltaTime;
 
         switch (state)

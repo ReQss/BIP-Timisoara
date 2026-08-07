@@ -17,7 +17,7 @@ public static class CafeRuntimeSetup
         new Vector3(11.03f, 0.08f + CustomerPositionYOffset, 0f)
     };
 
-    public static void Ensure(Texture2D characterSheet, BeverageDefinition[] beverages, Sprite fridgeSprite)
+    public static void Ensure(Texture2D characterSheet, BeverageDefinition[] beverages)
     {
         CafeCustomerDirector existingDirector = UnityEngine.Object.FindAnyObjectByType<CafeCustomerDirector>();
         if (existingDirector != null)
@@ -51,17 +51,6 @@ public static class CafeRuntimeSetup
         CafeDestination toilet = CreateDestination(system.transform, "Toilet", toiletPosition, CafeDestination.DestinationKind.Toilet, Vector2.down);
         director.Configure(template, entrance, exit, seats, toilet);
 
-        GameObject fridge = new GameObject("Beverage Fridge");
-        SpriteRenderer fridgeRenderer = fridge.AddComponent<SpriteRenderer>();
-        fridgeRenderer.sprite = fridgeSprite != null ? fridgeSprite : beverages[0].icon;
-        fridgeRenderer.color = new Color(0.65f, 0.88f, 1f);
-        fridgeRenderer.sortingOrder = 20;
-        BeverageFridge fridgeComponent = fridge.AddComponent<BeverageFridge>();
-        fridgeComponent.Configure(beverages);
-        Tilemap kitchen = FindTilemap("Kitchen");
-        fridge.transform.position = kitchen != null
-            ? kitchen.transform.TransformPoint(kitchen.localBounds.center + Vector3.right * (kitchen.localBounds.extents.x - 0.75f))
-            : new Vector3(4f, 2f);
     }
 
     public static BeverageDefinition[] CreateBeverageMenu(Texture2D sheet, int count)
@@ -88,6 +77,39 @@ public static class CafeRuntimeSetup
                 0,
                 SpriteMeshType.FullRect);
             icon.name = "Beverage " + (i + 1);
+            menu[i] = new BeverageDefinition
+            {
+                type = (BeverageType)(i + 1),
+                displayName = names[i],
+                icon = icon
+            };
+        }
+
+        return menu;
+    }
+
+    public static BeverageDefinition[] CreateBeverageMenu(Sprite[] icons, int count)
+    {
+        int itemCount = Mathf.Clamp(count, 1, Mathf.Min(20, icons.Length));
+        BeverageDefinition[] menu = new BeverageDefinition[itemCount];
+        string[] names =
+        {
+            "Coffee", "Tea", "Cocoa", "Latte", "Espresso",
+            "Iced Coffee", "Milk Tea", "Green Tea", "Berry Tea", "Lemon Tea",
+            "Cola", "Orange Soda", "Lemon Soda", "Grape Soda", "Sparkling Water",
+            "Orange Juice", "Apple Juice", "Berry Juice", "Lemonade", "Fruit Punch"
+        };
+
+        for (int i = 0; i < itemCount; i++)
+        {
+            Sprite icon = icons[i];
+            if (icon != null)
+            {
+                // Pixel-art textures must never be interpolated between texels.
+                icon.texture.filterMode = FilterMode.Point;
+                icon.texture.wrapMode = TextureWrapMode.Clamp;
+            }
+
             menu[i] = new BeverageDefinition
             {
                 type = (BeverageType)(i + 1),

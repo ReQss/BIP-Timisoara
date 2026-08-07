@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: ee38f6b627087751e99179f9b427bb5c
+guid: 06e5ac63ef2ac8160b60c953eb7a4065
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1222971655099587749
-    second: Item14_0
+      213: -5948359012524782780
+    second: wall_free_0
+  - first:
+      213: 4531593239742299197
+    second: wall_free_1
+  - first:
+      213: 9010633694555922494
+    second: wall_free_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item14_0
+      name: wall_free_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 16
-        height: 13
+        y: 159
+        width: 256
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b53ea6f52c1270fe0800000000000000
-      internalID: -1222971655099587749
+      spriteID: 44b87fd6efe237da0800000000000000
+      internalID: -5948359012524782780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_free_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 241
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cb669ca0473ee30800000000000000
+      internalID: 4531593239742299197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_free_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 145
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30eb25da933c0d70800000000000000
+      internalID: 9010633694555922494
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Item14_0: -1222971655099587749
+      wall_free_0: -5948359012524782780
+      wall_free_1: 4531593239742299197
+      wall_free_2: 9010633694555922494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,7 +10,7 @@ public sealed class BeverageFridge : MonoBehaviour
     private sealed class SelectionSession
     {
         public IBeverageCarrier carrier;
-        public GameObject canvas;
+        public FridgeMenuView view;
         public readonly List<Image> buttons = new List<Image>();
         public int selectedIndex;
         public int openedFrame;
@@ -19,21 +19,38 @@ public sealed class BeverageFridge : MonoBehaviour
 
     [SerializeField] private BeverageDefinition[] beverages;
     [SerializeField, Min(0.25f)] private float interactionDistance = 1.25f;
+    [Header("Scene-authored UI")]
+    [SerializeField] private FridgeMenuView menuTemplate;
 
     private readonly List<SelectionSession> sessions = new List<SelectionSession>();
     private SplitScreenManager splitScreen;
+    private SpriteRenderer fridgeRenderer;
 
     public BeverageDefinition[] Beverages => beverages;
 
+    private void Awake()
+    {
+        fridgeRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public bool IsInRange(Vector3 position)
     {
-        return Vector2.Distance(position, transform.position) <= interactionDistance;
+        fridgeRenderer ??= GetComponent<SpriteRenderer>();
+        Vector3 closestPoint = fridgeRenderer != null
+            ? fridgeRenderer.bounds.ClosestPoint(position)
+            : transform.position;
+        return Vector2.Distance(position, closestPoint) <= interactionDistance;
     }
 
     public void ShowDrinkSelection(IBeverageCarrier carrier)
     {
+        if ((beverages == null || beverages.Length == 0) && TaskManager.Instance != null)
+        {
+            Configure(TaskManager.Instance.GetCafeBeverages());
+        }
+
         if (GameManager.IsGameplayInputBlocked ||
-            carrier == null || beverages == null || beverages.Length == 0)
+            carrier == null || beverages == null || beverages.Length == 0 || menuTemplate == null)
         {
             return;
         }
@@ -58,61 +75,25 @@ public sealed class BeverageFridge : MonoBehaviour
         sessions.Add(session);
         carrier.SetFridgeMenuOpen(true);
 
-        session.canvas = new GameObject(
-            carrier.UsesCatControls ? "Cat Fridge Selection" : "Dog Fridge Selection",
-            typeof(RectTransform), typeof(Canvas), typeof(CanvasScaler), typeof(GraphicRaycaster));
-        Canvas canvas = session.canvas.GetComponent<Canvas>();
-        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        session.view = Instantiate(menuTemplate, menuTemplate.transform.parent);
+        session.view.name = carrier.UsesCatControls ? "Cat Fridge Selection" : "Dog Fridge Selection";
+        session.view.transform.localScale = Vector3.one;
+        Canvas canvas = session.view.MenuCanvas;
         canvas.worldCamera = FindPlayerCamera(carrier);
-        canvas.planeDistance = 1f;
-        canvas.sortingOrder = 5000;
-        CanvasScaler scaler = session.canvas.GetComponent<CanvasScaler>();
-        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-        scaler.referenceResolution = new Vector2(960f, 1080f);
-        scaler.matchWidthOrHeight = 0.5f;
-
-        GameObject panel = new GameObject("White Drink Table", typeof(RectTransform), typeof(Image));
-        panel.transform.SetParent(session.canvas.transform, false);
-        RectTransform panelRect = panel.GetComponent<RectTransform>();
-        panelRect.anchorMin = panelRect.anchorMax = new Vector2(0.5f, 0.5f);
-        panelRect.pivot = new Vector2(0.5f, 0.5f);
-        panelRect.sizeDelta = new Vector2(700f, 550f);
-        panel.GetComponent<Image>().color = Color.white;
-
-        CreateLabel(panel.transform, carrier.UsesCatControls ? "CAT — CHOOSE A DRINK" : "DOG — CHOOSE A DRINK",
-            new Vector2(0f, 240f), new Vector2(600f, 46f), 28, FontStyle.Bold);
-
-        GameObject gridObject = new GameObject("Drinks", typeof(RectTransform), typeof(GridLayoutGroup));
-        gridObject.transform.SetParent(panel.transform, false);
-        RectTransform gridRect = gridObject.GetComponent<RectTransform>();
-        gridRect.anchorMin = gridRect.anchorMax = new Vector2(0.5f, 0.5f);
-        gridRect.sizeDelta = new Vector2(640f, 410f);
-        gridRect.anchoredPosition = new Vector2(0f, -20f);
-        GridLayoutGroup grid = gridObject.GetComponent<GridLayoutGroup>();
-        grid.cellSize = new Vector2(118f, 90f);
-        grid.spacing = new Vector2(10f, 10f);
-        grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        grid.constraintCount = 5;
-        grid.childAlignment = TextAnchor.UpperCenter;
+        session.view.Title.text = carrier.UsesCatControls
+            ? "CAT — CHOOSE A DRINK"
+            : "DOG — CHOOSE A DRINK";
 
         int visibleCount = Mathf.Min(20, beverages.Length);
         for (int i = 0; i < visibleCount; i++)
         {
             BeverageDefinition choice = beverages[i];
-            Image image = CreateDrinkButton(gridObject.transform, choice, () => SelectDrink(session, choice));
+            Image image = CreateDrinkButton(session.view.DrinksContainer, choice, () => SelectDrink(session, choice));
             session.buttons.Add(image);
         }
 
-        GameObject close = new GameObject("Close", typeof(RectTransform), typeof(Image), typeof(Button));
-        close.transform.SetParent(panel.transform, false);
-        RectTransform closeRect = close.GetComponent<RectTransform>();
-        closeRect.anchorMin = closeRect.anchorMax = new Vector2(1f, 1f);
-        closeRect.pivot = new Vector2(1f, 1f);
-        closeRect.anchoredPosition = new Vector2(-12f, -12f);
-        closeRect.sizeDelta = new Vector2(42f, 42f);
-        close.GetComponent<Image>().color = new Color(0.9f, 0.9f, 0.9f);
-        close.GetComponent<Button>().onClick.AddListener(() => CloseSelection(session));
-        CreateLabel(close.transform, "X", Vector2.zero, new Vector2(42f, 42f), 22, FontStyle.Bold);
+        session.view.CloseButton.onClick.AddListener(() => CloseSelection(session));
+        session.view.gameObject.SetActive(true);
         UpdateSelectionHighlight(session);
     }
 
@@ -131,7 +112,7 @@ public sealed class BeverageFridge : MonoBehaviour
 
     private void UpdateSession(SelectionSession session)
     {
-        if (session.canvas == null || Time.frameCount == session.openedFrame)
+        if (session.view == null || Time.frameCount == session.openedFrame)
         {
             return;
         }
@@ -223,7 +204,8 @@ public sealed class BeverageFridge : MonoBehaviour
         iconRect.anchorMin = iconRect.anchorMax = new Vector2(0.5f, 1f);
         iconRect.pivot = new Vector2(0.5f, 1f);
         iconRect.anchoredPosition = new Vector2(0f, -5f);
-        iconRect.sizeDelta = new Vector2(56f, 56f);
+        // Four physical pixels per source pixel keeps 16x16 art evenly scaled.
+        iconRect.sizeDelta = new Vector2(64f, 64f);
         Image icon = iconObject.GetComponent<Image>();
         icon.sprite = beverage.icon;
         icon.preserveAspect = true;
@@ -263,7 +245,7 @@ public sealed class BeverageFridge : MonoBehaviour
     {
         if (!sessions.Remove(session)) return;
         session.carrier?.SetFridgeMenuOpen(false);
-        if (session.canvas != null) Destroy(session.canvas);
+        if (session.view != null) Destroy(session.view.gameObject);
         splitScreen?.PopMenuSplit();
     }
 

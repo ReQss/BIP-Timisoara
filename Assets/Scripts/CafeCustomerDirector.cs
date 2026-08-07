@@ -34,6 +34,11 @@ public sealed class CafeCustomerDirector : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.IsGameActiveNow)
+        {
+            return;
+        }
+
         customers.RemoveAll(customer => customer == null);
         if (Time.time < nextArrivalTime || customers.Count >= maximumCustomers)
         {
@@ -102,6 +107,30 @@ public sealed class CafeCustomerDirector : MonoBehaviour
         {
             UnhappyCount++;
         }
+    }
+
+    public void ResetRound()
+    {
+        foreach (FrogCustomer customer in customers)
+        {
+            if (customer != null)
+            {
+                Destroy(customer.gameObject);
+            }
+        }
+
+        customers.Clear();
+        if (seats != null)
+        {
+            foreach (CafeDestination seat in seats)
+            {
+                seat?.Release();
+            }
+        }
+        toilet?.Release();
+        ServedCount = 0;
+        UnhappyCount = 0;
+        nextArrivalTime = Time.time + firstArrivalDelay;
     }
 
     public void Configure(

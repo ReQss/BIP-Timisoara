@@ -14,6 +14,8 @@ public class JobItemInList
 public class UIHandler : MonoBehaviour
 {
     public GameObject pauseMenu;
+    [Header("Customer order UI")]
+    [SerializeField] private Sprite customerDrinkBackground;
     //5 elements for jobs
     public List<JobItemInList> jobItemsInList = new List<JobItemInList>();
     private readonly List<CustomerOrderRow> customerOrderRows = new List<CustomerOrderRow>();
@@ -184,7 +186,11 @@ public class UIHandler : MonoBehaviour
         rect.pivot = new Vector2(0.5f, 1f);
         rect.anchoredPosition = new Vector2(0f, -50f - index * 40f);
         rect.sizeDelta = new Vector2(-20f, 34f);
-        root.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.08f);
+        Image background = root.GetComponent<Image>();
+        background.sprite = customerDrinkBackground;
+        background.color = customerDrinkBackground != null
+            ? Color.white
+            : new Color(1f, 1f, 1f, 0.08f);
 
         GameObject iconObject = new GameObject("Icon", typeof(RectTransform), typeof(Image));
         iconObject.transform.SetParent(root.transform, false);
@@ -193,7 +199,8 @@ public class UIHandler : MonoBehaviour
         iconRect.anchorMax = new Vector2(0f, 0.5f);
         iconRect.pivot = new Vector2(0f, 0.5f);
         iconRect.anchoredPosition = new Vector2(5f, 0f);
-        iconRect.sizeDelta = new Vector2(28f, 28f);
+        // Two physical pixels per source pixel keeps 16x16 art evenly scaled.
+        iconRect.sizeDelta = new Vector2(32f, 32f);
         Image icon = iconObject.GetComponent<Image>();
         icon.preserveAspect = true;
 
@@ -207,7 +214,9 @@ public class UIHandler : MonoBehaviour
         TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
         label.fontSize = 18f;
         label.alignment = TextAlignmentOptions.MidlineLeft;
-        label.color = Color.white;
+        label.color = customerDrinkBackground != null
+            ? new Color(0.22f, 0.15f, 0.25f)
+            : Color.white;
 
         return new CustomerOrderRow(root, icon, label);
     }

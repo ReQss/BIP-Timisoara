@@ -53,6 +53,8 @@ MonoBehaviour:
   moveSpeed: 3
   useArrowKeys: 0
   useGamepadAndIJKL: 0
+  walkingClip: {fileID: 8300000, guid: db95f9092a8d2a34bb27339483965d48, type: 3}
+  walkingVolume: 0.35
 --- !u!61 &5751363368541483729
 BoxCollider2D:
   m_ObjectHideFlags: 0

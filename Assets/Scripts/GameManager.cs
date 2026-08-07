@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,11 +16,15 @@ public class GameManager : MonoBehaviour
     private bool isGameActive;
     private float currentTime;
     private int gameStartedFrame = -1;
+    private GameOverPanelView gameOverView;
 
     private static GameManager instance;
 
     public static bool IsGameplayInputBlocked =>
-        instance != null && (!instance.isGameActive || instance.IsStartInputBlocked());
+        instance != null && (!instance.isGameActive || Time.frameCount == instance.gameStartedFrame);
+
+    // Scenes without a GameManager retain their previous always-running behaviour.
+    public static bool IsGameActiveNow => instance == null || instance.isGameActive;
 
     private void Awake()
     {
@@ -34,6 +40,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentTime = startTime;
+
+        EnsureGameOverPanel();
+        gameOverView?.Hide();
 
         if (startPanel != null)
             startPanel.SetActive(true);
@@ -59,9 +68,7 @@ public class GameManager : MonoBehaviour
         if (currentTime <= 0f)
         {
             currentTime = 0f;
-            isGameActive = false;
-            timerText.text = "OVER";
-            ShowGameOverPanel();
+            EndGame();
             return;
         }
 
@@ -79,8 +86,7 @@ public class GameManager : MonoBehaviour
         if (startPanel != null)
             startPanel.SetActive(false);
 
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(false);
+        gameOverView?.Hide();
 
         UpdateTimerUI();
     }
@@ -90,10 +96,93 @@ public class GameManager : MonoBehaviour
         return isGameActive;
     }
 
-    private bool IsStartInputBlocked()
+    public void ReturnToStartPanel()
     {
-        bool startMenuVisible = startPanel != null && startPanel.activeInHierarchy;
-        return startMenuVisible || Time.frameCount == gameStartedFrame;
+        isGameActive = false;
+        gameStartedFrame = -1;
+
+        FindAnyObjectByType<CafeCustomerDirector>()?.ResetRound();
+        TaskManager.Instance?.ResetRound();
+
+        gameOverView?.Hide();
+        if (startPanel != null)
+        {
+            startPanel.SetActive(true);
+        }
+
+        currentTime = startTime;
+        UpdateTimerUI();
+    }
+
+    private void EndGame()
+    {
+        isGameActive = false;
+        if (timerText != null)
+        {
+            timerText.text = "OVER";
+        }
+
+        EnsureGameOverPanel();
+        CafeCustomerDirector director = FindAnyObjectByType<CafeCustomerDirector>();
+        int served = TaskManager.Instance != null
+            ? TaskManager.Instance.CompletedOrderCount
+            : director != null ? director.ServedCount : 0;
+        int unhappy = director != null ? director.UnhappyCount : 0;
+        int moneyEarned = TaskManager.Instance != null ? TaskManager.Instance.MoneyEarned : 0;
+        gameOverView?.Show(served, unhappy, moneyEarned);
+    }
+
+    private void EnsureGameOverPanel()
+    {
+        if (gameOverPanel == null)
+        {
+            gameOverPanel = FindSceneObject("GameOverPanel");
+        }
+
+        if (gameOverPanel == null)
+        {
+            Canvas canvas = FindAnyObjectByType<Canvas>();
+            if (canvas == null)
+            {
+                Debug.LogWarning("A Canvas is required to display the game-over panel.", this);
+                return;
+            }
+
+            gameOverPanel = new GameObject("GameOverPanel", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            gameOverPanel.transform.SetParent(canvas.transform, false);
+            RectTransform rect = gameOverPanel.GetComponent<RectTransform>();
+            rect.anchorMin = Vector2.zero;
+            rect.anchorMax = Vector2.one;
+            rect.offsetMin = Vector2.zero;
+            rect.offsetMax = Vector2.zero;
+            gameOverPanel.GetComponent<Image>().color = new Color(0.04f, 0.03f, 0.06f, 0.88f);
+        }
+
+        gameOverPanel.transform.SetAsLastSibling();
+        gameOverView = gameOverPanel.GetComponent<GameOverPanelView>();
+        if (gameOverView == null)
+        {
+            gameOverView = gameOverPanel.AddComponent<GameOverPanelView>();
+        }
+        gameOverView.Initialize(this);
+    }
+
+    private static GameObject FindSceneObject(string objectName)
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        foreach (GameObject root in scene.GetRootGameObjects())
+        {
+            Transform[] descendants = root.GetComponentsInChildren<Transform>(true);
+            foreach (Transform descendant in descendants)
+            {
+                if (descendant.name == objectName)
+                {
+                    return descendant.gameObject;
+                }
+            }
+        }
+
+        return null;
     }
 
     private void ShowGameOverPanel()
@@ -120,6 +209,11 @@ public class GameManager : MonoBehaviour
 
     private void UpdateTimerUI()
     {
+        if (timerText == null)
+        {
+            return;
+        }
+
         int minutes = Mathf.FloorToInt(currentTime / 60f);
         int seconds = Mathf.FloorToInt(currentTime % 60f);
 
