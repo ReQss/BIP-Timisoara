@@ -57,6 +57,8 @@ public class TaskManager : MonoBehaviour
     private int completedOrderCount;
     private int money;
     private int completedCustomerOrders;
+    private int catDeliveredCount;
+    private int dogDeliveredCount;
 
     public IReadOnlyList<CustomerOrderTask> CustomerOrders => customerOrders;
     public IReadOnlyList<BeverageDefinition> CafeBeverages => cafeBeverages;
@@ -64,12 +66,16 @@ public class TaskManager : MonoBehaviour
     public int CompletedCustomerOrders => completedCustomerOrders;
     public int CompletedOrderCount => completedOrderCount;
     public int MoneyEarned => Mathf.Max(0, money - startingMoney);
+    public int CatDeliveredCount => catDeliveredCount;
+    public int DogDeliveredCount => dogDeliveredCount;
 
     public void ResetRoundStatistics()
     {
         money = startingMoney;
         completedOrderCount = 0;
         completedCustomerOrders = 0;
+        catDeliveredCount = 0;
+        dogDeliveredCount = 0;
         uiHandler?.SetMoney(money);
     }
 
@@ -96,7 +102,7 @@ public class TaskManager : MonoBehaviour
         return id;
     }
 
-    public void CompleteCustomerOrder(int id)
+    public void CompleteCustomerOrder(int id, BeverageServer server)
     {
         int removed = customerOrders.RemoveAll(order => order.id == id);
         if (removed > 0)
@@ -104,6 +110,14 @@ public class TaskManager : MonoBehaviour
             completedOrderCount++;
             money += moneyPerOrder;
             completedCustomerOrders += removed;
+            if (server == BeverageServer.Cat)
+            {
+                catDeliveredCount += removed;
+            }
+            else
+            {
+                dogDeliveredCount += removed;
+            }
             if (uiHandler != null)
             {
                 uiHandler.SetMoney(money);
@@ -186,6 +200,8 @@ public class TaskManager : MonoBehaviour
         customerOrderIdCounter = 0;
         completedOrderCount = 0;
         completedCustomerOrders = 0;
+        catDeliveredCount = 0;
+        dogDeliveredCount = 0;
         money = startingMoney;
 
         uiHandler?.CleanJobList();

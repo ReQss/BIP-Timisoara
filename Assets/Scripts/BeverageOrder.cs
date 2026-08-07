@@ -26,6 +26,12 @@ public enum BeverageType
     FruitPunch
 }
 
+public enum BeverageServer
+{
+    Cat,
+    Dog
+}
+
 [Serializable]
 public struct BeverageDefinition
 {

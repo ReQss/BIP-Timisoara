@@ -28,6 +28,11 @@ public class UIHandler : MonoBehaviour
     private TextMeshProUGUI moneyText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    private void Awake()
+    {
+        BindExitConfirmationButton();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -323,6 +328,34 @@ public class UIHandler : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit(0);
+#endif
+    }
+
+    private void BindExitConfirmationButton()
+    {
+        Button[] buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (Button button in buttons)
+        {
+            TextMeshProUGUI label = button.GetComponentInChildren<TextMeshProUGUI>(true);
+            if (label == null || !string.Equals(label.text.Trim(), "YES", System.StringComparison.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            // Replace the serialized prefab event entirely. Prefab instance targets
+            // can become invalid in a standalone build even when they work in-editor.
+            button.onClick = new Button.ButtonClickedEvent();
+            button.onClick.AddListener(QuitGame);
+        }
+    }
+
     public void ActiveOrDisablePanel(GameObject panel)
     {
         panel.SetActive(!panel.activeSelf);

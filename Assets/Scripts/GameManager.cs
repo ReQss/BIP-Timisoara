@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private GameOverPanelView gameOverView;
 
     private static GameManager instance;
+    private static bool startImmediatelyAfterReload;
 
     public static bool IsGameplayInputBlocked =>
         instance != null && (!instance.isGameActive || Time.frameCount == instance.gameStartedFrame);
@@ -48,8 +49,18 @@ public class GameManager : MonoBehaviour
         EnsureGameOverPanel();
         gameOverView?.Hide();
 
+        bool shouldStartImmediately = startImmediatelyAfterReload;
+        startImmediatelyAfterReload = false;
+        if (shouldStartImmediately)
+        {
+            StartGame();
+            return;
+        }
+
         if (startPanel != null)
+        {
             startPanel.SetActive(true);
+        }
 
         UpdateTimerUI();
     }
@@ -105,6 +116,7 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
         gameStartedFrame = -1;
 
+        FindAnyObjectByType<BeverageFridge>()?.CloseAllSelections();
         FindAnyObjectByType<CafeCustomerDirector>()?.ResetRound();
         TaskManager.Instance?.ResetRound();
 
@@ -116,6 +128,20 @@ public class GameManager : MonoBehaviour
 
         currentTime = startTime;
         UpdateTimerUI();
+    }
+
+    public void RestartGame()
+    {
+        Scene activeScene = SceneManager.GetActiveScene();
+        if (activeScene.buildIndex < 0)
+        {
+            ReturnToStartPanel();
+            StartGame();
+            return;
+        }
+
+        startImmediatelyAfterReload = true;
+        SceneManager.LoadScene(activeScene.buildIndex, LoadSceneMode.Single);
     }
 
     private void EndGame()
@@ -131,9 +157,10 @@ public class GameManager : MonoBehaviour
         int served = TaskManager.Instance != null
             ? TaskManager.Instance.CompletedOrderCount
             : director != null ? director.ServedCount : 0;
-        int unhappy = director != null ? director.UnhappyCount : 0;
         int moneyEarned = TaskManager.Instance != null ? TaskManager.Instance.MoneyEarned : 0;
-        gameOverView?.Show(served, unhappy, moneyEarned);
+        int catDelivered = TaskManager.Instance != null ? TaskManager.Instance.CatDeliveredCount : 0;
+        int dogDelivered = TaskManager.Instance != null ? TaskManager.Instance.DogDeliveredCount : 0;
+        gameOverView?.Show(served, moneyEarned, catDelivered, dogDelivered);
     }
 
     private void EnsureGameOverPanel()

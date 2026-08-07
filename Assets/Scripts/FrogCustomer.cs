@@ -192,7 +192,7 @@ public sealed class FrogCustomer : MonoBehaviour
         // Orders intentionally have no patience timer. The customer waits until served.
     }
 
-    public bool TryServe(BeverageType beverage, Vector3 serverPosition)
+    public bool TryServe(BeverageType beverage, Vector3 serverPosition, BeverageServer server)
     {
         if (state != CustomerState.WaitingForOrder || beverage != order.type ||
             Vector2.Distance(transform.position, serverPosition) > serveDistance)
@@ -203,7 +203,7 @@ public sealed class FrogCustomer : MonoBehaviour
         served = true;
         if (orderTaskId >= 0)
         {
-            TaskManager.Instance?.CompleteCustomerOrder(orderTaskId);
+            TaskManager.Instance?.CompleteCustomerOrder(orderTaskId, server);
             orderTaskId = -1;
         }
         state = CustomerState.Eating;

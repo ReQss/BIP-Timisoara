@@ -182,6 +182,14 @@ public sealed class BeverageFridge : MonoBehaviour
         beverages = definitions;
     }
 
+    public void CloseAllSelections()
+    {
+        while (sessions.Count > 0)
+        {
+            CloseSelection(sessions[0]);
+        }
+    }
+
     private Camera FindPlayerCamera(IBeverageCarrier carrier)
     {
         PlayerCameraFollow[] follows = FindObjectsByType<PlayerCameraFollow>();
@@ -293,7 +301,7 @@ public sealed class BeverageFridge : MonoBehaviour
 
     private void OnDestroy()
     {
-        while (sessions.Count > 0) CloseSelection(sessions[0]);
+        CloseAllSelections();
     }
 
     private void OnDrawGizmosSelected()

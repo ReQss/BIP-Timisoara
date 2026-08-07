@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public sealed class GameOverPanelView : MonoBehaviour
@@ -14,9 +15,11 @@ public sealed class GameOverPanelView : MonoBehaviour
     private Sprite cardSprite;
     private Sprite buttonSprite;
     private TextMeshProUGUI servedValue;
-    private TextMeshProUGUI unhappyValue;
     private TextMeshProUGUI moneyValue;
-    private TextMeshProUGUI satisfactionValue;
+    private TextMeshProUGUI catDeliveredValue;
+    private TextMeshProUGUI dogDeliveredValue;
+    private Button playAgainButton;
+    private int shownFrame = -1;
 
     public void Initialize(
         GameManager owner,
@@ -49,23 +52,46 @@ public sealed class GameOverPanelView : MonoBehaviour
         }
     }
 
-    public void Show(int served, int unhappy, int moneyEarned)
+    public void Show(int served, int moneyEarned, int catDelivered, int dogDelivered)
     {
         gameObject.SetActive(true);
         transform.SetAsLastSibling();
         CacheLabels();
+        shownFrame = Time.frameCount;
 
-        int resolvedVisits = served + unhappy;
-        int satisfaction = resolvedVisits > 0 ? Mathf.RoundToInt(served * 100f / resolvedVisits) : 0;
         SetValue(servedValue, served.ToString());
-        SetValue(unhappyValue, unhappy.ToString());
         SetValue(moneyValue, "$" + moneyEarned);
-        SetValue(satisfactionValue, satisfaction + "%");
+        SetValue(catDeliveredValue, catDelivered.ToString());
+        SetValue(dogDeliveredValue, dogDelivered.ToString());
+
+        if (playAgainButton == null)
+        {
+            playAgainButton = transform.Find("GameOverContent/PlayAgainButton")?.GetComponent<Button>();
+        }
+        if (playAgainButton != null && EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(playAgainButton.gameObject);
+        }
     }
 
     public void Hide()
     {
+        shownFrame = -1;
         gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (shownFrame < 0 || Time.frameCount == shownFrame)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) ||
+            Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        {
+            OnPlayAgainClicked();
+        }
     }
 
     private void DisableLegacyContent()
@@ -89,22 +115,22 @@ public sealed class GameOverPanelView : MonoBehaviour
         CreateLabel("Subtitle", content, "TODAY'S CAFE REPORT", 21f, MutedInkColor, FontStyles.Bold,
             new Vector2(0f, 207f), new Vector2(500f, 38f));
 
-        servedValue = CreateStatCard(content, "Served", "ORDERS SERVED", new Vector2(-132f, 92f));
-        unhappyValue = CreateStatCard(content, "Unhappy", "UNHAPPY GUESTS", new Vector2(132f, 92f));
-        moneyValue = CreateStatCard(content, "Money", "MONEY EARNED", new Vector2(-132f, -70f));
-        satisfactionValue = CreateStatCard(content, "Satisfaction", "SATISFACTION", new Vector2(132f, -70f));
+        servedValue = CreateStatCard(content, "Served", "ORDERS SERVED", new Vector2(-132f, 77f));
+        moneyValue = CreateStatCard(content, "Money", "MONEY EARNED", new Vector2(132f, 77f));
+        catDeliveredValue = CreateStatCard(content, "CatDelivered", "CAT DELIVERED", new Vector2(-132f, -85f));
+        dogDeliveredValue = CreateStatCard(content, "DogDelivered", "DOG DELIVERED", new Vector2(132f, -85f));
 
         RectTransform buttonRect = CreatePanel("PlayAgainButton", content, buttonSprite, Color.white);
-        buttonRect.anchoredPosition = new Vector2(0f, -238f);
-        buttonRect.sizeDelta = new Vector2(324f, 102f);
-        Button button = buttonRect.gameObject.AddComponent<Button>();
-        button.targetGraphic = buttonRect.GetComponent<Image>();
-        button.transition = Selectable.Transition.ColorTint;
-        ColorBlock colors = button.colors;
+        buttonRect.anchoredPosition = new Vector2(0f, -248f);
+        buttonRect.sizeDelta = new Vector2(300f, 88f);
+        playAgainButton = buttonRect.gameObject.AddComponent<Button>();
+        playAgainButton.targetGraphic = buttonRect.GetComponent<Image>();
+        playAgainButton.transition = Selectable.Transition.ColorTint;
+        ColorBlock colors = playAgainButton.colors;
         colors.highlightedColor = new Color(1f, 0.92f, 0.94f);
         colors.pressedColor = new Color(0.9f, 0.72f, 0.78f);
-        button.colors = colors;
-        button.onClick.AddListener(OnPlayAgainClicked);
+        playAgainButton.colors = colors;
+        playAgainButton.onClick.AddListener(OnPlayAgainClicked);
         CreateLabel("Label", buttonRect, "PLAY AGAIN", 29f, InkColor, FontStyles.Bold,
             new Vector2(0f, 2f), new Vector2(270f, 58f));
     }
@@ -123,9 +149,9 @@ public sealed class GameOverPanelView : MonoBehaviour
     private void CacheLabels()
     {
         servedValue = FindValue("ServedPanel");
-        unhappyValue = FindValue("UnhappyPanel");
         moneyValue = FindValue("MoneyPanel");
-        satisfactionValue = FindValue("SatisfactionPanel");
+        catDeliveredValue = FindValue("CatDeliveredPanel");
+        dogDeliveredValue = FindValue("DogDeliveredPanel");
     }
 
     private TextMeshProUGUI FindValue(string panelName)
@@ -136,7 +162,13 @@ public sealed class GameOverPanelView : MonoBehaviour
 
     private void OnPlayAgainClicked()
     {
-        gameManager?.ReturnToStartPanel();
+        if (shownFrame < 0)
+        {
+            return;
+        }
+
+        shownFrame = -1;
+        gameManager?.RestartGame();
     }
 
     private static RectTransform CreatePanel(string name, Transform parent, Sprite sprite, Color color)

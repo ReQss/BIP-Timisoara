@@ -11,7 +11,7 @@ public sealed class CafeCustomerDirector : MonoBehaviour
     [SerializeField] private CafeDestination[] seats;
     [SerializeField] private CafeDestination toilet;
     [SerializeField, Min(0.5f)] private float firstArrivalDelay = 1.5f;
-    [SerializeField, Min(1f)] private float arrivalInterval = 8f;
+    [SerializeField, Min(1f)] private float arrivalInterval = 5.33f;
     [SerializeField, Min(1)] private int maximumCustomers = 3;
 
     private readonly List<FrogCustomer> customers = new List<FrogCustomer>();

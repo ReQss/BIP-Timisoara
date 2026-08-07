@@ -69,7 +69,8 @@ public class CatActions : MonoBehaviour, IBeverageCarrier
             }
         }
 
-        if (closest == null || !closest.TryServe(heldBeverage.type, transform.position))
+        if (closest == null ||
+            !closest.TryServe(heldBeverage.type, transform.position, BeverageServer.Cat))
         {
             return false;
         }
