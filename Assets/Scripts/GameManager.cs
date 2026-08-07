@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject startPanel;
+    [SerializeField] private GameObject gameOverPanel;
 
     [Header("Timer")]
     [SerializeField] private float startTime = 120f; // 2 minuty
@@ -17,12 +18,17 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
     public static bool IsGameplayInputBlocked =>
-        instance != null && instance.IsStartInputBlocked();
+        instance != null && (!instance.isGameActive || instance.IsStartInputBlocked());
 
     private void Awake()
     {
         instance = this;
         isGameActive = false;
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.GetComponent<GameOverPanel>()?.Configure(this);
+            gameOverPanel.SetActive(false);
+        }
     }
 
     private void Start()
@@ -55,6 +61,7 @@ public class GameManager : MonoBehaviour
             currentTime = 0f;
             isGameActive = false;
             timerText.text = "OVER";
+            ShowGameOverPanel();
             return;
         }
 
@@ -66,9 +73,14 @@ public class GameManager : MonoBehaviour
         currentTime = startTime;
         isGameActive = true;
         gameStartedFrame = Time.frameCount;
+        TaskManager.Instance?.ResetRoundStatistics();
+        FindAnyObjectByType<CafeCustomerDirector>()?.ResetRoundStatistics();
 
         if (startPanel != null)
             startPanel.SetActive(false);
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
 
         UpdateTimerUI();
     }
@@ -82,6 +94,22 @@ public class GameManager : MonoBehaviour
     {
         bool startMenuVisible = startPanel != null && startPanel.activeInHierarchy;
         return startMenuVisible || Time.frameCount == gameStartedFrame;
+    }
+
+    private void ShowGameOverPanel()
+    {
+        if (gameOverPanel == null)
+        {
+            return;
+        }
+
+        GameOverPanel panel = gameOverPanel.GetComponent<GameOverPanel>();
+        if (panel == null)
+        {
+            panel = gameOverPanel.AddComponent<GameOverPanel>();
+            panel.Configure(this);
+        }
+        panel.Show();
     }
 
     private void OnDestroy()

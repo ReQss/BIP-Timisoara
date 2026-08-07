@@ -20,6 +20,12 @@ public sealed class CafeCustomerDirector : MonoBehaviour
     public int ServedCount { get; private set; }
     public int UnhappyCount { get; private set; }
 
+    public void ResetRoundStatistics()
+    {
+        ServedCount = 0;
+        UnhappyCount = 0;
+    }
+
     private void Awake()
     {
         EnsureUiEventSystem();
