@@ -56,9 +56,19 @@ public class TaskManager : MonoBehaviour
     private readonly List<CustomerOrderTask> customerOrders = new List<CustomerOrderTask>();
     private int customerOrderIdCounter;
     private int money;
+    private int completedCustomerOrders;
 
     public IReadOnlyList<CustomerOrderTask> CustomerOrders => customerOrders;
     public IReadOnlyList<BeverageDefinition> CafeBeverages => cafeBeverages;
+    public int Money => money;
+    public int CompletedCustomerOrders => completedCustomerOrders;
+
+    public void ResetRoundStatistics()
+    {
+        money = startingMoney;
+        completedCustomerOrders = 0;
+        uiHandler?.SetMoney(money);
+    }
 
     private void Awake()
     {
@@ -89,6 +99,7 @@ public class TaskManager : MonoBehaviour
         if (removed > 0)
         {
             money += moneyPerOrder;
+            completedCustomerOrders += removed;
             if (uiHandler != null)
             {
                 uiHandler.SetMoney(money);
