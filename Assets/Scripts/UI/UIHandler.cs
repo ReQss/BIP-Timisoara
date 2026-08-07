@@ -15,11 +15,16 @@ public class UIHandler : MonoBehaviour
 {
     public GameObject pauseMenu;
     [Header("Customer order UI")]
+    [SerializeField] private TMP_FontAsset pixelUiFont;
+    [SerializeField] private Sprite customerOrderPanelBackground;
     [SerializeField] private Sprite customerDrinkBackground;
+    [SerializeField] private Sprite customerOrderBadgeBackground;
     //5 elements for jobs
     public List<JobItemInList> jobItemsInList = new List<JobItemInList>();
     private readonly List<CustomerOrderRow> customerOrderRows = new List<CustomerOrderRow>();
     private RectTransform customerOrderPanel;
+    private TextMeshProUGUI customerOrderCountText;
+    private GameObject customerOrderEmptyState;
     private TextMeshProUGUI moneyText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -71,6 +76,15 @@ public class UIHandler : MonoBehaviour
         if (customerOrderPanel == null)
         {
             return;
+        }
+
+        if (customerOrderCountText != null)
+        {
+            customerOrderCountText.text = orders.Count.ToString();
+        }
+        if (customerOrderEmptyState != null)
+        {
+            customerOrderEmptyState.SetActive(orders.Count == 0);
         }
 
         while (customerOrderRows.Count < orders.Count)
@@ -156,9 +170,14 @@ public class UIHandler : MonoBehaviour
         customerOrderPanel.anchorMin = new Vector2(1f, 1f);
         customerOrderPanel.anchorMax = new Vector2(1f, 1f);
         customerOrderPanel.pivot = new Vector2(1f, 1f);
-        customerOrderPanel.anchoredPosition = new Vector2(-24f, -90f);
-        customerOrderPanel.sizeDelta = new Vector2(280f, 260f);
-        panel.GetComponent<Image>().color = new Color(0.08f, 0.11f, 0.13f, 0.9f);
+        customerOrderPanel.anchoredPosition = new Vector2(-22f, -84f);
+        customerOrderPanel.sizeDelta = new Vector2(320f, 330f);
+        Image panelImage = panel.GetComponent<Image>();
+        panelImage.sprite = customerOrderPanelBackground;
+        panelImage.type = customerOrderPanelBackground != null ? Image.Type.Sliced : Image.Type.Simple;
+        panelImage.color = customerOrderPanelBackground != null
+            ? Color.white
+            : new Color(0.18f, 0.13f, 0.22f, 0.94f);
 
         GameObject heading = new GameObject("Heading", typeof(RectTransform), typeof(TextMeshProUGUI));
         heading.transform.SetParent(panel.transform, false);
@@ -166,14 +185,60 @@ public class UIHandler : MonoBehaviour
         headingRect.anchorMin = new Vector2(0f, 1f);
         headingRect.anchorMax = new Vector2(1f, 1f);
         headingRect.pivot = new Vector2(0.5f, 1f);
-        headingRect.anchoredPosition = new Vector2(0f, -10f);
-        headingRect.sizeDelta = new Vector2(-20f, 34f);
+        headingRect.anchoredPosition = new Vector2(-12f, -20f);
+        headingRect.sizeDelta = new Vector2(-74f, 38f);
         TextMeshProUGUI headingText = heading.GetComponent<TextMeshProUGUI>();
         headingText.text = "CUSTOMER ORDERS";
-        headingText.fontSize = 22f;
+        if (pixelUiFont != null) headingText.font = pixelUiFont;
+        headingText.fontSize = 21f;
         headingText.fontStyle = FontStyles.Bold;
-        headingText.alignment = TextAlignmentOptions.Center;
-        headingText.color = new Color(1f, 0.86f, 0.55f);
+        headingText.alignment = TextAlignmentOptions.MidlineLeft;
+        headingText.color = new Color(0.25f, 0.15f, 0.3f);
+        headingText.raycastTarget = false;
+
+        GameObject badge = new GameObject("Order Count", typeof(RectTransform), typeof(Image));
+        badge.transform.SetParent(panel.transform, false);
+        RectTransform badgeRect = badge.GetComponent<RectTransform>();
+        badgeRect.anchorMin = badgeRect.anchorMax = new Vector2(1f, 1f);
+        badgeRect.pivot = new Vector2(1f, 1f);
+        badgeRect.anchoredPosition = new Vector2(-24f, -15f);
+        badgeRect.sizeDelta = new Vector2(48f, 48f);
+        Image badgeImage = badge.GetComponent<Image>();
+        badgeImage.sprite = customerOrderBadgeBackground;
+        badgeImage.type = customerOrderBadgeBackground != null ? Image.Type.Sliced : Image.Type.Simple;
+        badgeImage.color = customerOrderBadgeBackground != null ? Color.white : new Color(0.78f, 0.9f, 0.77f);
+
+        GameObject count = new GameObject("Value", typeof(RectTransform), typeof(TextMeshProUGUI));
+        count.transform.SetParent(badge.transform, false);
+        RectTransform countRect = count.GetComponent<RectTransform>();
+        countRect.anchorMin = Vector2.zero;
+        countRect.anchorMax = Vector2.one;
+        countRect.offsetMin = Vector2.zero;
+        countRect.offsetMax = Vector2.zero;
+        customerOrderCountText = count.GetComponent<TextMeshProUGUI>();
+        customerOrderCountText.text = "0";
+        if (pixelUiFont != null) customerOrderCountText.font = pixelUiFont;
+        customerOrderCountText.fontSize = 22f;
+        customerOrderCountText.fontStyle = FontStyles.Bold;
+        customerOrderCountText.alignment = TextAlignmentOptions.Center;
+        customerOrderCountText.color = new Color(0.24f, 0.35f, 0.24f);
+        customerOrderCountText.raycastTarget = false;
+
+        customerOrderEmptyState = new GameObject("Empty State", typeof(RectTransform), typeof(TextMeshProUGUI));
+        customerOrderEmptyState.transform.SetParent(panel.transform, false);
+        RectTransform emptyRect = customerOrderEmptyState.GetComponent<RectTransform>();
+        emptyRect.anchorMin = new Vector2(0f, 1f);
+        emptyRect.anchorMax = new Vector2(1f, 1f);
+        emptyRect.pivot = new Vector2(0.5f, 1f);
+        emptyRect.anchoredPosition = new Vector2(0f, -104f);
+        emptyRect.sizeDelta = new Vector2(-58f, 80f);
+        TextMeshProUGUI emptyText = customerOrderEmptyState.GetComponent<TextMeshProUGUI>();
+        emptyText.text = "NO ORDERS YET\nKEEP AN EYE ON THE TABLES!";
+        if (pixelUiFont != null) emptyText.font = pixelUiFont;
+        emptyText.fontSize = 17f;
+        emptyText.alignment = TextAlignmentOptions.Center;
+        emptyText.color = new Color(0.42f, 0.32f, 0.46f);
+        emptyText.raycastTarget = false;
     }
 
     private CustomerOrderRow CreateCustomerOrderRow(int index)
@@ -184,10 +249,11 @@ public class UIHandler : MonoBehaviour
         rect.anchorMin = new Vector2(0f, 1f);
         rect.anchorMax = new Vector2(1f, 1f);
         rect.pivot = new Vector2(0.5f, 1f);
-        rect.anchoredPosition = new Vector2(0f, -50f - index * 40f);
-        rect.sizeDelta = new Vector2(-20f, 34f);
+        rect.anchoredPosition = new Vector2(0f, -72f - index * 48f);
+        rect.sizeDelta = new Vector2(-42f, 42f);
         Image background = root.GetComponent<Image>();
         background.sprite = customerDrinkBackground;
+        background.type = customerDrinkBackground != null ? Image.Type.Sliced : Image.Type.Simple;
         background.color = customerDrinkBackground != null
             ? Color.white
             : new Color(1f, 1f, 1f, 0.08f);
@@ -198,7 +264,7 @@ public class UIHandler : MonoBehaviour
         iconRect.anchorMin = new Vector2(0f, 0.5f);
         iconRect.anchorMax = new Vector2(0f, 0.5f);
         iconRect.pivot = new Vector2(0f, 0.5f);
-        iconRect.anchoredPosition = new Vector2(5f, 0f);
+        iconRect.anchoredPosition = new Vector2(9f, 0f);
         // Two physical pixels per source pixel keeps 16x16 art evenly scaled.
         iconRect.sizeDelta = new Vector2(32f, 32f);
         Image icon = iconObject.GetComponent<Image>();
@@ -209,14 +275,17 @@ public class UIHandler : MonoBehaviour
         RectTransform labelRect = labelObject.GetComponent<RectTransform>();
         labelRect.anchorMin = Vector2.zero;
         labelRect.anchorMax = Vector2.one;
-        labelRect.offsetMin = new Vector2(42f, 0f);
-        labelRect.offsetMax = new Vector2(-6f, 0f);
+        labelRect.offsetMin = new Vector2(50f, 0f);
+        labelRect.offsetMax = new Vector2(-10f, 0f);
         TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
-        label.fontSize = 18f;
+        if (pixelUiFont != null) label.font = pixelUiFont;
+        label.fontSize = 17f;
+        label.fontStyle = FontStyles.Bold;
         label.alignment = TextAlignmentOptions.MidlineLeft;
         label.color = customerDrinkBackground != null
             ? new Color(0.22f, 0.15f, 0.25f)
             : Color.white;
+        label.raycastTarget = false;
 
         return new CustomerOrderRow(root, icon, label);
     }
@@ -263,6 +332,8 @@ public class UIHandler : MonoBehaviour
     {
         customerOrderRows.Clear();
         customerOrderPanel = null;
+        customerOrderCountText = null;
+        customerOrderEmptyState = null;
         moneyText = null;
     }
 }

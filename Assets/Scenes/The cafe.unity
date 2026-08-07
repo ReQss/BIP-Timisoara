@@ -3467,7 +3467,11 @@ MonoBehaviour:
   timerText: {fileID: 743773330}
   startPanel: {fileID: 197171390}
   gameOverPanel: {fileID: 549499709}
-  startTime: 10
+  pixelUiFont: {fileID: 11400000, guid: 4c0786ed2b9019d40b4e609b6f4df33e, type: 2}
+  gameOverPanelSprite: {fileID: -2815682473399237662, guid: c032f124ceab2be4f81f7b2539b72427, type: 3}
+  gameOverCardSprite: {fileID: 3159541315134722779, guid: c032f124ceab2be4f81f7b2539b72427, type: 3}
+  gameOverButtonSprite: {fileID: 2596742083257103518, guid: c032f124ceab2be4f81f7b2539b72427, type: 3}
+  startTime: 120
 --- !u!4 &401864846
 Transform:
   m_ObjectHideFlags: 0
@@ -14927,7 +14931,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHandler
   pauseMenu: {fileID: 1853846198}
+  pixelUiFont: {fileID: 11400000, guid: 4c0786ed2b9019d40b4e609b6f4df33e, type: 2}
+  customerOrderPanelBackground: {fileID: 1537610869080829233, guid: c032f124ceab2be4f81f7b2539b72427, type: 3}
   customerDrinkBackground: {fileID: 6821315046833349002, guid: c032f124ceab2be4f81f7b2539b72427, type: 3}
+  customerOrderBadgeBackground: {fileID: 3159541315134722779, guid: c032f124ceab2be4f81f7b2539b72427, type: 3}
   jobItemsInList:
   - job:
       waitingTime: 0

@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject startPanel;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private TMP_FontAsset pixelUiFont;
+    [SerializeField] private Sprite gameOverPanelSprite;
+    [SerializeField] private Sprite gameOverCardSprite;
+    [SerializeField] private Sprite gameOverButtonSprite;
 
     [Header("Timer")]
     [SerializeField] private float startTime = 120f; // 2 minuty
@@ -159,12 +163,20 @@ public class GameManager : MonoBehaviour
         }
 
         gameOverPanel.transform.SetAsLastSibling();
+        RectTransform panelRect = gameOverPanel.GetComponent<RectTransform>();
+        if (panelRect != null)
+        {
+            panelRect.anchorMin = Vector2.zero;
+            panelRect.anchorMax = Vector2.one;
+            panelRect.offsetMin = Vector2.zero;
+            panelRect.offsetMax = Vector2.zero;
+        }
         gameOverView = gameOverPanel.GetComponent<GameOverPanelView>();
         if (gameOverView == null)
         {
             gameOverView = gameOverPanel.AddComponent<GameOverPanelView>();
         }
-        gameOverView.Initialize(this);
+        gameOverView.Initialize(this, pixelUiFont, gameOverPanelSprite, gameOverCardSprite, gameOverButtonSprite);
     }
 
     private static GameObject FindSceneObject(string objectName)

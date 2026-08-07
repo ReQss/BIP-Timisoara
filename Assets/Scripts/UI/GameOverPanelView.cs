@@ -4,21 +4,43 @@ using UnityEngine.UI;
 
 public sealed class GameOverPanelView : MonoBehaviour
 {
-    private static readonly Color PanelColor = new Color(0.12f, 0.09f, 0.16f, 0.97f);
-    private static readonly Color CardColor = new Color(0.24f, 0.18f, 0.29f, 0.96f);
-    private static readonly Color AccentColor = new Color(1f, 0.76f, 0.32f);
+    private static readonly Color InkColor = new Color(0.24f, 0.14f, 0.29f);
+    private static readonly Color MutedInkColor = new Color(0.38f, 0.29f, 0.43f);
+    private static readonly Color OverlayColor = new Color(0.09f, 0.07f, 0.13f, 0.82f);
 
     private GameManager gameManager;
+    private TMP_FontAsset pixelFont;
+    private Sprite panelSprite;
+    private Sprite cardSprite;
+    private Sprite buttonSprite;
     private TextMeshProUGUI servedValue;
     private TextMeshProUGUI unhappyValue;
     private TextMeshProUGUI moneyValue;
     private TextMeshProUGUI satisfactionValue;
 
-    public void Initialize(GameManager owner)
+    public void Initialize(
+        GameManager owner,
+        TMP_FontAsset font,
+        Sprite pastelPanel,
+        Sprite pastelCard,
+        Sprite pastelButton)
     {
         gameManager = owner;
+        pixelFont = font;
+        panelSprite = pastelPanel;
+        cardSprite = pastelCard;
+        buttonSprite = pastelButton;
+
+        Image overlay = GetComponent<Image>();
+        if (overlay != null)
+        {
+            overlay.sprite = null;
+            overlay.color = OverlayColor;
+        }
+
         if (transform.Find("GameOverContent") == null)
         {
+            DisableLegacyContent();
             BuildContent();
         }
         else
@@ -46,47 +68,56 @@ public sealed class GameOverPanelView : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void DisableLegacyContent()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
     private void BuildContent()
     {
-        RectTransform content = CreatePanel("GameOverContent", transform, PanelColor);
+        RectTransform content = CreatePanel("GameOverContent", transform, panelSprite, Color.white);
         content.anchorMin = new Vector2(0.5f, 0.5f);
         content.anchorMax = new Vector2(0.5f, 0.5f);
         content.pivot = new Vector2(0.5f, 0.5f);
-        content.sizeDelta = new Vector2(540f, 610f);
+        content.sizeDelta = new Vector2(620f, 640f);
 
-        CreateLabel("Title", content, "GAME OVER", 42f, AccentColor, FontStyles.Bold,
-            new Vector2(0f, 244f), new Vector2(480f, 64f));
-        CreateLabel("Subtitle", content, "SHIFT STATISTICS", 20f, Color.white, FontStyles.Bold,
-            new Vector2(0f, 194f), new Vector2(480f, 38f));
+        CreateLabel("Title", content, "SHIFT OVER!", 43f, InkColor, FontStyles.Bold,
+            new Vector2(0f, 252f), new Vector2(520f, 64f));
+        CreateLabel("Subtitle", content, "TODAY'S CAFE REPORT", 21f, MutedInkColor, FontStyles.Bold,
+            new Vector2(0f, 207f), new Vector2(500f, 38f));
 
-        RectTransform statistics = CreatePanel("StatisticsPanel", content, new Color(0.07f, 0.05f, 0.1f, 0.7f));
-        statistics.anchoredPosition = new Vector2(0f, 20f);
-        statistics.sizeDelta = new Vector2(460f, 310f);
+        servedValue = CreateStatCard(content, "Served", "ORDERS SERVED", new Vector2(-132f, 92f));
+        unhappyValue = CreateStatCard(content, "Unhappy", "UNHAPPY GUESTS", new Vector2(132f, 92f));
+        moneyValue = CreateStatCard(content, "Money", "MONEY EARNED", new Vector2(-132f, -70f));
+        satisfactionValue = CreateStatCard(content, "Satisfaction", "SATISFACTION", new Vector2(132f, -70f));
 
-        servedValue = CreateStatCard(statistics, "Served", "ORDERS SERVED", 105f);
-        unhappyValue = CreateStatCard(statistics, "Unhappy", "UNHAPPY CUSTOMERS", 35f);
-        moneyValue = CreateStatCard(statistics, "Money", "MONEY EARNED", -35f);
-        satisfactionValue = CreateStatCard(statistics, "Satisfaction", "SATISFACTION", -105f);
-
-        RectTransform buttonRect = CreatePanel("PlayAgainButton", content, AccentColor);
-        buttonRect.anchoredPosition = new Vector2(0f, -245f);
-        buttonRect.sizeDelta = new Vector2(300f, 72f);
+        RectTransform buttonRect = CreatePanel("PlayAgainButton", content, buttonSprite, Color.white);
+        buttonRect.anchoredPosition = new Vector2(0f, -238f);
+        buttonRect.sizeDelta = new Vector2(324f, 102f);
         Button button = buttonRect.gameObject.AddComponent<Button>();
         button.targetGraphic = buttonRect.GetComponent<Image>();
+        button.transition = Selectable.Transition.ColorTint;
+        ColorBlock colors = button.colors;
+        colors.highlightedColor = new Color(1f, 0.92f, 0.94f);
+        colors.pressedColor = new Color(0.9f, 0.72f, 0.78f);
+        button.colors = colors;
         button.onClick.AddListener(OnPlayAgainClicked);
-        CreateLabel("Label", buttonRect, "PLAY AGAIN", 28f, new Color(0.16f, 0.1f, 0.18f), FontStyles.Bold,
-            Vector2.zero, buttonRect.sizeDelta);
+        CreateLabel("Label", buttonRect, "PLAY AGAIN", 29f, InkColor, FontStyles.Bold,
+            new Vector2(0f, 2f), new Vector2(270f, 58f));
     }
 
-    private TextMeshProUGUI CreateStatCard(Transform parent, string name, string label, float y)
+    private TextMeshProUGUI CreateStatCard(Transform parent, string name, string label, Vector2 position)
     {
-        RectTransform card = CreatePanel(name + "Panel", parent, CardColor);
-        card.anchoredPosition = new Vector2(0f, y);
-        card.sizeDelta = new Vector2(410f, 58f);
-        CreateLabel("Label", card, label, 18f, new Color(0.92f, 0.88f, 0.95f), FontStyles.Normal,
-            new Vector2(-75f, 0f), new Vector2(235f, 50f), TextAlignmentOptions.MidlineLeft);
-        return CreateLabel("Value", card, "0", 25f, AccentColor, FontStyles.Bold,
-            new Vector2(145f, 0f), new Vector2(95f, 50f), TextAlignmentOptions.MidlineRight);
+        RectTransform card = CreatePanel(name + "Panel", parent, cardSprite, Color.white);
+        card.anchoredPosition = position;
+        card.sizeDelta = new Vector2(238f, 144f);
+        CreateLabel("Label", card, label, 17f, MutedInkColor, FontStyles.Bold,
+            new Vector2(0f, 32f), new Vector2(204f, 34f));
+        return CreateLabel("Value", card, "0", 34f, InkColor, FontStyles.Bold,
+            new Vector2(0f, -13f), new Vector2(190f, 58f));
     }
 
     private void CacheLabels()
@@ -99,7 +130,7 @@ public sealed class GameOverPanelView : MonoBehaviour
 
     private TextMeshProUGUI FindValue(string panelName)
     {
-        Transform value = transform.Find("GameOverContent/StatisticsPanel/" + panelName + "/Value");
+        Transform value = transform.Find("GameOverContent/" + panelName + "/Value");
         return value != null ? value.GetComponent<TextMeshProUGUI>() : null;
     }
 
@@ -108,7 +139,7 @@ public sealed class GameOverPanelView : MonoBehaviour
         gameManager?.ReturnToStartPanel();
     }
 
-    private static RectTransform CreatePanel(string name, Transform parent, Color color)
+    private static RectTransform CreatePanel(string name, Transform parent, Sprite sprite, Color color)
     {
         GameObject panel = new GameObject(name, typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
         panel.transform.SetParent(parent, false);
@@ -116,11 +147,14 @@ public sealed class GameOverPanelView : MonoBehaviour
         rect.anchorMin = new Vector2(0.5f, 0.5f);
         rect.anchorMax = new Vector2(0.5f, 0.5f);
         rect.pivot = new Vector2(0.5f, 0.5f);
-        panel.GetComponent<Image>().color = color;
+        Image image = panel.GetComponent<Image>();
+        image.sprite = sprite;
+        image.type = sprite != null ? Image.Type.Sliced : Image.Type.Simple;
+        image.color = color;
         return rect;
     }
 
-    private static TextMeshProUGUI CreateLabel(
+    private TextMeshProUGUI CreateLabel(
         string name, Transform parent, string text, float size, Color color, FontStyles style,
         Vector2 position, Vector2 dimensions, TextAlignmentOptions alignment = TextAlignmentOptions.Center)
     {
@@ -135,6 +169,10 @@ public sealed class GameOverPanelView : MonoBehaviour
 
         TextMeshProUGUI label = labelObject.GetComponent<TextMeshProUGUI>();
         label.text = text;
+        if (pixelFont != null)
+        {
+            label.font = pixelFont;
+        }
         label.fontSize = size;
         label.fontStyle = style;
         label.color = color;

@@ -7,11 +7,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using TMPro;
 
 public static class FridgeSceneSetup
 {
     private const string ScenePath = "Assets/Scenes/The cafe.unity";
     private const string UiSheetPath = "Assets/UI/UIBundleFree/PastelUIFree.png";
+    private const string PixelFontPath = "Assets/Fonts/PixelifySans-Bold SDF.asset";
 
     [MenuItem("Tools/Cat Cafe/Put Fridge And UI In Scene")]
     public static void ApplyToCafeScene()
@@ -23,7 +25,7 @@ public static class FridgeSceneSetup
         }
 
         CreateOrUpdateFridge(scene, null);
-        AssignCustomerOrderBackground(scene);
+        AssignPastelUiTheme(scene);
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);
         AssetDatabase.SaveAssets();
@@ -130,16 +132,36 @@ public static class FridgeSceneSetup
         return view;
     }
 
-    private static void AssignCustomerOrderBackground(Scene scene)
+    private static void AssignPastelUiTheme(Scene scene)
     {
-        Sprite background = LoadSprite(UiSheetPath, "PastelUIFree_4");
+        TMP_FontAsset font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(PixelFontPath);
+        Sprite panel = LoadSprite(UiSheetPath, "PastelUIFree_1");
+        Sprite row = LoadSprite(UiSheetPath, "PastelUIFree_4");
+        Sprite card = LoadSprite(UiSheetPath, "PastelUIFree_2");
         foreach (UIHandler handler in scene.GetRootGameObjects()
                      .SelectMany(root => root.GetComponentsInChildren<UIHandler>(true)))
         {
             SerializedObject data = new SerializedObject(handler);
-            data.FindProperty("customerDrinkBackground").objectReferenceValue = background;
+            data.FindProperty("pixelUiFont").objectReferenceValue = font;
+            data.FindProperty("customerOrderPanelBackground").objectReferenceValue = panel;
+            data.FindProperty("customerDrinkBackground").objectReferenceValue = row;
+            data.FindProperty("customerOrderBadgeBackground").objectReferenceValue = card;
             data.ApplyModifiedPropertiesWithoutUndo();
             EditorUtility.SetDirty(handler);
+        }
+
+        foreach (GameManager manager in scene.GetRootGameObjects()
+                     .SelectMany(root => root.GetComponentsInChildren<GameManager>(true)))
+        {
+            SerializedObject data = new SerializedObject(manager);
+            data.FindProperty("pixelUiFont").objectReferenceValue = font;
+            data.FindProperty("gameOverPanelSprite").objectReferenceValue =
+                LoadSprite(UiSheetPath, "PastelUIFree_0");
+            data.FindProperty("gameOverCardSprite").objectReferenceValue = card;
+            data.FindProperty("gameOverButtonSprite").objectReferenceValue =
+                LoadSprite(UiSheetPath, "PastelUIFree_82");
+            data.ApplyModifiedPropertiesWithoutUndo();
+            EditorUtility.SetDirty(manager);
         }
     }
 
