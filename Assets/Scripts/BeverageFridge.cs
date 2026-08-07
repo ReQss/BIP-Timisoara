@@ -23,6 +23,8 @@ public sealed class BeverageFridge : MonoBehaviour
     [SerializeField] private FridgeMenuView menuTemplate;
 
     private readonly List<SelectionSession> sessions = new List<SelectionSession>();
+    private readonly Dictionary<IBeverageCarrier, int> lastClosedFrameByCarrier =
+        new Dictionary<IBeverageCarrier, int>();
     private SplitScreenManager splitScreen;
     private SpriteRenderer fridgeRenderer;
 
@@ -44,6 +46,16 @@ public sealed class BeverageFridge : MonoBehaviour
 
     public void ShowDrinkSelection(IBeverageCarrier carrier)
     {
+        // Confirming a drink uses the same key as opening the fridge. Depending on
+        // script update order, the carrier can see that key again after the menu
+        // closes and reopen it immediately. Ignore only that closing frame.
+        if (carrier != null &&
+            lastClosedFrameByCarrier.TryGetValue(carrier, out int lastClosedFrame) &&
+            lastClosedFrame == Time.frameCount)
+        {
+            return;
+        }
+
         if ((beverages == null || beverages.Length == 0) && TaskManager.Instance != null)
         {
             Configure(TaskManager.Instance.GetCafeBeverages());
@@ -244,7 +256,11 @@ public sealed class BeverageFridge : MonoBehaviour
     private void CloseSelection(SelectionSession session)
     {
         if (!sessions.Remove(session)) return;
-        session.carrier?.SetFridgeMenuOpen(false);
+        if (session.carrier != null)
+        {
+            lastClosedFrameByCarrier[session.carrier] = Time.frameCount;
+            session.carrier.SetFridgeMenuOpen(false);
+        }
         if (session.view != null) Destroy(session.view.gameObject);
         splitScreen?.PopMenuSplit();
     }
